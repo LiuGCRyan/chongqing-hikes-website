@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chongqing Hikes - Explore the 8D City & Wild Mountains</title>
+    <title>Chongqing Hikes - Private Tours & Wild Adventures</title>
+    <meta name="description" content="Discover the 8D wonderland of Chongqing with a local English-speaking guide. City walks, wild hiking, authentic food experiences.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">CHONGQING HIKES</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <a href="index.html" class="logo">
+                <span class="logo-text">CHONGQING</span>
+                <span class="logo-accent">HIKES</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="city-tours.html">City Tours</a></li>
                 <li><a href="hiking.html">Wild Hiking</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="btn-nav">Book Now</a></li>
+                <li><a href="contact.html" class="btn-nav">Inquire</a></li>
             </ul>
         </div>
     </nav>
@@ -33,148 +37,328 @@
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>DISCOVER CHONGQING<br><span>LIKE A LOCAL</span></h1>
-            <p class="hero-subtitle">City walks through the 8D wonderland & Wild hikes into hidden mountains</p>
+            <p class="hero-label">Private Tours in Chongqing, China</p>
+            <h1 class="hero-title">
+                Discover the City<br>
+                <span class="highlight">You've Never Seen</span>
+            </h1>
+            <p class="hero-subtitle">
+                Beyond the 8D skyline lies a world of hidden trails, ancient villages,
+                and flavors that tell a thousand stories. Let us show you.
+            </p>
             <div class="hero-cta">
-                <a href="#choose" class="btn-primary">Start Your Adventure</a>
-                <a href="about.html" class="btn-secondary">Meet Ryan</a>
+                <a href="#experiences" class="btn-primary">Explore Experiences</a>
+                <a href="about.html" class="btn-ghost">Meet Your Guide</a>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
+            <span>Scroll to discover</span>
+            <div class="scroll-line"></div>
         </div>
     </header>
 
-    <!-- Two Paths Section -->
-    <section id="choose" class="choose-path">
+    <!-- Trust Indicators -->
+    <section class="trust-section">
         <div class="container">
-            <h2 class="section-title">CHOOSE YOUR ADVENTURE</h2>
-            <p class="section-subtitle">Two faces of Chongqing. Two different experiences. Both unforgettable.</p>
-            
-            <div class="paths-grid">
-                <!-- City Tours Card -->
-                <a href="city-tours.html" class="path-card city-card">
-                    <div class="path-card-overlay"></div>
-                    <div class="path-card-content">
-                        <div class="path-icon">🏙️</div>
-                        <h3>CITY TOURS</h3>
-                        <p class="path-tagline">The 8D Wonder You've Seen on TikTok</p>
-                        <ul class="path-highlights">
-                            <li>Hongya Cave night walks</li>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-number">500+</span>
+                    <span class="trust-label">Happy Travelers</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">4.9</span>
+                    <span class="trust-label">⭐ Rating</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">100%</span>
+                    <span class="trust-label">Private Tours</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">Local</span>
+                    <span class="trust-label">English Guide</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Experiences Section -->
+    <section id="experiences" class="experiences-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">What We Offer</p>
+                <h2 class="section-title">Two Worlds, One City</h2>
+                <p class="section-subtitle">
+                    Chongqing is a city of contrasts. Futuristic skyscrapers and ancient villages.
+                    Neon-lit nightlife and serene mountain trails. Which world will you discover?
+                </p>
+            </div>
+
+            <div class="experiences-grid">
+                <!-- City Tours Experience -->
+                <article class="experience-card city-card">
+                    <div class="experience-image">
+                        <div class="experience-overlay"></div>
+                        <div class="experience-badge">Most Popular</div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 21h18M5 21V7l8-4v18M13 21V7l8 4v10M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="experience-title">City Immersion</h3>
+                        <p class="experience-tagline">The 8D Wonder You've Seen on TikTok</p>
+                        <p class="experience-description">
+                            Walk through Hongya Cave's glowing labyrinth. Taste authentic hotpot at
+                            places locals keep secret. Discover a city where trains pass through buildings
+                            and every corner tells a story.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Hongya Cave night exploration</li>
                             <li>Authentic hotpot experiences</li>
                             <li>Hidden local food spots</li>
                             <li>Historic Ciqikou Old Town</li>
+                            <li>8D architecture photography</li>
                         </ul>
-                        <div class="path-price">From ¥300 / half day</div>
-                        <span class="btn-path">Explore City Tours →</span>
+                        <div class="experience-footer">
+                            <div class="experience-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">¥300</span>
+                                <span class="price-unit">/ half day</span>
+                            </div>
+                            <a href="city-tours.html" class="btn-experience">
+                                Explore City Tours
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </a>
+                </article>
 
-                <!-- Wild Hiking Card -->
-                <a href="hiking.html" class="path-card hiking-card">
-                    <div class="path-card-overlay"></div>
-                    <div class="path-card-content">
-                        <div class="path-icon">🏔️</div>
-                        <h3>WILD HIKING</h3>
-                        <p class="path-tagline">Off the Beaten Path. Where Tourists Never Go.</p>
-                        <ul class="path-highlights">
+                <!-- Wild Hiking Experience -->
+                <article class="experience-card hiking-card">
+                    <div class="experience-image">
+                        <div class="experience-overlay"></div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M8 21l4-10 4 10M12 11V3M3 21h18M7 17l5-5 5 5"/>
+                            </svg>
+                        </div>
+                        <h3 class="experience-title">Wild Escapes</h3>
+                        <p class="experience-tagline">Off the Beaten Path. Where Tourists Never Go.</p>
+                        <p class="experience-description">
+                            Journey into the karst mountains surrounding Chongqing. Discover hidden trails,
+                            ancient temples, and villages frozen in time. Watch the sunrise paint the peaks gold.
+                        </p>
+                        <ul class="experience-highlights">
                             <li>Hidden mountain trails</li>
                             <li>Karst landscape adventures</li>
                             <li>Sunrise & sunset viewpoints</li>
-                            <li>Local village encounters</li>
+                            <li>Traditional village encounters</li>
+                            <li>Local family lunch experiences</li>
                         </ul>
-                        <div class="path-price">From ¥400 / half day</div>
-                        <span class="btn-path">Explore Wild Hiking →</span>
+                        <div class="experience-footer">
+                            <div class="experience-price">
+                                <span class="price-from">From</span>
+                                <span class="price-amount">¥400</span>
+                                <span class="price-unit">/ half day</span>
+                            </div>
+                            <a href="hiking.html" class="btn-experience">
+                                Explore Wild Hiking
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </a>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="why-us">
+    <section class="why-section">
         <div class="container">
-            <h2 class="section-title">WHY EXPLORE WITH RYAN?</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">🎯</div>
-                    <h4>Local Expert</h4>
-                    <p>Born and raised in Chongqing. I know every hidden corner, every secret trail, and the best hole-in-the-wall restaurants locals keep to themselves.</p>
+            <div class="section-header">
+                <p class="section-label">Why Choose Us</p>
+                <h2 class="section-title">Travel with a Local Storyteller</h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h4>Born & Raised in Chongqing</h4>
+                    <p>
+                        Every corner holds a memory. Every dish tells a story.
+                        I don't just know Chongqing—I am Chongqing.
+                    </p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🗣️</div>
-                    <h4>English Speaking</h4>
-                    <p>No language barriers. I explain the history, culture, and stories behind every place in clear, engaging English.</p>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Fluent English Communication</h4>
+                    <p>
+                        No language barriers, no awkward pauses.
+                        Cultural nuances translated into stories you'll remember.
+                    </p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">📸</div>
-                    <h4>Content Friendly</h4>
-                    <p>I understand what makes great social media content. I'll help you find those perfect shots and video angles for your TikTok/Instagram.</p>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                    </div>
+                    <h4>Content-Ready Experiences</h4>
+                    <p>
+                        I know what makes viral content. I'll help you find those perfect angles
+                        for TikTok and Instagram.
+                    </p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🤝</div>
-                    <h4>Small Groups Only</h4>
-                    <p>Private tours or tiny groups (2-8 people). No crowded buses, no rushed schedules. Your experience, your pace.</p>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h4>Small Groups, Big Experiences</h4>
+                    <p>
+                        Private or tiny groups (2-8). No crowded buses, no rushed schedules.
+                        Your pace, your adventure.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Preview -->
-    <section class="video-preview">
-        <div class="container">
-            <h2 class="section-title">SEE WHAT AWAITS YOU</h2>
-            <p class="section-subtitle">Real moments from real adventures</p>
-            <div class="video-container">
-                <!-- TikTok Embed Placeholder -->
-                <div class="video-placeholder">
-                    <p>🎥 Video Content Coming Soon</p>
-                    <p class="small">Follow <a href="https://www.tiktok.com/@chongqinghikes" target="_blank">@chongqinghikes</a> on TikTok</p>
+    <!-- Featured Experience -->
+    <section class="featured-section">
+        <div class="featured-container">
+            <div class="featured-image">
+                <div class="featured-overlay"></div>
+            </div>
+            <div class="featured-content">
+                <p class="featured-label">Featured Experience</p>
+                <h3 class="featured-title">Sunrise on Jinfo Mountain</h3>
+                <p class="featured-description">
+                    Wake before dawn. Climb through ancient forests. Watch the sun paint
+                    the karst peaks in gold and crimson. Share breakfast with a local family.
+                    This is Chongqing most travelers never see.
+                </p>
+                <div class="featured-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Duration</span>
+                        <span class="meta-value">Full Day</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Group Size</span>
+                        <span class="meta-value">2-6 People</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Difficulty</span>
+                        <span class="meta-value">Moderate</span>
+                    </div>
                 </div>
+                <a href="contact.html" class="btn-primary">Inquire About This Tour</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials-section">
         <div class="container">
-            <h2 class="section-title">WHAT TRAVELERS SAY</h2>
+            <div class="section-header">
+                <p class="section-label">Traveler Stories</p>
+                <h2 class="section-title">What They Say</h2>
+            </div>
+
             <div class="testimonials-grid">
-                <div class="testimonial">
+                <blockquote class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p>"Ryan took us to places we never would have found on our own. The sunrise hike was absolutely magical!"</p>
-                    <div class="testimonial-author">
-                        <strong>Sarah & Tom</strong>
-                        <span>Australia</span>
-                    </div>
-                </div>
-                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "Ryan took us to places we never would have found on our own.
+                        The sunrise hike was absolutely magical. He's not just a guide—he's a storyteller."
+                    </p>
+                    <footer class="testimonial-author">
+                        <cite>
+                            <strong>Sarah & Tom</strong>
+                            <span>Australia</span>
+                        </cite>
+                    </footer>
+                </blockquote>
+
+                <blockquote class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p>"Best hotpot of my life, and Ryan explained everything about Chongqing's history in perfect English. Highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <strong>Mike</strong>
-                        <span>USA</span>
-                    </div>
-                </div>
-                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "Best hotpot of my life, and Ryan explained everything about Chongqing's
+                        history in perfect English. He understood exactly what we wanted to see."
+                    </p>
+                    <footer class="testimonial-author">
+                        <cite>
+                            <strong>Mike Chen</strong>
+                            <span>USA</span>
+                        </cite>
+                    </footer>
+                </blockquote>
+
+                <blockquote class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p>"The wild hiking trail was incredible. Felt like we had the whole mountain to ourselves. Ryan is a fantastic guide!"</p>
-                    <div class="testimonial-author">
-                        <strong>Emma & Lucas</strong>
-                        <span>Germany</span>
-                    </div>
-                </div>
+                    <p class="testimonial-text">
+                        "The wild hiking trail was incredible. Felt like we had the whole mountain
+                        to ourselves. Ryan knows the real Chongqing, not the tourist version."
+                    </p>
+                    <footer class="testimonial-author">
+                        <cite>
+                            <strong>Emma & Lucas</strong>
+                            <span>Germany</span>
+                        </cite>
+                    </footer>
+                </blockquote>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
-            <h2>READY FOR YOUR ADVENTURE?</h2>
-            <p>Book your private tour today. Limited spots available each week.</p>
-            <a href="contact.html" class="btn-primary btn-large">Book Now</a>
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready for Your Adventure?</h2>
+                <p class="cta-subtitle">
+                    Limited spots available each week.
+                    Let's create your perfect Chongqing experience together.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary btn-large">
+                        Start Planning
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/8615696078461" class="btn-ghost" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -183,25 +367,74 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>CHONGQING HIKES</h3>
-                    <p>Your local English-speaking guide to the 8D city and wild mountains of Chongqing, China.</p>
+                    <h3 class="footer-logo">CHONGQING HIKES</h3>
+                    <p class="footer-tagline">
+                        Your local English-speaking guide to the 8D city
+                        and wild mountains of Chongqing, China.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.tiktok.com/@chongqinghikes" target="_blank" aria-label="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/chongqinghikes" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="17.5" cy="6.5" r="1.5"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Experiences</h4>
                     <ul>
                         <li><a href="city-tours.html">City Tours</a></li>
                         <li><a href="hiking.html">Wild Hiking</a></li>
-                        <li><a href="about.html">About Ryan</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Custom Tours</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ryan</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
                 <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>WhatsApp: +86 156 9607 8461</p>
-                    <p>Email: chongqinghikes@qq.com</p>
-                    <p>WeChat: Ryan-LGC</p>
+                    <h4>Get in Touch</h4>
+                    <p>
+                        <a href="https://wa.me/8615696078461">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp: +86 156 9607 8461
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:chongqinghikes@qq.com">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            chongqinghikes@qq.com
+                        </a>
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Chongqing, China
+                    </p>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Chongqing Hikes. All rights reserved.</p>
             </div>

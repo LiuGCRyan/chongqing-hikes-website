@@ -1,52 +1,10 @@
-/* ============================================
-   CHONGQING HIKES - Main JavaScript
-   ============================================ */
+// ============================================
+// Chongqing Hikes - Premium Travel Website
+// ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // ============================================
-    // Mobile Navigation Toggle
-    // ============================================
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            
-            // Animate hamburger to X
-            const spans = navToggle.querySelectorAll('span');
-            navToggle.classList.toggle('active');
-            
-            if (navToggle.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
-        });
-        
-        // Close menu when clicking a link
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-                
-                const spans = navToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            });
-        });
-    }
-    
-    // ============================================
-    // Navbar Background on Scroll
-    // ============================================
-    const navbar = document.querySelector('.navbar');
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
     
     function handleScroll() {
         if (window.scrollY > 50) {
@@ -59,34 +17,72 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check on load
     
-    // ============================================
-    // Smooth Scroll for Anchor Links
-    // ============================================
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            
+            // Animate hamburger to X
+            const spans = navToggle.querySelectorAll('span');
+            spans.forEach((span, index) => {
+                if (navMenu.classList.contains('active')) {
+                    if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    if (index === 1) span.style.opacity = '0';
+                    if (index === 2) span.style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    span.style.transform = 'none';
+                    span.style.opacity = '1';
+                }
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navbar.contains(e.target)) {
+                navMenu.classList.remove('active');
+                const spans = navToggle.querySelectorAll('span');
+                spans.forEach(span => {
+                    span.style.transform = 'none';
+                    span.style.opacity = '1';
+                });
+            }
+        });
+        
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const spans = navToggle.querySelectorAll('span');
+                spans.forEach(span => {
+                    span.style.transform = 'none';
+                    span.style.opacity = '1';
+                });
+            });
+        });
+    }
+    
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            
-            if (targetId === '#') return;
-            
-            const target = document.querySelector(targetId);
-            
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                e.preventDefault();
-                
-                const navHeight = navbar.offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 
                 window.scrollTo({
-                    top: targetPosition,
+                    top: offsetPosition,
                     behavior: 'smooth'
                 });
             }
         });
     });
     
-    // ============================================
-    // Scroll Animations
-    // ============================================
+    // Intersection Observer for fade-in animations
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -103,101 +99,81 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for animation
-    document.querySelectorAll('.feature, .testimonial, .path-card').forEach(el => {
-        observer.observe(el);
+    const animateElements = document.querySelectorAll(
+        '.experience-card, .why-card, .testimonial-card, .section-header'
+    );
+    
+    animateElements.forEach(el => observer.observe(el));
+    
+    // Parallax effect for hero (subtle)
+    const hero = document.querySelector('.hero');
+    
+    if (hero && window.innerWidth > 768) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * 0.3;
+            
+            if (scrolled < window.innerHeight) {
+                hero.style.backgroundPositionY = `${rate}px`;
+            }
+        });
+    }
+    
+    // Add loading state to buttons
+    document.querySelectorAll('.btn-primary, .btn-experience').forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Add a brief loading state for visual feedback
+            const originalContent = this.innerHTML;
+            this.style.opacity = '0.7';
+            this.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                this.innerHTML = originalContent;
+                this.style.opacity = '1';
+                this.style.pointerEvents = 'auto';
+            }, 200);
+        });
     });
     
-    // ============================================
-    // Active Navigation Link
-    // ============================================
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        const href = link.getAttribute('href');
-        
-        if (href === currentPage) {
-            link.classList.add('active');
-        }
-    });
-    
-    // ============================================
-    // Video Embed Handler (for future TikTok/YouTube)
-    // ============================================
-    function embedVideo(platform, videoId, container) {
-        const videoContainer = document.querySelector(container);
-        
-        if (!videoContainer) return;
-        
-        if (platform === 'youtube') {
-            videoContainer.innerHTML = `
-                <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/${videoId}" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            `;
-        } else if (platform === 'tiktok') {
-            videoContainer.innerHTML = `
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@chongqinghikes/video/${videoId}" data-video-id="${videoId}">
-                    <a href="https://www.tiktok.com/@chongqinghikes/video/${videoId}">Watch on TikTok</a>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-            `;
-        }
+    // Lazy load images (if needed in future)
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Fallback for browsers that don't support lazy loading
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+        document.body.appendChild(script);
     }
     
-    // ============================================
-    // Form Handling (for contact page)
-    // ============================================
-    const contactForm = document.querySelector('#contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Here you would normally send to a backend
-            // For now, we'll open WhatsApp with the message
-            
-            const message = `Hi Ryan! I'm interested in booking a tour.\n\nName: ${data.name}\nEmail: ${data.email}\nTour: ${data.tour || 'Not specified'}\nMessage: ${data.message || 'No message'}`;
-            
-            const whatsappUrl = `https://wa.me/8615696078461?text=${encodeURIComponent(message)}`;
-            
-            window.open(whatsappUrl, '_blank');
-        });
-    }
-    
-    // ============================================
-    // Image Lazy Loading (for future images)
-    // ============================================
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        document.querySelectorAll('img.lazy').forEach(img => {
-            imageObserver.observe(img);
-        });
-    }
-    
-    // ============================================
-    // Console Welcome Message
-    // ============================================
-    console.log('%c🏔️ Chongqing Hikes', 'font-size: 24px; font-weight: bold; color: #ff6b35;');
-    console.log('%cExplore the 8D City & Wild Mountains', 'font-size: 14px; color: #b0b8c1;');
-    console.log('%cBuilt with ❤️ for adventure seekers', 'font-size: 12px; color: #6b7280;');
-    
+    // Console branding
+    console.log('%c🏔️ Chongqing Hikes', 'font-size: 24px; font-weight: bold; color: #c9a961;');
+    console.log('%cDiscover the 8D wonderland with a local guide', 'font-size: 14px; color: #4a4a4a;');
+    console.log('%cWhatsApp: +86 156 9607 8461', 'font-size: 12px; color: #7a7a7a;');
 });
+
+// Helper function to check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Debounce function for performance
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
