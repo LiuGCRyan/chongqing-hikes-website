@@ -1,0 +1,16 @@
+/* 图片目录 */
+
+请将你的图片放在这个文件夹中：
+
+- 个人照片：about-photo.jpg
+- 城市游照片：city-1.jpg, city-2.jpg, city-3.jpg, city-4.jpg
+- 徒步照片：hiking-1.jpg, hiking-2.jpg, hiking-3.jpg, hiking-4.jpg, hiking-5.jpg
+- Hero 背景：hero-bg.jpg
+
+建议格式：JPG 或 WebP
+建议尺寸：
+- Hero：1920x1080px
+- Tour 卡片：800x600px
+- 个人照片：500x500px
+
+放好图片后，在 HTML 文件中添加 <img> 标签引用。

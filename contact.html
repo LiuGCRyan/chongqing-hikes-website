@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Chongqing Hikes | Book Your Adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CHONGQING HIKES</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city-tours.html">City Tours</a></li>
+                <li><a href="hiking.html">Wild Hiking</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn-nav active">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="page-hero contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>BOOK YOUR ADVENTURE</h1>
+            <p class="hero-subtitle">Let's plan your perfect Chongqing experience</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>GET IN TOUCH</h2>
+                    <p class="intro">The easiest way to book is through WhatsApp. I respond within a few hours (usually faster during daytime China time).</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/8615696078461" class="contact-method whatsapp" target="_blank">
+                            <div class="method-icon">💬</div>
+                            <div class="method-content">
+                                <h4>WhatsApp (Preferred)</h4>
+                                <p>+86 156 9607 8461</p>
+                                <span class="method-note">Fastest response</span>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:chongqinghikes@qq.com" class="contact-method email">
+                            <div class="method-icon">📧</div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>chongqinghikes@qq.com</p>
+                                <span class="method-note">For detailed inquiries</span>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-method wechat">
+                            <div class="method-icon">📱</div>
+                            <div class="method-content">
+                                <h4>WeChat</h4>
+                                <p>Ryan-LGC</p>
+                                <span class="method-note">If you're already in China</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="response-time">
+                        <h4>⏰ Response Time</h4>
+                        <p>I typically respond within <strong>2-4 hours</strong> during daytime (8:00 - 22:00 China Standard Time, UTC+8). For urgent matters, WhatsApp is fastest.</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Form -->
+                <div class="contact-form-wrapper">
+                    <h2>QUICK INQUIRY</h2>
+                    <p>Fill this out and I'll get back to you via WhatsApp or email.</p>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Smith">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp (optional)</label>
+                            <input type="text" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8900">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tour">Interested In *</label>
+                            <select id="tour" name="tour" required>
+                                <option value="">Select a tour type...</option>
+                                <optgroup label="City Tours">
+                                    <option value="half-day-city">Half-Day City Walk (¥300)</option>
+                                    <option value="full-day-city">Full-Day Deep Dive (¥700)</option>
+                                    <option value="food-night">Food & Night Tour (¥500)</option>
+                                    <option value="custom-city">Custom City Tour</option>
+                                </optgroup>
+                                <optgroup label="Wild Hiking">
+                                    <option value="nanshan">Nanshan Forest Trail (¥400)</option>
+                                    <option value="gele">Gele Mountain Traverse (¥600)</option>
+                                    <option value="jinyun">Jinyun Mountain Summit (¥500)</option>
+                                    <option value="wulong">Wulong Karst Day Trip (¥900)</option>
+                                    <option value="iron-peak">Iron Peak Ridge (¥700)</option>
+                                    <option value="custom-hike">Custom Hiking Adventure</option>
+                                </optgroup>
+                                <option value="unsure">Not sure yet - need advice</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Preferred Date(s)</label>
+                            <input type="text" id="date" name="date" placeholder="Flexible, or specific dates (e.g., March 15-17, 2026)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="people">Number of People</label>
+                            <select id="people" name="people">
+                                <option value="1">1 person</option>
+                                <option value="2" selected>2 people</option>
+                                <option value="3">3 people</option>
+                                <option value="4">4 people</option>
+                                <option value="5+">5+ people</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Any Questions or Requests?</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Dietary restrictions, fitness level, special interests, etc."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-large btn-full">Send Inquiry</button>
+                        <p class="form-note">By submitting, you'll be redirected to WhatsApp to complete your message.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">FREQUENTLY ASKED</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How do I pay?</h4>
+                    <p>I accept PayPal for international clients, WeChat Pay / Alipay if you're already in China. A 20% deposit secures your date; remaining balance can be paid on the day.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What's your cancellation policy?</h4>
+                    <p>Full refund if cancelled 48+ hours before. 50% refund if 24-48 hours. No refund for less than 24 hours notice (I can try to reschedule instead).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you pick up from hotels?</h4>
+                    <p>Yes! For city tours, I'll meet you at your hotel lobby. For hiking trips, I'll arrange transport or meet you at a convenient starting point.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if it rains?</h4>
+                    <p>Light rain = we go (it's part of the experience). Heavy rain = I'll suggest rescheduling or switching to indoor activities. Your safety comes first.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can you help with other travel needs?</h4>
+                    <p>Happy to help with hotel recommendations, train bookings, and general China travel advice. Just ask!</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Are your tours suitable for all fitness levels?</h4>
+                    <p>City tours: Yes, anyone can join (just expect stairs!). Hiking: Check the difficulty rating — I'll recommend the right trail for your fitness level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>READY TO EXPLORE CHONGQING?</h2>
+            <p>Message me now and let's start planning your adventure.</p>
+            <a href="https://wa.me/8615696078461" class="btn-primary btn-large" target="_blank">Message on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CHONGQING HIKES</h3>
+                    <p>Your local English-speaking guide to the 8D city and wild mountains of Chongqing, China.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="city-tours.html">City Tours</a></li>
+                        <li><a href="hiking.html">Wild Hiking</a></li>
+                        <li><a href="about.html">About Ryan</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: +86 156 9607 8461</p>
+                    <p>Email: chongqinghikes@qq.com</p>
+                    <p>WeChat: Ryan-LGC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chongqing Hikes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
