@@ -1,0 +1,909 @@
+﻿{
+  "ok": true,
+  "command": "run",
+  "data": {
+    "browser_command": "snapshot -i",
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://vacations.ctrip.com/list/whole/sc4.html?sv=%E9%87%8D%E5%BA%86&startcity=4&st=%E9%87%8D%E5%BA%86&p=1",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "generic"
+          },
+          "e10": {
+            "name": "",
+            "role": "generic"
+          },
+          "e100": {
+            "name": "",
+            "role": "generic"
+          },
+          "e101": {
+            "name": "",
+            "role": "generic"
+          },
+          "e102": {
+            "name": "",
+            "role": "generic"
+          },
+          "e103": {
+            "name": "",
+            "role": "generic"
+          },
+          "e104": {
+            "name": "",
+            "role": "generic"
+          },
+          "e105": {
+            "name": "",
+            "role": "generic"
+          },
+          "e106": {
+            "name": "",
+            "role": "generic"
+          },
+          "e107": {
+            "name": "",
+            "role": "generic"
+          },
+          "e108": {
+            "name": "",
+            "role": "generic"
+          },
+          "e109": {
+            "name": "",
+            "role": "generic"
+          },
+          "e11": {
+            "name": "",
+            "role": "generic"
+          },
+          "e110": {
+            "name": "",
+            "role": "generic"
+          },
+          "e111": {
+            "name": "",
+            "role": "generic"
+          },
+          "e112": {
+            "name": "",
+            "role": "generic"
+          },
+          "e113": {
+            "name": "",
+            "role": "generic"
+          },
+          "e114": {
+            "name": "",
+            "role": "generic"
+          },
+          "e115": {
+            "name": "",
+            "role": "generic"
+          },
+          "e116": {
+            "name": "",
+            "role": "generic"
+          },
+          "e117": {
+            "name": "",
+            "role": "generic"
+          },
+          "e118": {
+            "name": "",
+            "role": "generic"
+          },
+          "e119": {
+            "name": "",
+            "role": "generic"
+          },
+          "e12": {
+            "name": "",
+            "role": "generic"
+          },
+          "e120": {
+            "name": "",
+            "role": "generic"
+          },
+          "e121": {
+            "name": "",
+            "role": "generic"
+          },
+          "e122": {
+            "name": "",
+            "role": "generic"
+          },
+          "e123": {
+            "name": "",
+            "role": "generic"
+          },
+          "e124": {
+            "name": "",
+            "role": "generic"
+          },
+          "e125": {
+            "name": "",
+            "role": "generic"
+          },
+          "e126": {
+            "name": "",
+            "role": "generic"
+          },
+          "e127": {
+            "name": "",
+            "role": "generic"
+          },
+          "e128": {
+            "name": "",
+            "role": "generic"
+          },
+          "e129": {
+            "name": "",
+            "role": "generic"
+          },
+          "e13": {
+            "name": "",
+            "role": "generic"
+          },
+          "e130": {
+            "name": "",
+            "role": "generic"
+          },
+          "e131": {
+            "name": "",
+            "role": "generic"
+          },
+          "e132": {
+            "name": "",
+            "role": "generic"
+          },
+          "e133": {
+            "name": "",
+            "role": "generic"
+          },
+          "e134": {
+            "name": "",
+            "role": "generic"
+          },
+          "e135": {
+            "name": "",
+            "role": "generic"
+          },
+          "e136": {
+            "name": "",
+            "role": "generic"
+          },
+          "e137": {
+            "name": "",
+            "role": "generic"
+          },
+          "e138": {
+            "name": "",
+            "role": "generic"
+          },
+          "e139": {
+            "name": "",
+            "role": "generic"
+          },
+          "e14": {
+            "name": "",
+            "role": "generic"
+          },
+          "e140": {
+            "name": "",
+            "role": "generic"
+          },
+          "e141": {
+            "name": "",
+            "role": "generic"
+          },
+          "e142": {
+            "name": "",
+            "role": "generic"
+          },
+          "e143": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e144": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e145": {
+            "name": "Copyright©",
+            "role": "link"
+          },
+          "e146": {
+            "name": "ctrip.com",
+            "role": "link"
+          },
+          "e147": {
+            "name": "ICP证：沪B2-20050130 | ",
+            "role": "link"
+          },
+          "e148": {
+            "name": "沪ICP备08023580号-3 | ",
+            "role": "link"
+          },
+          "e149": {
+            "name": "网信算备310105117481904230015号",
+            "role": "link"
+          },
+          "e15": {
+            "name": "",
+            "role": "generic"
+          },
+          "e150": {
+            "name": "沪公网备31010502002731号",
+            "role": "link"
+          },
+          "e151": {
+            "name": "互联网药品信息服务资格证",
+            "role": "link"
+          },
+          "e152": {
+            "name": "（沪）网械平台备字[2022]第00001号",
+            "role": "link"
+          },
+          "e153": {
+            "name": "旅游度假资质",
+            "role": "link"
+          },
+          "e154": {
+            "name": "平台信息",
+            "role": "link"
+          },
+          "e155": {
+            "name": "资质与规则",
+            "role": "link"
+          },
+          "e156": {
+            "name": "上海市旅游网站落实诚信建设主体责任承诺书",
+            "role": "link"
+          },
+          "e157": {
+            "name": "上海市监",
+            "role": "link"
+          },
+          "e158": {
+            "name": "网络社会征信网",
+            "role": "link"
+          },
+          "e159": {
+            "name": "信息举报中心",
+            "role": "link"
+          },
+          "e16": {
+            "name": "",
+            "role": "generic"
+          },
+          "e160": {
+            "name": "可信网站",
+            "role": "link"
+          },
+          "e161": {
+            "name": "信用中国",
+            "role": "link"
+          },
+          "e162": {
+            "name": "网上有害信息举报专区",
+            "role": "link"
+          },
+          "e163": {
+            "name": "消费维权联络点",
+            "role": "link"
+          },
+          "e164": {
+            "name": "酒店 按回车键打开菜单",
+            "role": "button"
+          },
+          "e165": {
+            "name": "机票 按回车键打开菜单",
+            "role": "button"
+          },
+          "e166": {
+            "name": "火车票 按回车键打开菜单",
+            "role": "button"
+          },
+          "e167": {
+            "name": "旅游 按回车键打开菜单",
+            "role": "button"
+          },
+          "e168": {
+            "name": "门票·活动 按回车键打开菜单",
+            "role": "button"
+          },
+          "e169": {
+            "name": "汽车·船票 按回车键打开菜单",
+            "role": "button"
+          },
+          "e17": {
+            "name": "",
+            "role": "generic"
+          },
+          "e170": {
+            "name": "用车 按回车键打开菜单",
+            "role": "button"
+          },
+          "e171": {
+            "name": "AI行程助手 按回车键打开菜单",
+            "role": "button"
+          },
+          "e172": {
+            "name": "攻略·景点 按回车键打开菜单",
+            "role": "button"
+          },
+          "e173": {
+            "name": "旅游地图 按回车键打开菜单",
+            "role": "button"
+          },
+          "e174": {
+            "name": "全球购 按回车键打开菜单",
+            "role": "button"
+          },
+          "e175": {
+            "name": "礼品卡 按回车键打开菜单",
+            "role": "button"
+          },
+          "e176": {
+            "name": "携程金融 按回车键打开菜单",
+            "role": "button"
+          },
+          "e177": {
+            "name": "企业商旅 按回车键打开菜单",
+            "role": "button"
+          },
+          "e178": {
+            "name": "老友会 按回车键打开菜单",
+            "role": "button"
+          },
+          "e179": {
+            "name": "关于携程 按回车键打开菜单",
+            "role": "button"
+          },
+          "e18": {
+            "name": "",
+            "role": "generic"
+          },
+          "e180": {
+            "name": "",
+            "role": "generic"
+          },
+          "e181": {
+            "name": "搜旅任何旅行相关...",
+            "role": "textbox"
+          },
+          "e182": {
+            "name": "󰩬",
+            "role": "link"
+          },
+          "e183": {
+            "name": "热门目的地",
+            "role": "term"
+          },
+          "e184": {
+            "name": "",
+            "role": "generic"
+          },
+          "e185": {
+            "name": "",
+            "role": "generic"
+          },
+          "e186": {
+            "name": "",
+            "role": "generic"
+          },
+          "e187": {
+            "name": "",
+            "role": "textbox"
+          },
+          "e188": {
+            "name": "",
+            "role": "textbox"
+          },
+          "e189": {
+            "name": "宾馆索引",
+            "role": "link"
+          },
+          "e19": {
+            "name": "",
+            "role": "generic"
+          },
+          "e190": {
+            "name": "攻略索引",
+            "role": "link"
+          },
+          "e191": {
+            "name": "机票索引",
+            "role": "link"
+          },
+          "e192": {
+            "name": "网站导航",
+            "role": "link"
+          },
+          "e193": {
+            "name": "旅游索引",
+            "role": "link"
+          },
+          "e194": {
+            "name": "邮轮索引",
+            "role": "link"
+          },
+          "e195": {
+            "name": "企业差旅索引",
+            "role": "link"
+          },
+          "e196": {
+            "name": "分销联盟",
+            "role": "link"
+          },
+          "e197": {
+            "name": "友情链接",
+            "role": "link"
+          },
+          "e198": {
+            "name": "企业礼品卡采购",
+            "role": "link"
+          },
+          "e199": {
+            "name": "保险代理",
+            "role": "link"
+          },
+          "e2": {
+            "name": "",
+            "role": "generic"
+          },
+          "e20": {
+            "name": "携程旅游",
+            "role": "heading"
+          },
+          "e200": {
+            "name": "代理合作",
+            "role": "link"
+          },
+          "e201": {
+            "name": "酒店加盟",
+            "role": "link"
+          },
+          "e202": {
+            "name": "目的地及景区合作",
+            "role": "link"
+          },
+          "e203": {
+            "name": "更多加盟合作",
+            "role": "link"
+          },
+          "e204": {
+            "name": "关于携程",
+            "role": "link"
+          },
+          "e205": {
+            "name": "联系我们",
+            "role": "link"
+          },
+          "e206": {
+            "name": "诚聘英才",
+            "role": "link"
+          },
+          "e207": {
+            "name": "用户协议",
+            "role": "link"
+          },
+          "e208": {
+            "name": "隐私政策",
+            "role": "link"
+          },
+          "e209": {
+            "name": "营业执照",
+            "role": "link"
+          },
+          "e21": {
+            "name": "",
+            "role": "generic"
+          },
+          "e210": {
+            "name": "安全中心",
+            "role": "link"
+          },
+          "e211": {
+            "name": "携程内容中心",
+            "role": "link"
+          },
+          "e212": {
+            "name": "知识产权",
+            "role": "link"
+          },
+          "e213": {
+            "name": "Trip.com Group",
+            "role": "link"
+          },
+          "e214": {
+            "name": "注册",
+            "role": "button"
+          },
+          "e215": {
+            "name": "",
+            "role": "generic"
+          },
+          "e216": {
+            "name": "重庆站",
+            "role": "term"
+          },
+          "e217": {
+            "name": "",
+            "role": "textbox"
+          },
+          "e218": {
+            "name": "",
+            "role": "generic"
+          },
+          "e219": {
+            "name": "登录",
+            "role": "button"
+          },
+          "e22": {
+            "name": "旅游",
+            "role": "link"
+          },
+          "e220": {
+            "name": "我的订单",
+            "role": "button"
+          },
+          "e221": {
+            "name": "携程客服",
+            "role": "button"
+          },
+          "e222": {
+            "name": "扫码下载携程App或关注微信公众号",
+            "role": "button"
+          },
+          "e223": {
+            "name": "全部产品",
+            "role": "link"
+          },
+          "e23": {
+            "name": "重庆旅游",
+            "role": "heading"
+          },
+          "e24": {
+            "name": "全部",
+            "role": "link"
+          },
+          "e25": {
+            "name": "出发地参团",
+            "role": "link"
+          },
+          "e26": {
+            "name": "私家团",
+            "role": "link"
+          },
+          "e27": {
+            "name": "自由行",
+            "role": "link"
+          },
+          "e28": {
+            "name": "一日游",
+            "role": "link"
+          },
+          "e29": {
+            "name": "邮轮",
+            "role": "link"
+          },
+          "e3": {
+            "name": "",
+            "role": "generic"
+          },
+          "e30": {
+            "name": "亲子·游学",
+            "role": "link"
+          },
+          "e31": {
+            "name": "跟团店铺",
+            "role": "link"
+          },
+          "e32": {
+            "name": "私家团店铺",
+            "role": "link"
+          },
+          "e33": {
+            "name": "景点门票",
+            "role": "link"
+          },
+          "e34": {
+            "name": "",
+            "role": "spinbutton"
+          },
+          "e35": {
+            "name": "",
+            "role": "spinbutton"
+          },
+          "e36": {
+            "name": "",
+            "role": "generic"
+          },
+          "e37": {
+            "name": "",
+            "role": "generic"
+          },
+          "e38": {
+            "name": "",
+            "role": "generic"
+          },
+          "e39": {
+            "name": "",
+            "role": "generic"
+          },
+          "e4": {
+            "name": "",
+            "role": "generic"
+          },
+          "e40": {
+            "name": "",
+            "role": "generic"
+          },
+          "e41": {
+            "name": "",
+            "role": "generic"
+          },
+          "e42": {
+            "name": "",
+            "role": "generic"
+          },
+          "e43": {
+            "name": "",
+            "role": "generic"
+          },
+          "e44": {
+            "name": "",
+            "role": "generic"
+          },
+          "e45": {
+            "name": "",
+            "role": "generic"
+          },
+          "e46": {
+            "name": "",
+            "role": "generic"
+          },
+          "e47": {
+            "name": "",
+            "role": "generic"
+          },
+          "e48": {
+            "name": "",
+            "role": "generic"
+          },
+          "e49": {
+            "name": "",
+            "role": "generic"
+          },
+          "e5": {
+            "name": "",
+            "role": "generic"
+          },
+          "e50": {
+            "name": "",
+            "role": "generic"
+          },
+          "e51": {
+            "name": "",
+            "role": "generic"
+          },
+          "e52": {
+            "name": "",
+            "role": "generic"
+          },
+          "e53": {
+            "name": "",
+            "role": "generic"
+          },
+          "e54": {
+            "name": "",
+            "role": "generic"
+          },
+          "e55": {
+            "name": "",
+            "role": "generic"
+          },
+          "e56": {
+            "name": "",
+            "role": "generic"
+          },
+          "e57": {
+            "name": "",
+            "role": "generic"
+          },
+          "e58": {
+            "name": "",
+            "role": "generic"
+          },
+          "e59": {
+            "name": "",
+            "role": "generic"
+          },
+          "e6": {
+            "name": "",
+            "role": "generic"
+          },
+          "e60": {
+            "name": "",
+            "role": "generic"
+          },
+          "e61": {
+            "name": "",
+            "role": "generic"
+          },
+          "e62": {
+            "name": "",
+            "role": "generic"
+          },
+          "e63": {
+            "name": "",
+            "role": "generic"
+          },
+          "e64": {
+            "name": "",
+            "role": "generic"
+          },
+          "e65": {
+            "name": "",
+            "role": "generic"
+          },
+          "e66": {
+            "name": "",
+            "role": "spinbutton"
+          },
+          "e67": {
+            "name": "确定",
+            "role": "button"
+          },
+          "e68": {
+            "name": "携程旅行网",
+            "role": "link"
+          },
+          "e69": {
+            "name": "无障碍阅读开关",
+            "role": "button"
+          },
+          "e7": {
+            "name": "",
+            "role": "generic"
+          },
+          "e70": {
+            "name": "关怀版",
+            "role": "button"
+          },
+          "e71": {
+            "name": "",
+            "role": "DescriptionList"
+          },
+          "e72": {
+            "name": "搜 索",
+            "role": "link"
+          },
+          "e73": {
+            "name": "",
+            "role": "generic"
+          },
+          "e74": {
+            "name": "",
+            "role": "generic"
+          },
+          "e75": {
+            "name": "",
+            "role": "generic"
+          },
+          "e76": {
+            "name": "",
+            "role": "generic"
+          },
+          "e77": {
+            "name": "",
+            "role": "generic"
+          },
+          "e78": {
+            "name": "",
+            "role": "generic"
+          },
+          "e79": {
+            "name": "",
+            "role": "generic"
+          },
+          "e8": {
+            "name": "",
+            "role": "generic"
+          },
+          "e80": {
+            "name": "",
+            "role": "generic"
+          },
+          "e81": {
+            "name": "",
+            "role": "generic"
+          },
+          "e82": {
+            "name": "",
+            "role": "generic"
+          },
+          "e83": {
+            "name": "",
+            "role": "generic"
+          },
+          "e84": {
+            "name": "",
+            "role": "generic"
+          },
+          "e85": {
+            "name": "",
+            "role": "generic"
+          },
+          "e86": {
+            "name": "",
+            "role": "generic"
+          },
+          "e87": {
+            "name": "",
+            "role": "generic"
+          },
+          "e88": {
+            "name": "",
+            "role": "generic"
+          },
+          "e89": {
+            "name": "",
+            "role": "generic"
+          },
+          "e9": {
+            "name": "",
+            "role": "generic"
+          },
+          "e90": {
+            "name": "",
+            "role": "generic"
+          },
+          "e91": {
+            "name": "",
+            "role": "generic"
+          },
+          "e92": {
+            "name": "",
+            "role": "generic"
+          },
+          "e93": {
+            "name": "",
+            "role": "generic"
+          },
+          "e94": {
+            "name": "",
+            "role": "generic"
+          },
+          "e95": {
+            "name": "",
+            "role": "generic"
+          },
+          "e96": {
+            "name": "",
+            "role": "generic"
+          },
+          "e97": {
+            "name": "",
+            "role": "generic"
+          },
+          "e98": {
+            "name": "",
+            "role": "generic"
+          },
+          "e99": {
+            "name": "",
+            "role": "generic"
+          }
+        },
+        "snapshot": "- generic [ref=e21] clickable [cursor:pointer]\n- button \"酒店 按回车键打开菜单\" [ref=e164]\n- button \"机票 按回车键打开菜单\" [ref=e165]\n- button \"火车票 按回车键打开菜单\" [ref=e166]\n- button \"旅游 按回车键打开菜单\" [ref=e167]\n- button \"门票·活动 按回车键打开菜单\" [ref=e168]\n- button \"汽车·船票 按回车键打开菜单\" [ref=e169]\n- button \"用车 按回车键打开菜单\" [ref=e170]\n- button \"AI行程助手 按回车键打开菜单\" [ref=e171]\n- button \"攻略·景点 按回车键打开菜单\" [ref=e172]\n- button \"旅游地图 按回车键打开菜单\" [ref=e173]\n- button \"全球购 按回车键打开菜单\" [ref=e174]\n- button \"礼品卡 按回车键打开菜单\" [ref=e175]\n- button \"携程金融 按回车键打开菜单\" [ref=e176]\n- button \"企业商旅 按回车键打开菜单\" [ref=e177]\n- button \"老友会 按回车键打开菜单\" [ref=e178]\n- button \"关于携程 按回车键打开菜单\" [ref=e179]\n- generic [ref=e180] clickable [cursor:pointer]\n- link \"携程旅行网\" [ref=e68]\n- textbox \"搜旅任何旅行相关...\" [ref=e181]\n- link \"󰩬\" [ref=e182]\n- button \"登录\" [ref=e219]\n- button \"注册\" [ref=e214]\n- generic \"我的订单\" [ref=e215] clickable [cursor:pointer]\n  - button \"我的订单\" [ref=e220]\n- button \"携程客服\" [ref=e221]\n- button \"扫码下载携程App或关注微信公众号\" [ref=e222]\n- button \"无障碍阅读开关\" [ref=e69]\n- button \"关怀版\" [ref=e70]\n- term \"重庆站\" [ref=e216] clickable [cursor:pointer, onclick]\n- DescriptionList \"热门目的地\" [ref=e71] clickable [onclick]\n  - term \"热门目的地\" [ref=e183] clickable [cursor:pointer]\n- textbox [ref=e217]: 重庆\n- link \"全部产品\" [ref=e223]\n- link \"搜索\" [ref=e72]\n- generic \"旅游>重庆旅游\" [ref=e1] clickable [onclick]\n  - link \"旅游\" [ref=e22]\n  - heading \"重庆旅游\" [level=1, ref=e23]\n- generic \"全部出发地参团私家团自由行一日游邮轮亲子·游学跟团店铺私家团店铺景点门票\" [ref=e2] clickable [onclick]\n  - link \"全部\" [ref=e24]\n  - link \"出发地参团\" [ref=e25]\n  - link \"私家团\" [ref=e26]\n  - link \"自由行\" [ref=e27]\n  - link \"一日游\" [ref=e28]\n  - link \"邮轮\" [ref=e29]\n  - link \"亲子·游学\" [ref=e30]\n  - link \"跟团店铺\" [ref=e31]\n  - link \"私家团店铺\" [ref=e32]\n  - link \"景点门票\" [ref=e33]\n- generic \"当地参团\" [ref=e73] clickable [cursor:pointer, onclick]\n- generic \"携程自营\" [ref=e74] clickable [cursor:pointer, onclick]\n- generic \"无购物\" [ref=e75] clickable [cursor:pointer, onclick]\n- generic \"最多9人团\" [ref=e76] clickable [cursor:pointer, onclick]\n- generic \"亲子甄选\" [ref=e77] clickable [cursor:pointer, onclick]\n- generic \"更多\" [ref=e184] clickable [cursor:pointer, onclick]\n- generic \"1日(34%选择)\" [ref=e78] clickable [cursor:pointer, onclick]\n- generic \"2日(21%选择)\" [ref=e79] clickable [cursor:pointer, onclick]\n- generic \"3日\" [ref=e80] clickable [cursor:pointer, onclick]\n- generic \"4日(17%选择)\" [ref=e81] clickable [cursor:pointer, onclick]\n- generic \"5日\" [ref=e82] clickable [cursor:pointer, onclick]\n- generic \"6日\" [ref=e83] clickable [cursor:pointer, onclick]\n- generic \"7日\" [ref=e84] clickable [cursor:pointer, onclick]\n- generic \"8日\" [ref=e85] clickable [cursor:pointer, onclick]\n- generic \"9日\" [ref=e86] clickable [cursor:pointer, onclick]\n- generic \"10日\" [ref=e87] clickable [cursor:pointer, onclick]\n- generic \"11日\" [ref=e88] clickable [cursor:pointer, onclick]\n- generic \"12日\" [ref=e89] clickable [cursor:pointer, onclick]\n- generic \"13日\" [ref=e90] clickable [cursor:pointer, onclick]\n- generic \"14日\" [ref=e91] clickable [cursor:pointer, onclick]\n- generic \"15日及以上\" [ref=e92] clickable [cursor:pointer, onclick]\n- generic \"更多\" [ref=e185] clickable [cursor:pointer, onclick]\n- generic \"重庆一地\" [ref=e93] clickable [cursor:pointer, onclick]\n- generic \"武隆+重庆\" [ref=e94] clickable [cursor:pointer, onclick]\n- generic \"武隆+涪陵+重庆\" [ref=e95] clickable [cursor:pointer, onclick]\n- generic \"武隆+彭水+重庆\" [ref=e96] clickable [cursor:pointer, onclick]\n- generic \"重庆+武隆+涪陵+仙女山\" [ref=e97] clickable [cursor:pointer, onclick]\n- generic \"重庆+宜昌+长江三峡\" [ref=e98] clickable [cursor:pointer, onclick]\n- generic \"武隆+彭水\" [ref=e99] clickable [cursor:pointer, onclick]\n- generic \"武隆+仙女山\" [ref=e100] clickable [cursor:pointer, onclick]\n- generic \"重庆+成都+三星堆\" [ref=e101] clickable [cursor:pointer, onclick]\n- generic \"重庆+成都+黄龙+九寨沟+三星堆\" [ref=e102] clickable [cursor:pointer, onclick]\n- generic \"重庆+成都+黄龙+九寨沟\" [ref=e103] clickable [cursor:pointer, onclick]\n- generic \"武隆+涪陵\" [ref=e104] clickable [cursor:pointer, onclick]\n- generic \"重庆+成都+都江堰+青城山+三星堆\" [ref=e105] clickable [cursor:pointer, onclick]\n- generic \"武隆+涪陵+大足+重庆\" [ref=e106] clickable [cursor:pointer, onclick]\n- generic \"重庆+宜昌+恩施+长江三峡\" [ref=e107] clickable [cursor:pointer, onclick]\n- generic \"重庆+成都+都江堰\" [ref=e108] clickable [cursor:pointer, onclick]\n- generic \"武隆+大足+重庆\" [ref=e109] clickable [cursor:pointer, onclick]\n- generic \"重庆+宜昌+长江三峡+武隆\" [ref=e110] clickable [cursor:pointer, onclick]\n- generic \"重庆+武汉+宜昌+长江三峡\" [ref=e111] clickable [cursor:pointer, onclick]\n- generic \"重庆+成都+九寨沟\" [ref=e112] clickable [cursor:pointer, onclick]\n- generic \"更多\" [ref=e186] clickable [cursor:pointer, onclick]\n- generic \"瞿塘峡\" [ref=e113] clickable [cursor:pointer, onclick]\n- generic \"巫峡\" [ref=e114] clickable [cursor:pointer, onclick]\n- generic \"三峡大坝旅游区\" [ref=e115] clickable [cursor:pointer, onclick]\n- generic \"夔门\" [ref=e116] clickable [cursor:pointer, onclick]\n- generic \"丰都鬼城名山景区\" [ref=e117] clickable [cursor:pointer, onclick]\n- generic \"三峡垂直升船机\" [ref=e118] clickable [cursor:pointer, onclick]\n- generic \"白帝城\" [ref=e119] clickable [cursor:pointer, onclick]\n- generic \"长江三峡\" [ref=e120] clickable [cursor:pointer, onclick]\n- generic \"长江索道\" [ref=e121] clickable [cursor:pointer, onclick]\n- generic \"洪崖洞民俗风貌区\" [ref=e122] clickable [cursor:pointer, onclick]\n- generic \"李子坝轻轨站\" [ref=e123] clickable [cursor:pointer, onclick]\n- generic \"磁器口古镇\" [ref=e124] clickable [cursor:pointer, onclick]\n- generic \"神女溪景区\" [ref=e125] clickable [cursor:pointer, onclick]\n- generic \"巫山小三峡\" [ref=e126] clickable [cursor:pointer, onclick]\n- generic \"解放碑步行街\" [ref=e127] clickable [cursor:pointer, onclick]\n- generic \"大型山水实景演艺《烽烟三国》\" [ref=e128] clickable [cursor:pointer, onclick]\n- generic \"白公馆\" [ref=e129] clickable [cursor:pointer, onclick]\n- generic \"山城步道\" [ref=e130] clickable [cursor:pointer, onclick]\n- generic \"185观景平台\" [ref=e131] clickable [cursor:pointer, onclick]\n- generic \"坛子岭风景区\" [ref=e132] clickable [cursor:pointer, onclick]\n- generic \"重庆(95%选择)\" [ref=e133] clickable [cursor:pointer, onclick]\n- generic \"云阳\" [ref=e134] clickable [cursor:pointer, onclick]\n- generic \"跟团游\" [ref=e135] clickable [cursor:pointer, onclick]\n- generic \"私家团\" [ref=e136] clickable [cursor:pointer, onclick]\n- generic \"自由行\" [ref=e137] clickable [cursor:pointer, onclick]\n- generic \"一日游\" [ref=e138] clickable [cursor:pointer, onclick]\n- generic \"2钻及以下(经济型)\" [ref=e139] clickable [cursor:pointer, onclick]\n- generic \"3钻(舒适型)\" [ref=e140] clickable [cursor:pointer, onclick]\n- generic \"4钻(高档型)\" [ref=e141] clickable [cursor:pointer, onclick]\n- generic \"5钻(豪华型)\" [ref=e142] clickable [cursor:pointer, onclick]\n- textbox [ref=e187]\n- textbox [ref=e188]\n- generic \"服务保障 / 出行人群 / 供应商 / 交通方式 / 团队规模\" [ref=e218] clickable [cursor:pointer, onclick]\n- generic \"推荐排序\" [ref=e3] clickable [cursor:pointer, onclick]\n- generic \"近期销量优先\" [ref=e4] clickable [cursor:pointer, onclick]\n- generic \"好评优先\" [ref=e5] clickable [cursor:pointer, onclick]\n- generic \"价格价格 低 → 高价格 高 → 低\" [ref=e6] clickable [cursor:pointer]\n- spinbutton [ref=e34]\n- spinbutton [ref=e35]\n- generic [ref=e7] clickable [cursor:pointer, onclick]\n- generic [ref=e8] clickable [cursor:pointer, onclick]\n- generic \"拼小团重庆出发武隆区2日1晚拼小团8人纯玩团·赠树顶漫步+5A奇景『武陵山大裂谷+天生三桥+仙女山』+816工程丨A线4钻酒店提前2天免费退0购物立即确认成团保障上门接0购物0自费活动森林4.8分已售\" [ref=e36] clickable [onclick]\n- generic \"一日游重庆出发【可选游船】重庆武隆天生三桥+龙水峡地缝+乌江1日游|可包团可订明日上门接中文服务等立即确认有条件退晨间出游4.9分月销1K+份2523条点评￥436起\" [ref=e37] clickable [onclick]\n- generic \"一日游重庆出发洪崖洞+长江索道+磁器口古镇+两江小渡+李子坝城市打卡一日游可订明日上门接立即确认有条件退无购物晨间出游高空景观4.9分月销200+份88条点评￥123起\" [ref=e38] clickable [onclick]\n- generic \"私家团重庆出发宜昌+长江三峡+重庆6日5晚私家团『甄选·五星黄金系列游轮』美食街 管家式服务『饕鬄美食·住大平阳台标间』金色大厅 + 全景露台，长江 “移动宫殿”【魔幻城市重庆地标串游】【赠地道川渝火\" [ref=e39] clickable [onclick]\n- generic \"自由行重庆出发重庆+长江三峡4日3晚自由行暑期预售2大免1小 黄金游轮&宿180度一线江景阳台房，全程中西自助餐+赠登船晚餐+重庆行李搬运｜游轮赠送三景游&长江三峡核心景区4.7分已售10013条点评\" [ref=e40] clickable [onclick]\n- generic \"一日游重庆出发【可含游船8人内团】重庆武隆天生三桥+龙水峡地缝+乌江一日游可订明日上门接送中文服务等立即确认有条件退晨间出游高空景观4.9分月销2K+份9224条点评￥436起\" [ref=e41] clickable [onclick]\n- generic \"拼小团重庆出发重庆+成都+九寨沟6日5晚拼小团8人内经典小团+赠两江游船+川剧变脸秀+旅拍|都江堰/三星堆导游精讲+24h专车接送机/站0购物成团保障0购物0自费活动70岁须陪同游船熊猫基地古镇古村5\" [ref=e42] clickable [onclick]\n- generic \"一日游重庆出发【8人内游船票全含】重庆武隆天生三桥+龙水峡地缝+乌江一日游可订明日上门接送中文服务等立即确认有条件退亲子甄选晨间出游高空景观4.9分月销1K+份19419条点评￥436起\" [ref=e43] clickable [onclick]\n- generic \"私家团重庆出发重庆+成都6日5晚私家团端午、暑期预售，咨询【旅行管家】下单领现金立减，提前报名享【三星堆优先出票】，赠送重庆两江夜游船票，入住精选5钻酒店｜含重庆至成都去程动车，赠重庆成都接送站含接送\" [ref=e44] clickable [onclick]\n- generic \"一日游重庆出发【晚出发|优选商务团】全景大足石刻一日游|三场大咖导游精讲可订明日上门接中文服务等立即确认有条件退无购物含导游博物馆4.9分月销500+份5895条点评￥308起\" [ref=e45] clickable [onclick]\n- generic \"跟团游重庆出发重庆+武隆区5日4晚跟团游『自营明星款』5/6月免升亚朵+金牌导游丨8人/30人团任选丨全景武隆＆市区经典丨赠船票含接送机/站全程2+1车型低价优选超值跟团0购物成团保障80岁须陪同双酒\" [ref=e46] clickable [onclick]\n- generic \"一日游重庆出发武隆天生三桥+蚩尤九黎城+乌江画廊乘坐游船1小时含船票一日游可订明日上门接中文服务等立即确认有条件退无购物晨间出游古镇古村4.9分月销600+份303条点评￥423起\" [ref=e47] clickable [onclick]\n- generic \"一日游重庆出发【全景8人内小团】重庆武隆天生三桥+龙水峡地缝+仙女山一日游可订明日上门接送中文服务等立即确认有条件退无购物晨间出游名胜古迹4.9分月销1K+份2734条点评￥455起\" [ref=e48] clickable [onclick]\n- generic \"私家团重庆出发长江三峡+重庆5日4晚私家团【咨询客服 升级3楼入住】爸妈放心游【长江美维系列游轮】『五星级移动酒店 入住超大平阳台间饕鬄美食』【8D魔幻重庆市内地标串游】【赠地道川渝火锅】宜进渝出·2\" [ref=e49] clickable [onclick]\n- generic \"一日游重庆出发【全景8人内小团】重庆武隆天生三桥+龙水峡地缝+仙女山可订明日上门接送中文服务等立即确认有条件退亲子甄选晨间出游4.9分月销700+份5025条点评￥455起\" [ref=e50] clickable [onclick]\n- generic \"一日游重庆出发重庆长江索道+磁器口+轻轨穿楼+洪崖洞一日游|无自费|无套路可订明日上门接立即确认有条件退无购物含导游晨间出游高空景观4.9分月销300+份5767条点评￥123起\" [ref=e51] clickable [onclick]\n- generic \"跟团游重庆出发武隆区2日1晚跟团游『金牌导游带队丨8人团/30人团任选』武隆全景 ·仙女山+天生三桥+地缝+芙蓉洞+乌江画廊直降特价优选低价优选超值跟团0购物成团保障80岁须陪同现代演出游船4.8分已\" [ref=e52] clickable [onclick]\n- generic \"跟团游重庆出发宜昌+长江三峡+重庆6日5晚跟团游美维邮轮&180度江景阳台房+华美达酒店+5早6正自助餐 赠3景游+三峡核心段 重庆精华景点直降早鸟优惠多人同行全程2+1车型0购物成团保障老友会严选老\" [ref=e53] clickable [onclick]\n- generic \"一日游奉节出发奉节白帝城·瞿塘峡景区+三峡之巅一日游 精品纯玩团·含大门票可订明日上门接送立即确认有条件退无购物睡饱出发森林公园4.9分月销200+份1169条点评￥268起\" [ref=e54] clickable [onclick]\n- generic \"自由行重庆出发重庆+长江三峡+宜昌4日3晚自由行美维系列邮轮&3晚连宿180度一线江景阳台房·全程中西自助餐，游轮含三峡大坝+神女溪+双桂山+船游巫峡+瞿塘峡，单人可拼房4.9分已售386条点评￥15\" [ref=e55] clickable [onclick]\n- generic \"一日游重庆出发【纯玩·小团】仙女山森林公园+武隆天生三桥+乌江画廊一日游可订明日上门接送立即确认有条件退无购物晨间出游高空景观4.8分月销300+份309条点评￥363起\" [ref=e56] clickable [onclick]\n- generic \"拼小团重庆出发重庆+武隆区5日4晚拼小团『武陵魔方·8人封顶』纯玩·解放碑酒店·两江游船+云端之眼·武隆奇观+市区网红·专车接送多人同行提前2天免费退含接送机/站0购物成团保障0购物0自费活动游船4.\" [ref=e57] clickable [onclick]\n- generic \"私家团重庆出发成都+重庆5日4晚私家团【错峰出行~咨询领优惠】魔幻山城City walk .打卡解放碑洪崖洞|李子坝+蓉城看“软糯”大熊猫|三星堆-赠2H+精讲|都江堰|青城山【双城动车】限时免费送天\" [ref=e58] clickable [onclick]\n- generic \"自由行重庆出发重庆+重庆长江三峡游船+宜昌4日3晚自由行赠重庆一日游【总统系列游轮-总统6号·1.2万吨大船】『住独立江景阳台房·游轮中西自助美食』船观瞿塘巫峡胜景，赠岸上游：丰都鬼城/神农溪/三峡大\" [ref=e59] clickable [onclick]\n- generic \"一日游重庆出发长江索道+磁器口+白公馆+渣滓洞+轻轨穿楼+洪崖洞市区一日游可订明日上门接立即确认有条件退高空景观4.9分月销200+份1594条点评￥123起\" [ref=e60] clickable [onclick]\n- generic \"拼小团重庆出发武隆天生三桥+蚩尤九黎城+龚滩古镇乌江画廊+重庆2日1晚拼小团8人精致纯玩小团 天生三桥+九黎城+龚滩古镇+乌江画廊 主城五区上门接 夜宿四钻酒店提前2天免费退0购物立即确认成团保障上门\" [ref=e61] clickable [onclick]\n- generic \"一日游重庆出发【可选8人小团】白鹤梁水下博物馆+816工程+大裂谷一日游可订明日立即确认有条件退含导游晨间出游博物馆4.9分月销200+份304条点评￥268起\" [ref=e62] clickable [onclick]\n- generic \"一日游重庆出发【团型多选·可选坐游船】武隆天生三桥+龙水峡地缝+乌江一日游可订明日立即确认有条件退无购物含导游晨间出游高空景观4.9分月销200+份72条点评￥338起\" [ref=e63] clickable [onclick]\n- generic \"私家团重庆出发宜昌+长江三峡+重庆6日5晚私家团世纪邮轮&180度一线江景阳台房+宿重庆华美达品牌酒店｜7天外船票免费退+全程中西自助餐+赠登船晚餐｜重庆精华线路4选1&长江三峡核心景区直降可加购导游\" [ref=e64] clickable [onclick]\n- generic \"一日游重庆出发数字影院+宝顶山+北山+大足石刻博物馆+大足石刻一日游拼小团可订明日上门接立即确认有条件退无购物含导游晨间出游博物馆4.9分月销100+份394条点评￥333起\" [ref=e65] clickable [onclick]\n- generic \"上一页\" [ref=e9] clickable [onclick]\n- generic \"1\" [ref=e10] clickable [cursor:pointer, onclick]\n- generic \"2\" [ref=e11] clickable [cursor:pointer, onclick]\n- generic \"3\" [ref=e12] clickable [cursor:pointer, onclick]\n- generic \"4\" [ref=e13] clickable [cursor:pointer, onclick]\n- generic \"5\" [ref=e14] clickable [cursor:pointer, onclick]\n- generic \"6\" [ref=e15] clickable [cursor:pointer, onclick]\n- generic \"7\" [ref=e16] clickable [cursor:pointer, onclick]\n- generic \"8\" [ref=e17] clickable [cursor:pointer, onclick]\n- generic \"38\" [ref=e18] clickable [cursor:pointer, onclick]\n- generic \"下一页\" [ref=e19] clickable [cursor:pointer, onclick]\n- spinbutton [ref=e66]\n- button \"确定\" [ref=e67]\n- heading \"携程旅游\" [level=3, ref=e20]\n- listitem \"联系客服\" [level=1, ref=e143] clickable [onclick]\n- listitem \"返回顶部\" [level=1, ref=e144] clickable [onclick]\n- link \"宾馆索引\" [ref=e189]\n- link \"攻略索引\" [ref=e190]\n- link \"机票索引\" [ref=e191]\n- link \"网站导航\" [ref=e192]\n- link \"旅游索引\" [ref=e193]\n- link \"邮轮索引\" [ref=e194]\n- link \"企业差旅索引\" [ref=e195]\n- link \"分销联盟\" [ref=e196]\n- link \"友情链接\" [ref=e197]\n- link \"企业礼品卡采购\" [ref=e198]\n- link \"保险代理\" [ref=e199]\n- link \"代理合作\" [ref=e200]\n- link \"酒店加盟\" [ref=e201]\n- link \"目的地及景区合作\" [ref=e202]\n- link \"更多加盟合作\" [ref=e203]\n- link \"关于携程\" [ref=e204]\n- link \"联系我们\" [ref=e205]\n- link \"诚聘英才\" [ref=e206]\n- link \"用户协议\" [ref=e207]\n- link \"隐私政策\" [ref=e208]\n- link \"营业执照\" [ref=e209]\n- link \"安全中心\" [ref=e210]\n- link \"携程内容中心\" [ref=e211]\n- link \"知识产权\" [ref=e212]\n- link \"Trip.com Group\" [ref=e213]\n- link \"Copyright©\" [ref=e145]\n- link \"ctrip.com\" [ref=e146]\n- link \"ICP证：沪B2-20050130|\" [ref=e147]\n- link \"沪ICP备08023580号-3|\" [ref=e148]\n- link \"网信算备310105117481904230015号\" [ref=e149]\n- link \"沪公网备31010502002731号\" [ref=e150]\n- link \"互联网药品信息服务资格证\" [ref=e151]\n- link \"（沪）网械平台备字[2022]第00001号\" [ref=e152]\n- link \"旅游度假资质\" [ref=e153]\n- link \"平台信息\" [ref=e154]\n- link \"资质与规则\" [ref=e155]\n- link \"上海市旅游网站落实诚信建设主体责任承诺书\" [ref=e156]\n- link \"上海市监\" [ref=e157]\n- link \"网络社会征信网\" [ref=e158]\n- link \"信息举报中心\" [ref=e159]\n- link \"可信网站\" [ref=e160]\n- link \"信用中国\" [ref=e161]\n- link \"网上有害信息举报专区\" [ref=e162]\n- link \"消费维权联络点\" [ref=e163]"
+      },
+      "error": null
+    }
+  }
+}

@@ -1,0 +1,25 @@
+﻿First 20 prices:
+  1. 2400 (type: int)
+  2. 1000 (type: int)
+  3. 300 (type: int)
+  4. 14100 (type: int)
+  5. 6500 (type: int)
+  6. 1000 (type: int)
+  7. 10600 (type: int)
+  8. 1000 (type: int)
+  9. 10000 (type: int)
+  10. 800 (type: int)
+  11. 4600 (type: int)
+  12. 1000 (type: int)
+  13. 1100 (type: int)
+  14. 14700 (type: int)
+  15. 1300 (type: int)
+  16. 300 (type: int)
+  17. 2100 (type: int)
+  18. 7200 (type: int)
+  19. 900 (type: int)
+  20. 5100 (type: int)
+
+Valid prices: 1110/1116
+
+Types: {'˽����', '������', 'һ����', '������', 'ƴС��'}
