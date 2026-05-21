@@ -1,7 +1,9 @@
-// routes.js - Load and display routes from JSON
+// routes.js - Load and display routes from JSON with pagination
 
 let allRoutes = [];
 let filteredRoutes = [];
+let displayCount = 0;
+const ROUTES_PER_PAGE = 20;
 
 // Load routes from JSON
 async function loadRoutes() {
@@ -24,28 +26,63 @@ async function loadRoutes() {
     }
 }
 
-// Render route cards
-function renderRoutes(routes) {
+// Render route cards with pagination
+function renderRoutes(routes, append = false) {
     const grid = document.getElementById('routes-grid');
     const noResults = document.getElementById('no-results');
+    const loadMoreContainer = document.getElementById('load-more-container');
     
-    if (routes.length === 0) {
+    if (!append) {
+        grid.innerHTML = '';
+        displayCount = 0;
+    }
+    
+    if (routes.length === 0 && !append) {
         grid.innerHTML = '';
         noResults.style.display = 'block';
+        loadMoreContainer.style.display = 'none';
         return;
     }
     
     noResults.style.display = 'none';
     
-    grid.innerHTML = routes.map(route => createRouteCard(route)).join('');
+    // Get next batch
+    const start = displayCount;
+    const end = Math.min(start + ROUTES_PER_PAGE, routes.length);
+    const batch = routes.slice(start, end);
     
-    // Add click listeners to cards
-    grid.querySelectorAll('.route-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const routeId = card.dataset.id;
-            const route = allRoutes.find(r => r['产品ID'] === routeId);
-            if (route) showRouteDetail(route);
-        });
+    // Render batch
+    const cardsHTML = batch.map(route => createRouteCard(route)).join('');
+    
+    if (append) {
+        grid.insertAdjacentHTML('beforeend', cardsHTML);
+    } else {
+        grid.innerHTML = cardsHTML;
+    }
+    
+    displayCount = end;
+    
+    // Show/hide "Load More" button
+    if (loadMoreContainer) {
+        if (displayCount >= routes.length) {
+            loadMoreContainer.style.display = 'none';
+        } else {
+            loadMoreContainer.style.display = 'block';
+            const btn = document.getElementById('btn-load-more');
+            if (btn) {
+                btn.textContent = `Load More Tours (${routes.length - displayCount} remaining)`;
+            }
+        }
+    }
+    
+    // Add click listeners to new cards
+    batch.forEach((route, index) => {
+        const card = grid.children[start + index];
+        if (card) {
+            card.addEventListener('click', () => {
+                showRouteDetail(route);
+            });
+        }
     });
 }
 
@@ -64,12 +101,16 @@ function createRouteCard(route) {
     const firstHighlight = highlights.split('|')[0]?.trim() || '';
     
     // Calculate discount
-    const discount = oldPrice > 0 ? Math.round((1 - price / oldPrice) * 100) : 0;
+    const discount = oldPrice > 0 && price > 0 ? Math.round((1 - price / oldPrice) * 100) : 0;
+    
+    // Format price display
+    const priceDisplay = price > 0 ? `¥${price}` : 'Contact Us';
+    const oldPriceDisplay = oldPrice > 0 && oldPrice !== price ? `<span class="old-price">¥${oldPrice}</span>` : '';
     
     return `
         <div class="route-card" data-id="${id}" data-type="${type}" data-price="${price}">
             <div class="route-image">
-                <img src="${image}" alt="${name}" loading="lazy">
+                <img src="${image}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder.jpg'">
                 ${discount > 0 ? `<span class="discount-badge">-${discount}%</span>` : ''}
                 <span class="route-type-badge">${type}</span>
             </div>
@@ -81,8 +122,8 @@ function createRouteCard(route) {
                 </div>` : ''}
                 ${firstHighlight ? `<p class="route-highlight">${firstHighlight}</p>` : ''}
                 <div class="route-pricing">
-                    ${oldPrice > 0 ? `<span class="old-price">¥${oldPrice}</span>` : ''}
-                    <span class="current-price">¥${price}</span>
+                    ${oldPriceDisplay}
+                    <span class="current-price">${priceDisplay}</span>
                 </div>
             </div>
         </div>
@@ -91,23 +132,11 @@ function createRouteCard(route) {
 
 // Apply filters
 function applyFilters() {
-    const typeFilter = document.getElementById('filter-type').value;
-    const priceFilter = document.getElementById('filter-price').value;
     const durationFilter = document.getElementById('filter-duration').value;
+    const priceFilter = document.getElementById('filter-price').value;
+    const sortFilter = document.getElementById('filter-sort').value;
     
     filteredRoutes = allRoutes.filter(route => {
-        // Type filter
-        if (typeFilter && route['类型'] !== typeFilter) return false;
-        
-        // Price filter
-        const price = route['你的价格'] || 0;
-        if (priceFilter) {
-            if (priceFilter === '0-500' && price > 500) return false;
-            if (priceFilter === '500-1000' && (price < 500 || price > 1000)) return false;
-            if (priceFilter === '1000-2000' && (price < 1000 || price > 2000)) return false;
-            if (priceFilter === '2000+' && price < 2000) return false;
-        }
-        
         // Duration filter (extract from title)
         if (durationFilter) {
             const name = route['线路名称'] || '';
@@ -118,8 +147,26 @@ function applyFilters() {
             if (durationFilter === '4+' && days < 4) return false;
         }
         
+        // Price filter
+        const price = route['你的价格'] || 0;
+        if (priceFilter) {
+            if (priceFilter === '0-500' && price > 500) return false;
+            if (priceFilter === '500-1000' && (price < 500 || price > 1000)) return false;
+            if (priceFilter === '1000-2000' && (price < 1000 || price > 2000)) return false;
+            if (priceFilter === '2000+' && price < 2000) return false;
+        }
+        
         return true;
     });
+    
+    // Apply sorting
+    if (sortFilter === 'price-asc') {
+        filteredRoutes.sort((a, b) => (a['你的价格'] || 0) - (b['你的价格'] || 0));
+    } else if (sortFilter === 'price-desc') {
+        filteredRoutes.sort((a, b) => (b['你的价格'] || 0) - (a['你的价格'] || 0));
+    } else if (sortFilter === 'rating') {
+        filteredRoutes.sort((a, b) => (b['评分'] || 0) - (a['评分'] || 0));
+    }
     
     console.log(`🔍 Filtered: ${filteredRoutes.length} / ${allRoutes.length}`);
     
@@ -140,16 +187,32 @@ function extractDays(name) {
 
 // Setup filter listeners
 function setupFilters() {
-    document.getElementById('filter-type').addEventListener('change', applyFilters);
-    document.getElementById('filter-price').addEventListener('change', applyFilters);
-    document.getElementById('filter-duration').addEventListener('change', applyFilters);
-    
-    document.getElementById('btn-reset-filters').addEventListener('click', () => {
-        document.getElementById('filter-type').value = '';
-        document.getElementById('filter-price').value = '';
-        document.getElementById('filter-duration').value = '';
+    document.getElementById('filter-duration').addEventListener('change', () => {
         applyFilters();
     });
+    
+    document.getElementById('filter-price').addEventListener('change', () => {
+        applyFilters();
+    });
+    
+    document.getElementById('filter-sort').addEventListener('change', () => {
+        applyFilters();
+    });
+    
+    document.getElementById('btn-reset-filters').addEventListener('click', () => {
+        document.getElementById('filter-duration').value = '';
+        document.getElementById('filter-price').value = '';
+        document.getElementById('filter-sort').value = 'default';
+        applyFilters();
+    });
+    
+    // Load More button
+    const loadMoreBtn = document.getElementById('btn-load-more');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            renderRoutes(filteredRoutes, true);
+        });
+    }
 }
 
 // Show route detail modal
@@ -167,10 +230,13 @@ function showRouteDetail(route) {
     const review = route['你的专业评价'] || '';
     const subtitle = route['副标题'] || '';
     
+    const priceDisplay = price > 0 ? `¥${price}` : 'Contact Us';
+    const oldPriceDisplay = oldPrice > 0 && oldPrice !== price ? `<span class="old-price">¥${oldPrice}</span>` : '';
+    
     modalBody.innerHTML = `
         <div class="route-detail">
             <div class="detail-image">
-                <img src="${image}" alt="${name}">
+                <img src="${image}" alt="${name}" onerror="this.src='images/placeholder.jpg'">
             </div>
             <div class="detail-info">
                 <h2>${name}</h2>
@@ -193,12 +259,12 @@ function showRouteDetail(route) {
                 </div>` : ''}
                 
                 <div class="detail-pricing">
-                    ${oldPrice > 0 ? `<span class="old-price">¥${oldPrice}</span>` : ''}
-                    <span class="current-price">¥${price}</span>
+                    ${oldPriceDisplay}
+                    <span class="current-price">${priceDisplay}</span>
                     <span class="price-note">per person</span>
                 </div>
                 
-                <button class="btn-primary" onclick="alert('Contact us via WhatsApp: +86 156 9607 8461')">Book Now</button>
+                <button class="btn-primary" onclick="window.open('https://wa.me/8615696078461', '_blank')">Book Now via WhatsApp</button>
             </div>
         </div>
     `;

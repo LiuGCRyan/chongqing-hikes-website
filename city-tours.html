@@ -10,18 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Google Translate Widget -->
-    <div id="google_translate_element" style="position:fixed;top:10px;right:10px;z-index:9999;"></div>
+    <!-- Google Translate (Hidden) -->
+    <div id="google_translate_element"></div>
     <script>
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
             pageLanguage: 'en',
             includedLanguages: 'en,fr,es,ru,de,ko',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+            autoDisplay: false
         }, 'google_translate_element');
     }
     </script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Custom Language Switcher -->
+    <div id="language-switcher"></div>
+    <script src="js/language-switcher.js"></script>
     
     <!-- Navigation -->
     <nav class="navbar scrolled">
@@ -66,7 +71,7 @@
             <div class="tours-grid">
                 <!-- Tour 1 -->
                 <div class="tour-card">
-                    <div class="tour-image city-tour-1">
+                    <div class="tour-image"><img src="images/routes/route_94189868.webp" alt="City Tour" loading="lazy">
                         <span class="tour-badge">Most Popular</span>
                     </div>
                     <div class="tour-content">
@@ -94,7 +99,7 @@
 
                 <!-- Tour 2 -->
                 <div class="tour-card">
-                    <div class="tour-image city-tour-2">
+                    <div class="tour-image"><img src="images/routes/route_33000502.webp" alt="City Tour" loading="lazy">
                         <span class="tour-badge">Food Focus</span>
                     </div>
                     <div class="tour-content">
@@ -123,7 +128,7 @@
 
                 <!-- Tour 3 -->
                 <div class="tour-card">
-                    <div class="tour-image city-tour-3">
+                    <div class="tour-image"><img src="images/routes/route_90934690.webp" alt="Food Tour" loading="lazy">
                         <span class="tour-badge">Foodie Special</span>
                     </div>
                     <div class="tour-content">
@@ -151,7 +156,7 @@
 
                 <!-- Tour 4 -->
                 <div class="tour-card">
-                    <div class="tour-image city-tour-4">
+                    <div class="tour-image"><img src="images/routes/route_39486564.webp" alt="Custom Tour" loading="lazy">
                         <span class="tour-badge">Custom</span>
                     </div>
                     <div class="tour-content">
@@ -316,9 +321,9 @@
         
         // Sort
         if (sort === 'price-asc') {
-            filtered.sort((a, b) => (a['最低价']||0) - (b['最低价']||0));
+            filtered.sort((a, b) => (a['你的价格']||0) - (b['你的价格']||0));
         } else if (sort === 'price-desc') {
-            filtered.sort((a, b) => (b['最低价']||0) - (a['最低价']||0));
+            filtered.sort((a, b) => (b['你的价格']||0) - (a['你的价格']||0));
         }
         
         displayedCount = 0;
@@ -352,7 +357,7 @@
         const title = r['线路名称'] || 'Untitled';
         const subtitle = r['副标题'] || '';
         const type = r['类型'] || '';
-        const price = r['最低价'] ? `¥${r['最低价']}` : 'N/A';
+        const price = r['你的价格'] ? `¥${r['你的价格']}` : 'N/A';
         
         div.innerHTML = `
             <div class="route-image">
