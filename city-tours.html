@@ -209,6 +209,41 @@
         </div>
     </section>
 
+    <!-- All Routes Section -->
+    <section class="al-routes-section">
+        <div class="container">
+            <h2 class="section-title">AL AVAILABLE TOURS</h2>
+            <p class="section-subtitle">Browse our complete collection of Chongqing tour routes</p>
+            
+            <!-- Filters -->
+            <div class="routes-filters">
+                <input type="text" id="searchInput" placeholder="Search routes..." class="search-box">
+                <select id="typeFilter" class="filter-select">
+                    <option value="">All Types</option>
+                    <option value="一日游">Day Tour</option>
+                    <option value="拼小团">Small Group</option>
+                    <option value="私家团">Private Tour</option>
+                    <option value="自由行">Free & Easy</option>
+                </select>
+                <select id="sortFilter" class="filter-select">
+                    <option value="default">Default</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                </select>
+            </div>
+            
+            <!-- Routes Grid -->
+            <div id="routesGrid" class="routes-grid">
+                <!-- Routes will be loaded here -->
+            </div>
+            
+            <!-- Load More -->
+            <div class="load-more-container">
+                <button id="loadMoreBtn" class="btn-primary">Load More</button>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
@@ -249,5 +284,102 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    // Load routes from JSON
+    let alRoutes = [];
+    let displayedCount = 0;
+    const LOAD_STEP = 20;
+
+    async function loadRoutes() {
+        try {
+            const response = await fetch('data/routes.json');
+            alRoutes = await response.json();
+            console.log(`✅ Loaded ${alRoutes.length} routes`);
+            applyFilters();
+        } catch (error) {
+            console.error('❌ Error loading routes:', error);
+        }
+    }
+
+    function applyFilters() {
+        const search = document.getElementById('searchInput').value.toLowerCase();
+        const type = document.getElementById('typeFilter').value;
+        const sort = document.getElementById('sortFilter').value;
+        
+        let filtered = alRoutes.filter(r => {
+            const matchSearch = !search || 
+                (r['线路名称'] && r['线路名称'].toLowerCase().includes(search)) ||
+                (r['副标题'] && r['副标题'].toLowerCase().includes(search));
+            const matchType = !type || (r['类型'] && r['类型'].includes(type));
+            return matchSearch && matchType;
+        });
+        
+        // Sort
+        if (sort === 'price-asc') {
+            filtered.sort((a, b) => (a['最低价']||0) - (b['最低价']||0));
+        } else if (sort === 'price-desc') {
+            filtered.sort((a, b) => (b['最低价']||0) - (a['最低价']||0));
+        }
+        
+        displayedCount = 0;
+        document.getElementById('routesGrid').innerHTML = '';
+        loadMore(filtered);
+    }
+
+    function loadMore(filtered = null) {
+        const routes = filtered || alRoutes;
+        const grid = document.getElementById('routesGrid');
+        const end = Math.min(displayedCount + LOAD_STEP, routes.length);
+        
+        for (let i = displayedCount; i < end; i++) {
+            const r = routes[i];
+            const card = createRouteCard(r);
+            grid.appendChild(card);
+        }
+        
+        displayedCount = end;
+        
+        // Hide Load More button if all shown
+        const btn = document.getElementById('loadMoreBtn');
+        btn.style.display = (displayedCount >= routes.length) ? 'none' : 'block';
+    }
+
+    function createRouteCard(r) {
+        const div = document.createElement('div');
+        div.className = 'route-card';
+        
+        const img = r['图片URL'] || 'images/placeholder.jpg';
+        const title = r['线路名称'] || 'Untitled';
+        const subtitle = r['副标题'] || '';
+        const type = r['类型'] || '';
+        const price = r['最低价'] ? `¥${r['最低价']}` : 'N/A';
+        
+        div.innerHTML = `
+            <div class="route-image">
+                <img src="${img}" alt="${title}" loading="lazy">
+                <span class="route-type">${type}</span>
+            </div>
+            <div class="route-content">
+                <h3>${title}</h3>
+                <p class="route-subtitle">${subtitle}</p>
+                <div class="route-footer">
+                    <span class="route-price">${price}</span>
+                    <a href="contact.html" class="btn-view">View Details</a>
+                </div>
+            </div>
+        `;
+        
+        return div;
+    }
+
+    // Event listeners
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    document.getElementById('typeFilter').addEventListener('change', applyFilters);
+    document.getElementById('sortFilter').addEventListener('change', applyFilters);
+    document.getElementById('loadMoreBtn').addEventListener('click', () => loadMore());
+
+    // Load routes on page load
+    loadRoutes();
+    </script>
 </body>
 </html>
