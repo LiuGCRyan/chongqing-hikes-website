@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chongqing Hikes - Tours & Routes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Chongqing<span>Hikes</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="routes.html" class="active">Tours</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Explore Chongqing</h1>
+            <p>Carefully curated tours for foreign travelers</p>
+        </div>
+    </header>
+
+    <!-- Filters -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-group">
+                <label>Tour Type:</label>
+                <select id="filter-type">
+                    <option value="">All Types</option>
+                    <option value="一日游">Day Tour</option>
+                    <option value="拼小团">Small Group</option>
+                    <option value="私家团">Private Tour</option>
+                    <option value="自由行">Free Walk</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Price Range:</label>
+                <select id="filter-price">
+                    <option value="">All Prices</option>
+                    <option value="0-500">Under ¥500</option>
+                    <option value="500-1000">¥500 - ¥1000</option>
+                    <option value="1000-2000">¥1000 - ¥2000</option>
+                    <option value="2000+">Above ¥2000</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Duration:</label>
+                <select id="filter-duration">
+                    <option value="">All Days</option>
+                    <option value="1">1 Day</option>
+                    <option value="2">2 Days</option>
+                    <option value="3">3 Days</option>
+                    <option value="4+">4+ Days</option>
+                </select>
+            </div>
+            <button id="btn-reset-filters" class="btn-secondary">Reset Filters</button>
+        </div>
+    </section>
+
+    <!-- Routes Grid -->
+    <section class="routes-section">
+        <div class="container">
+            <div id="routes-grid" class="routes-grid">
+                <!-- Route cards will be dynamically inserted here -->
+            </div>
+            <div id="no-results" class="no-results" style="display: none;">
+                <p>No tours match your filters. Please try different criteria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Chongqing Hikes</h4>
+                    <p>Premium travel experiences for foreign travelers in Chongqing, China.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="routes.html">Tours</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: +86 156 9607 8461</p>
+                    <p>Email: chongqinghikes@qq.com</p>
+                    <p>WeChat: Ryan-LGC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chongqing Hikes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Route Detail Modal -->
+    <div id="route-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/routes.js"></script>
+</body>
+</html>
