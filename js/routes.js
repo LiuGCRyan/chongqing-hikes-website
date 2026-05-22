@@ -97,10 +97,24 @@ function setupFilters() {
 
     // Load More button click event
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
-            console.log('[routes] Load More clicked, current count:', displayCount, '/', filteredRoutes.length);
+        // Force clickable - critical fix
+        loadMoreBtn.style.pointerEvents = 'auto';
+        loadMoreBtn.style.cursor = 'pointer';
+        loadMoreBtn.style.position = 'relative';
+        loadMoreBtn.style.zIndex = '10000';
+        
+        loadMoreBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            console.log('[routes] Load More clicked! current:', displayCount, '/', filteredRoutes.length);
             loadMore();
         });
+        
+        // Also bind on mousedown as backup
+        loadMoreBtn.addEventListener('mousedown', function(e) {
+            console.log('[routes] Load More mousedown detected');
+        });
+        
+        console.log('[routes] Load More button handler attached');
     }
 
     console.log('[routes] Filters setup complete');
