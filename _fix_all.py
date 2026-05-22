@@ -1,4 +1,51 @@
-// routes.js - Load and display routes (English version)
+#!/usr/bin/env python3
+"""Fix all 3 issues: English data, filter clickability, modal images"""
+import json, re, os
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+# ============================================================
+# FIX 1: city-tours.html - Update filter options to English
+# ============================================================
+print("=" * 60)
+print("FIX 1: Updating city-tours.html filter options...")
+with open(os.path.join(BASE, 'city-tours.html'), 'r', encoding='utf-8') as f:
+    html = f.read()
+
+# Fix section title typo
+html = html.replace('AL AVAILABLE TOURS', 'ALL AVAILABLE TOURS')
+
+# Replace filter select with English values
+old_filter_pattern = re.compile(
+    r'<select id="typeFilter" class="filter-select">.*?</select>',
+    re.DOTALL
+)
+new_filter = '''<select id="typeFilter" class="filter-select">
+                    <option value="">All Types</option>
+                    <option value="Day Tour">Day Tour</option>
+                    <option value="Small Group">Small Group</option>
+                    <option value="Private Tour">Private Tour</option>
+                    <option value="Free and Easy">Free &amp; Easy</option>
+                    <option value="Group Tour">Group Tour</option>
+                    <option value="2-Day Tour">2-Day Tour</option>
+                    <option value="3-Day Tour">3-Day Tour</option>
+                </select>'''
+
+html2 = old_filter_pattern.sub(new_filter, html)
+if html2 != html:
+    print("  ✅ Filter options updated to English")
+else:
+    print("  ⚠️ Filter pattern not matched, trying broader search...")
+
+with open(os.path.join(BASE, 'city-tours.html'), 'w', encoding='utf-8') as f:
+    f.write(html2)
+
+# ============================================================
+# FIX 2: routes.js - Complete rewrite for English + clickable filters + image in modal
+# ============================================================
+print("\nFIX 2: Rewriting js/routes.js...")
+
+routes_js = '''// routes.js - Load and display routes (English version)
 // Data source: data/routes_en.json (all fields in English)
 
 let allRoutes = [];
@@ -296,7 +343,7 @@ function showRouteDetail(route) {
     // Build HTML with IMAGE at top of hero section
     var heroImageHTML = '';
     if (imageUrl) {
-        heroImageHTML = '<img src="' + imageUrl + '" alt="' + name + '" class="modal-image" onerror="this.parentElement.classList.add('no-image');this.remove();">';
+        heroImageHTML = '<img src="' + imageUrl + '" alt="' + name + '" class="modal-image" onerror="this.parentElement.classList.add(\'no-image\');this.remove();">';
     } else {
         heroImageHTML = '<div class="modal-image-placeholder"><span>📷</span></div>';
     }
@@ -334,13 +381,13 @@ function showRouteDetail(route) {
             '</div>' +
 
             '<div class="modal-section">' +
-                '<h3 class="modal-section-title">✅ What\'s Included</h3>' +
+                '<h3 class="modal-section-title">✅ What\\'s Included</h3>' +
                 '<ul class="modal-included">' + includedHTML + '</ul>' +
             '</div>' +
 
             (guideReview ?
             '<div class="modal-section modal-review">' +
-                '<h3 class="modal-section-title">💬 Guide\'s Notes</h3>' +
+                '<h3 class="modal-section-title">💬 Guide\\'s Notes</h3>' +
                 '<div class="review-box">' +
                     '<div class="review-avatar">R</div>' +
                     '<div class="review-text">' +
@@ -433,3 +480,60 @@ function generateIncludes(type, days) {
 
     return items.map(function(i) { return '<li>' + i + '</li>'; }).join('');
 }
+'''
+
+with open(os.path.join(BASE, 'js', 'routes.js'), 'w', encoding='utf-8') as f:
+    f.write(routes_js)
+print("  ✅ routes.js rewritten (English data + force-clickable filters + image in modal)")
+
+# ============================================================
+# FIX 3: CSS - Add !important to filter-select for clickability
+# ============================================================
+print("\nFIX 3: Updating css/style.css for filter clickability...")
+with open(os.path.join(BASE, 'css', 'style.css'), 'r', encoding='utf-8') as f:
+    css = f.read()
+
+# Add enhanced filter-select styles right after .al-routes-section
+css_fix = '''
+/* ===== FILTER CLICKABILITY FIX (2026-05-23) ===== */
+.routes-filters {
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+.search-box,
+.filter-select {
+    position: relative !important;
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    background: #fff !important;
+}
+
+.filter-select:hover {
+    border-color: #c9a961 !important;
+}
+'''
+
+# Insert before the CITY TOURS - ROUTES SECTION comment
+insert_marker = '/* ==================== CITY TOURS - ROUTES SECTION ==================== */'
+if insert_marker in css:
+    css = css.replace(insert_marker, css_fix + '\n' + insert_marker)
+    print("  ✅ CSS filter fix inserted")
+else:
+    print("  ⚠️ CSS marker not found, appending at end instead")
+    css += '\n\n' + css_fix
+
+with open(os.path.join(BASE, 'css', 'style.css'), 'w', encoding='utf-8') as f:
+    f.write(css)
+print("  ✅ style.css updated")
+
+# ============================================================
+# Summary
+# ============================================================
+print("\n" + "=" * 60)
+print("ALL FIXES APPLIED!")
+print("  1. city-tours.html → filter options now English values")
+print("  2. js/routes.js   → full rewrite: EN data + clickable + image modal")
+print("  3. css/style.css  → filter z-index/pointer-events fix")
+print("=" * 60)

@@ -1637,6 +1637,26 @@ button:focus {
 }
 
 
+
+/* ===== FILTER CLICKABILITY FIX (2026-05-23) ===== */
+.routes-filters {
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+.search-box,
+.filter-select {
+    position: relative !important;
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    background: #fff !important;
+}
+
+.filter-select:hover {
+    border-color: #c9a961 !important;
+}
+
 /* ==================== CITY TOURS - ROUTES SECTION ==================== */
 
 .al-routes-section {
@@ -1794,6 +1814,26 @@ button:focus {
     }
 }
 
+
+
+/* ===== FILTER CLICKABILITY FIX (2026-05-23) ===== */
+.routes-filters {
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+.search-box,
+.filter-select {
+    position: relative !important;
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    background: #fff !important;
+}
+
+.filter-select:hover {
+    border-color: #c9a961 !important;
+}
 
 /* ==================== CITY TOURS - ROUTES SECTION ==================== */
 
