@@ -1538,7 +1538,7 @@ button:focus {
 }
 
 .detail-highlights li::before {
-    content: '✓';
+    content: '鉁?;
     position: absolute;
     left: 0;
     color: var(--color-primary);
@@ -1692,6 +1692,10 @@ button:focus {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1;
 }
 
 .route-card:hover {
@@ -1846,6 +1850,10 @@ button:focus {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1;
 }
 
 .route-card:hover {
@@ -2038,7 +2046,7 @@ button:focus {
 }
 
 .modal-image-placeholder::after {
-    content: '🏔️';
+    content: '馃彅锔?;
     font-size: 64px;
     opacity: 0.5;
 }

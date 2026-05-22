@@ -214,7 +214,12 @@ function createRouteCardElement(route) {
     `;
 
     // Click to open detail modal
-    card.addEventListener('click', () => showRouteDetail(route));
+    card.style.cssText = 'cursor:pointer !important; pointer-events:auto !important; position:relative; z-index:1;';
+    card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('🔘 Card clicked:', name);
+        showRouteDetail(route);
+    });
 
     return card;
 }
