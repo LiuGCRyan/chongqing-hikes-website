@@ -296,7 +296,7 @@ function showRouteDetail(route) {
     // Build HTML with IMAGE at top of hero section
     var heroImageHTML = '';
     if (imageUrl) {
-        heroImageHTML = '<img src="' + imageUrl + '" alt="' + name + '" class="modal-image" onerror="this.parentElement.classList.add('no-image');this.remove();">';
+        heroImageHTML = '<img src="' + imageUrl + '" alt="' + name + '" class="modal-image" onerror=\"this.parentElement.classList.add(\x27no-image\x27);this.remove();\">';
     } else {
         heroImageHTML = '<div class="modal-image-placeholder"><span>📷</span></div>';
     }
