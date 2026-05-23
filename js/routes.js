@@ -103,6 +103,18 @@ function setupFilters() {
         });
     }
 
+    // Reset Filters button
+    var resetBtn = document.getElementById('btn-reset-filters');
+    if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+            if (searchInput) searchInput.value = '';
+            if (typeFilter) typeFilter.value = '';
+            if (sortFilter) sortFilter.value = 'default';
+            if (priceFilter) priceFilter.value = '';
+            applyFilters();
+        });
+    }
+
     // Load More button click event
     if (loadMoreBtn) {
         // Force clickable - critical fix
