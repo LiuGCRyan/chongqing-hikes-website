@@ -476,11 +476,11 @@ function showRouteDetail(route) {
 
     // Build hero image HTML (FIXED: use double quotes for outer, escaped for inner)
     var heroImageHTML = '';
+    var heroNoImageClass = '';
     if (imageUrl) {
-        // Use Unicode escapes to avoid any quote issues
         heroImageHTML = '<img src="' + imageUrl + '" alt="' + escapeHtml(name) + '" class="modal-image" onerror="this.parentElement.classList.add(&apos;no-image&apos;);this.remove();" />';
     } else {
-        heroImageHTML = '<div class="modal-image-placeholder"><span>\uD83DDCF7</span></div>';
+        heroNoImageClass = ' no-image';
     }
 
     // Duration badge for modal
@@ -498,13 +498,22 @@ function showRouteDetail(route) {
     // Build full modal HTML
     var fullHtml = '';
 
-    // Hero section with image
-    fullHtml += '<div class="modal-hero">';
+    // Hero section with image + price overlay
+    fullHtml += '<div class="modal-hero' + heroNoImageClass + '">';
     fullHtml += heroImageHTML;
-    fullHtml += '<div class="modal-hero-overlay">';
+    fullHtml += '<div class="modal-hero-overlay-top">';
     fullHtml += '<span class="modal-type-badge">' + escapeHtml(type) + '</span>';
     fullHtml += durBadge;
     fullHtml += ratBadge;
+    fullHtml += '</div>';
+    fullHtml += '<div class="modal-hero-overlay-bottom">';
+    fullHtml += '<div class="hero-price-group">';
+    if (ctripPrice > 0) {
+    fullHtml += '<span class="hero-old-price">$' + ctripPrice + '</span>';
+    }
+    fullHtml += '<span class="hero-current-price">' + priceDisplay + '<small>/person</small></span>';
+    fullHtml += discountBadge2;
+    fullHtml += '</div>';
     fullHtml += '</div>';
     fullHtml += '</div>';
 
@@ -517,17 +526,12 @@ function showRouteDetail(route) {
         fullHtml += '<p class="modal-subtitle">' + escapeHtml(subtitle) + '</p>';
     }
 
-    // Price block
-    fullHtml += '<div class="modal-price-block">';
-    fullHtml += '<div class="modal-pricing">';
-    fullHtml += oldPriceHtml2;
-    fullHtml += '<span class="modal-current-price">' + priceDisplay + '<small>/person</small></span>';
-    fullHtml += discountBadge2;
-    fullHtml += '</div>';
+    // Tags only (price already shown in hero)
     if (tagItems) {
+        fullHtml += '<div class="modal-price-block modal-tags-only">';
         fullHtml += '<div class="modal-tags">' + tagItems + '</div>';
+        fullHtml += '</div>';
     }
-    fullHtml += '</div>';
 
     // Highlights
     fullHtml += '<div class="modal-section">';
