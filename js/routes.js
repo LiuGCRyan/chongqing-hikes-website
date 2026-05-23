@@ -95,6 +95,14 @@ function setupFilters() {
         });
     }
 
+    // Price range filter change event
+    var priceFilter = document.getElementById('filter-price');
+    if (priceFilter) {
+        priceFilter.addEventListener('change', function() {
+            applyFilters();
+        });
+    }
+
     // Load More button click event
     if (loadMoreBtn) {
         // Force clickable - critical fix
@@ -163,6 +171,7 @@ function applyFilters() {
     var searchVal = '';
     var typeVal = '';
     var sortVal = 'default';
+    var priceVal = '';
 
     var si = document.getElementById('searchInput');
     if (si) searchVal = (si.value || '').toLowerCase();
@@ -173,7 +182,10 @@ function applyFilters() {
     var sf = document.getElementById('sortFilter');
     if (sf) sortVal = sf.value || 'default';
 
-    console.log('[routes] Applying filters: search="' + searchVal + '" type="' + typeVal + '" sort="' + sortVal + '"');
+    var pf = document.getElementById('filter-price');
+    if (pf) priceVal = pf.value || '';
+
+    console.log('[routes] Applying filters: search="' + searchVal + '" type="' + typeVal + '" price="' + priceVal + '" sort="' + sortVal + '"');
 
     filteredRoutes = allRoutes.filter(function(route) {
         // Search filter
@@ -188,6 +200,20 @@ function applyFilters() {
         if (typeVal) {
             var rt = route.type || '';
             if (rt !== typeVal) return false;
+        }
+
+        // Price range filter
+        if (priceVal) {
+            var p = route.price || 0;
+            if (priceVal.indexOf('+') > -1) {
+                var minP = parseInt(priceVal);
+                if (p < minP) return false;
+            } else {
+                var parts = priceVal.split('-');
+                var lo = parseInt(parts[0]);
+                var hi = parseInt(parts[1]);
+                if (p < lo || p > hi) return false;
+            }
         }
 
         return true;
@@ -275,10 +301,10 @@ function createRouteCard(route) {
     }
 
     // Price display
-    var priceDisplay = price > 0 ? '\u00A5' + price : 'Contact Us';
+    var priceDisplay = price > 0 ? '$' + price : 'Contact Us';
     var oldPriceHtml = '';
     if (ctripPrice > 0 && ctripPrice !== price) {
-        oldPriceHtml = '<span class="old-price">\u00A5' + ctripPrice + '</span>';
+        oldPriceHtml = '<span class="old-price">$' + ctripPrice + '</span>';
     }
     var discountBadge = '';
     if (ctripPrice > 0 && price > 0 && ctripPrice > price) {
@@ -385,10 +411,10 @@ function showRouteDetail(route) {
     var imageUrl = route.imageUrl || '';
     var duration = route.duration || 0;
 
-    var priceDisplay = price > 0 ? '\u00A5' + price : 'Contact Us';
+    var priceDisplay = price > 0 ? '$' + price : 'Contact Us';
     var oldPriceHtml2 = '';
     if (ctripPrice > 0) {
-        oldPriceHtml2 = '<span class="modal-old-price">\u00A5' + ctripPrice + '</span>';
+        oldPriceHtml2 = '<span class="modal-old-price">$' + ctripPrice + '</span>';
     }
     var discountBadge2 = '';
     if (ctripPrice > 0 && price > 0 && ctripPrice > price) {
