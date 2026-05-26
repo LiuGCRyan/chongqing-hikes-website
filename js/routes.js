@@ -18,13 +18,14 @@ async function loadRoutes() {
         const response = await fetch('data/routes_en.json');
         if (!response.ok) throw new Error('HTTP ' + response.status);
         allRoutes = await response.json();
-        // Apply price multiplier (1.3~1.8x)
+        // Apply price adjustment (reduce by half)
         for (var i = 0; i < allRoutes.length; i++) {
             var route = allRoutes[i];
             if (route.price && route.price > 0) {
-                var multiplier = 1.3 + Math.random() * 0.5;
-                route.price = Math.round(route.price * multiplier);
+                route.price = Math.round(route.price * 0.5);
             }
+            // Remove ctripPrice to prevent old-price display
+            delete route.ctripPrice;
         }
         applyFilters();
     } catch (error) {
