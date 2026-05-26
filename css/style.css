@@ -3040,6 +3040,28 @@ button:focus {
     align-items: stretch !important;
 }
 
+/* Left side: image thumbnail */
+.route-card .route-image {
+    width: 220px !important;
+    min-width: 220px !important;
+    height: auto !important;
+    min-height: 180px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    flex-shrink: 0 !important;
+}
+
+.route-card .route-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.route-card:hover .route-image img {
+    transform: scale(1.05) !important;
+}
+
 .route-card:hover {
     transform: translateY(-3px) !important;
     box-shadow: 0 8px 28px rgba(0,0,0,0.12) !important;

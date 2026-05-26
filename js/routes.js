@@ -285,7 +285,7 @@ function loadMore() {
     }
 }
 
-// Create route card element - ALL ENGLISH, clean typography, NO image on card
+// Create route card element - ALL ENGLISH, clean typography, WITH image
 function createRouteCard(route) {
     if (!route) return null;
 
@@ -303,6 +303,7 @@ function createRouteCard(route) {
     var highlights = route.highlights || '';
     var tags = route.tags || '';
     var duration = route.duration || 0;
+    var imageUrl = route.imageUrl || '';
 
     // Get first highlight
     var parts = highlights.split('|');
@@ -354,8 +355,18 @@ function createRouteCard(route) {
         typeBadge = '<span class="route-type-badge">' + escapeHtml(type) + '</span>';
     }
 
-    // Build card HTML
-    var html = '<div class="route-content">';
+    // Build card HTML - left image, right content+price
+    var html = '';
+    
+    // Left: image thumbnail
+    if (imageUrl) {
+        html += '<div class="route-image">';
+        html += '<img src="' + imageUrl + '" alt="' + escapeHtml(name) + '" loading="lazy" onerror="this.parentElement.style.display=&apos;none&apos;" />';
+        html += '</div>';
+    }
+    
+    // Right: content
+    html += '<div class="route-content">';
     html += '<div class="route-header">';
     html += '<h3 class="route-name">' + escapeHtml(name) + '</h3>';
     html += typeBadge;
