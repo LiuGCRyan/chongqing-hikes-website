@@ -2638,7 +2638,7 @@ button:focus {
 }
 
 /* ============================================
-   LANGUAGE SWITCHER - Custom Google Translate
+   LANGUAGE SWITCHER - Nav Integrated
    ============================================ */
 
 #google_translate_element {
@@ -2650,49 +2650,67 @@ button:focus {
     overflow: hidden;
 }
 
-.lang-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
+/* Nav language item container */
+.nav-lang {
+    position: relative;
+    list-style: none;
+}
+
+/* Language switcher inside nav */
+.nav-lang .lang-switcher {
+    position: static;
+    z-index: auto;
+}
+
+/* Compact trigger for nav bar */
+.nav-lang .lang-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--text-white-muted);
+    transition: all var(--transition-fast);
     font-family: var(--font-body);
 }
 
-.lang-trigger {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(201, 169, 97, 0.3);
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    color: var(--text-dark);
-    transition: all var(--transition-fast);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.lang-trigger:hover {
-    background: white;
+.nav-lang .lang-trigger:hover {
+    background: rgba(201, 169, 97, 0.1);
     border-color: var(--color-primary);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: var(--text-white);
 }
 
-.lang-icon {
-    font-size: 18px;
+/* When navbar is scrolled (dark background) */
+.navbar.scrolled .nav-lang .lang-trigger {
+    color: var(--text-medium);
+    border-color: rgba(201, 169, 97, 0.3);
 }
 
-.lang-text {
+.navbar.scrolled .nav-lang .lang-trigger:hover {
+    color: var(--text-dark);
+    background: rgba(201, 169, 97, 0.1);
+}
+
+.nav-lang .lang-icon {
+    font-size: 16px;
+}
+
+.nav-lang .lang-text {
     font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
-.lang-arrow {
-    font-size: 10px;
-    color: var(--text-light);
+.nav-lang .lang-arrow {
+    font-size: 9px;
+    opacity: 0.7;
 }
 
-.lang-dropdown {
+/* Dropdown positioned relative to nav item */
+.nav-lang .lang-dropdown {
     display: none;
     position: absolute;
     top: calc(100% + 8px);
@@ -2701,53 +2719,53 @@ button:focus {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    min-width: 200px;
+    min-width: 180px;
     overflow: hidden;
+    z-index: 9999;
 }
 
-.lang-dropdown.active {
+.nav-lang .lang-dropdown.active {
     display: block;
 }
 
-.lang-option {
+.nav-lang .lang-option {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px;
+    padding: 10px 14px;
     cursor: pointer;
     transition: background var(--transition-fast);
 }
 
-.lang-option:hover {
+.nav-lang .lang-option:hover {
     background: var(--bg-cream);
 }
 
-.lang-option:not(:last-child) {
+.nav-lang .lang-option:not(:last-child) {
     border-bottom: 1px solid var(--bg-light);
 }
 
-.lang-native {
+.nav-lang .lang-native {
     font-weight: 600;
     color: var(--text-dark);
-    font-size: 14px;
+    font-size: 13px;
 }
 
-.lang-name {
-    font-size: 12px;
+.nav-lang .lang-name {
+    font-size: 11px;
     color: var(--text-light);
-    margin-left: 12px;
+    margin-left: 10px;
 }
 
-/* Responsive */
+/* Mobile: hide text, show only icon */
 @media (max-width: 768px) {
-    .lang-switcher {
-        top: 10px;
-        right: 10px;
+    .nav-lang .lang-text,
+    .nav-lang .lang-arrow {
+        display: none;
     }
     
-    .lang-trigger {
-        padding: 8px 12px;
-        font-size: 13px;
+    .nav-lang .lang-trigger {
+        padding: 0.5rem;
     }
 }
 

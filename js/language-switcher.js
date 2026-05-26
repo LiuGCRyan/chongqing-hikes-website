@@ -38,9 +38,9 @@ class LanguageSwitcher {
 
         container.innerHTML = `
             <div class="lang-switcher">
-                <button class="lang-trigger" id="lang-trigger">
+                <button class="lang-trigger" id="lang-trigger" type="button">
                     <span class="lang-icon">🌐</span>
-                    <span class="lang-text">Choose Your Language</span>
+                    <span class="lang-text">EN</span>
                     <span class="lang-arrow">▼</span>
                 </button>
                 <div class="lang-dropdown" id="lang-dropdown">
@@ -108,7 +108,7 @@ class LanguageSwitcher {
         if (lang) {
             const trigger = document.getElementById('lang-trigger');
             if (trigger) {
-                trigger.querySelector('.lang-text').textContent = lang.native;
+                trigger.querySelector('.lang-text').textContent = lang.code.toUpperCase();
             }
         }
     }
