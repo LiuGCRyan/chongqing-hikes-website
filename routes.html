@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chongqing Hikes - Tours & Routes</title>
+    <title>City Tours - Chongqing Hikes | Explore the 8D Wonder</title>
+    <meta name="description" content="Discover 1000+ curated Chongqing tours for foreign travelers. City walks, food tours, cultural experiences with English-speaking guides.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="City Tours - Chongqing Hikes">
+    <meta property="og:description" content="Discover 1000+ curated Chongqing tours for foreign travelers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://liugcryan.github.io/chongqing-hikes-website/city-tours.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="City Tours - Chongqing Hikes">
+    <meta name="twitter:description" content="Discover 1000+ curated Chongqing tours for foreign travelers.">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
 </head>
 <body>
     <!-- Google Translate (Hidden) -->
@@ -23,79 +40,180 @@
     </script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
-    <!-- Custom Language Switcher -->
-    <div id="language-switcher"></div>
-    <script src="js/language-switcher.js"></script>
-    
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation - Unified with other pages -->
+    <nav id="navbar" class="navbar scrolled">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Chongqing<span>Hikes</span></a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="routes.html" class="active">Tours</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+            <a href="index.html" class="logo">CHONGQING HIKES</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city-tours.html" class="active">City Tours</a></li>
+                <li><a href="hiking.html">Wild Hiking</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn-nav">Book Now</a></li>
+                <li id="language-switcher" class="nav-lang"></li>
+            </ul>
         </div>
     </nav>
+    <script src="js/language-switcher.js"></script>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1>Explore Chongqing</h1>
-            <p>Carefully curated tours for foreign travelers</p>
+    <!-- Hero -->
+    <header class="page-hero city-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>CITY TOURS</h1>
+            <p class="hero-subtitle">The 8D wonderland you've seen on TikTok — experience it for real</p>
         </div>
     </header>
 
-    <!-- Filters -->
-    <section class="filters">
+    <!-- Intro -->
+    <section class="section-intro">
         <div class="container">
-            <div class="filter-group">
-                <label>Tour Duration:</label>
-                <select id="filter-duration">
-                    <option value="">All Tours</option>
-                    <option value="1">一日游 (1 Day)</option>
-                    <option value="2">二日游 (2 Days)</option>
-                    <option value="3">三日游 (3 Days)</option>
-                    <option value="4+">四日游+ (4+ Days)</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>Price Range:</label>
-                <select id="filter-price">
-                    <option value="">All Prices</option>
-                    <option value="0-75">Under $75</option>
-                    <option value="75-150">$75 - $150</option>
-                    <option value="150-300">$150 - $300</option>
-                    <option value="300-500">$300 - $500</option>
-                    <option value="500+">Above $500</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>Sort By:</label>
-                <select id="filter-sort">
-                    <option value="default">Default</option>
-                    <option value="price-asc">Price: Low to High</option>
-                    <option value="price-desc">Price: High to Low</option>
-                    <option value="rating">Highest Rated</option>
-                </select>
-            </div>
-            <button id="btn-reset-filters" class="btn-secondary">Reset Filters</button>
+            <p class="lead">Chongqing isn't just a city — it's a vertical labyrinth where buildings stack on buildings, trains run through apartment blocks, and night markets glow like something from a sci-fi movie. Let me show you the real Chongqing, the way locals live it.</p>
         </div>
     </section>
 
-    <!-- Routes Grid -->
-    <section class="routes-section">
+    <!-- Tours Grid -->
+    <section class="tours-section">
         <div class="container">
-            <div id="routes-grid" class="routes-grid">
-                <!-- Route cards will be dynamically inserted here -->
+            <h2 class="section-title">CHOOSE YOUR EXPERIENCE</h2>
+            
+            <div class="tours-grid">
+                <!-- Tour 1 -->
+                <div class="tour-card">
+                    <div class="tour-image"><img src="images/tours/hongya_cave.webp" alt="Hongya Cave Panoramic" loading="lazy">
+                        <span class="tour-badge">Most Popular</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Half-Day City Walk</h3>
+                        <div class="tour-meta">
+                            <span>⏱️ 3-4 hours</span>
+                            <span>👥 Private or small group</span>
+                        </div>
+                        <p class="tour-desc">Perfect introduction to Chongqing's 8D magic. Hongya Cave, Liziba Station, and a hidden viewpoint most tourists miss.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">From $89</span>
+                            <a href="contact.html" class="btn-tour">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="tour-card">
+                    <div class="tour-image"><img src="images/tours/hotpot.webp" alt="Chongqing Hotpot" loading="lazy">
+                        <span class="tour-badge">Foodie Favorite</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Hotpot & Night Market Tour</h3>
+                        <div class="tour-meta">
+                            <span>⏱️ 4-5 hours</span>
+                            <span>👥 2-6 people</span>
+                        </div>
+                        <p class="tour-desc">Eat like a local. Visit an air-raid shelter hotpot joint, explore back-alley snack stalls, and finish with riverfront beers.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">From $119</span>
+                            <a href="contact.html" class="btn-tour">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="tour-card">
+                    <div class="tour-image"><img src="images/tours/ciqikou.webp" alt="Ciqikou Ancient Town" loading="lazy">
+                        <span class="tour-badge">Cultural</span>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Ancient Towns & Teahouses</h3>
+                        <div class="tour-meta">
+                            <span>⏱️ 6-7 hours</span>
+                            <span>👥 Private</span>
+                        </div>
+                        <p class="tour-desc">Step back in time at Ciqikou, sip tea in a 100-year-old teahouse, and hear the stories behind Chongqing's wartime capital history.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">From $149</span>
+                            <a href="contact.html" class="btn-tour">Inquire</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="no-results" class="no-results" style="display: none;">
-                <p>No tours match your filters. Please try different criteria.</p>
+
+            <!-- Route Filters -->
+            <div class="routes-filters" style="margin-top: 60px; padding: 30px; background: var(--bg-cream); border-radius: 8px;">
+                <h3 style="margin-bottom: 20px; font-family: var(--font-heading);">Browse All 1000+ Routes</h3>
+                <div class="filter-row" style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+                    <input type="text" id="searchInput" placeholder="Search routes..." style="padding: 10px 15px; border: 1px solid #ddd; border-radius: 4px; min-width: 200px;">
+                    <select id="typeFilter" style="padding: 10px 15px; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="">All Types</option>
+                        <option value="Day Tour">Day Tour</option>
+                        <option value="Small Group">Small Group</option>
+                        <option value="Private Tour">Private Tour</option>
+                        <option value="Free and Easy">Free and Easy</option>
+                    </select>
+                    <select id="sortFilter" style="padding: 10px 15px; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="default">Sort By</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                    <select id="filter-price" style="padding: 10px 15px; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="">All Prices</option>
+                        <option value="0-75">Under $75</option>
+                        <option value="75-150">$75 - $150</option>
+                        <option value="150-300">$150 - $300</option>
+                        <option value="300-500">$300 - $500</option>
+                        <option value="500+">Above $500</option>
+                    </select>
+                    <button id="resetFilters" class="btn-secondary" style="padding: 10px 20px;">Reset Filters</button>
+                </div>
             </div>
-            <div id="load-more-container" class="load-more-container" style="text-align: center; margin-top: 40px;">
-                <button id="btn-load-more" class="btn-primary">Load More Tours</button>
+
+            <!-- Loading Skeleton -->
+            <div id="loadingSkeleton" class="loading-skeleton" style="margin-top: 30px;">
+                <div class="skeleton-card">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-title"></div>
+                        <div class="skeleton-text"></div>
+                        <div class="skeleton-text short"></div>
+                        <div class="skeleton-footer">
+                            <div class="skeleton-price"></div>
+                            <div class="skeleton-btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-title"></div>
+                        <div class="skeleton-text"></div>
+                        <div class="skeleton-text short"></div>
+                        <div class="skeleton-footer">
+                            <div class="skeleton-price"></div>
+                            <div class="skeleton-btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-content">
+                        <div class="skeleton-title"></div>
+                        <div class="skeleton-text"></div>
+                        <div class="skeleton-text short"></div>
+                        <div class="skeleton-footer">
+                            <div class="skeleton-price"></div>
+                            <div class="skeleton-btn"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Routes Grid -->
+            <div id="routesGrid" class="routes-grid" style="margin-top: 30px; display: none;"></div>
+            <div id="loadMoreContainer" class="load-more-container" style="display: none;">
+                <button id="loadMoreBtn" class="btn-primary">Load More</button>
             </div>
         </div>
     </section>
@@ -111,7 +229,8 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <a href="index.html">Home</a>
-                    <a href="routes.html">Tours</a>
+                    <a href="city-tours.html">City Tours</a>
+                    <a href="hiking.html">Wild Hiking</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                 </div>
@@ -129,10 +248,10 @@
     </footer>
 
     <!-- Route Detail Modal -->
-    <div id="route-modal" class="modal">
+    <div id="routeModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
-            <div id="modal-body"></div>
+            <div id="modalBody"></div>
         </div>
     </div>
 

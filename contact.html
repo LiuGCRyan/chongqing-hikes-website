@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Chongqing Hikes | Book Your Adventure</title>
+    <meta name="description" content="Book your Chongqing tour with Ryan. WhatsApp, email, or fill out the inquiry form. Fast response within 2-4 hours.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact - Chongqing Hikes">
+    <meta property="og:description" content="Book your Chongqing tour with Ryan. Fast response within 2-4 hours.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://liugcryan.github.io/chongqing-hikes-website/contact.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Chongqing Hikes">
+    <meta name="twitter:description" content="Book your Chongqing tour with Ryan. Fast response within 2-4 hours.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +41,7 @@
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
     <!-- Navigation -->
-    <nav class="navbar scrolled">
+    <nav id="navbar" class="navbar scrolled">
         <div class="nav-container">
             <a href="index.html" class="logo">CHONGQING HIKES</a>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -103,7 +119,7 @@
                     <h2>QUICK INQUIRY</h2>
                     <p>Fill this out and I'll get back to you via WhatsApp or email.</p>
                     
-                    <form id="contact-form" class="contact-form">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xnqevwdr" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required placeholder="John Smith">
@@ -163,7 +179,8 @@
                         </div>
                         
                         <button type="submit" class="btn-primary btn-large btn-full">Send Inquiry</button>
-                        <p class="form-note">By submitting, you'll be redirected to WhatsApp to complete your message.</p>
+                        <p class="form-note">You'll receive a confirmation email. I typically reply within 2-4 hours.</p>
+                        <div id="form-status" style="margin-top: 15px; padding: 12px; border-radius: 4px; display: none;"></div>
                     </form>
                 </div>
             </div>
