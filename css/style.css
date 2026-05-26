@@ -1319,18 +1319,6 @@ button:focus {
     transform: scale(1.08);
 }
 
-.discount-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: #e74c3c;
-    color: var(--text-white);
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
 .route-type-badge {
     position: absolute;
     bottom: 1rem;
@@ -1394,12 +1382,6 @@ button:focus {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-}
-
-.old-price {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    text-decoration: line-through;
 }
 
 .current-price {
@@ -1573,10 +1555,6 @@ button:focus {
     padding: var(--spacing-md);
     background: var(--bg-light);
     border-radius: 6px;
-}
-
-.detail-pricing .old-price {
-    font-size: 1.1rem;
 }
 
 .detail-pricing .current-price {
@@ -2143,12 +2121,6 @@ button:focus {
     flex-wrap: wrap;
 }
 
-.hero-old-price {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.5);
-    text-decoration: line-through;
-}
-
 .hero-current-price {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.6rem;
@@ -2163,10 +2135,6 @@ button:focus {
     font-weight: 400;
     color: rgba(255,255,255,0.7);
     margin-left: 2px;
-}
-
-.modal-hero-overlay-bottom .modal-discount {
-    background: #27ae60;
 }
 
 .modal-type-badge {
@@ -2237,12 +2205,6 @@ button:focus {
     gap: 12px;
 }
 
-.modal-old-price {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    text-decoration: line-through;
-}
-
 .modal-current-price {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
@@ -2254,15 +2216,6 @@ button:focus {
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--text-light);
-}
-
-.modal-discount {
-    background: #27ae60;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
 }
 
 .modal-tags {
@@ -2574,21 +2527,6 @@ button:focus {
     font-weight: 700;
 }
 
-.route-card .old-price {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    text-decoration: line-through;
-}
-
-.discount-badge {
-    background: #27ae60;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 0.72rem;
-    font-weight: 600;
-}
-
 /* Responsive Modal */
 @media (max-width: 768px) {
     .route-modal {
@@ -2837,19 +2775,6 @@ button:focus {
 
 .route-card:hover .route-image img {
     transform: scale(1.05);
-}
-
-.discount-badge {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: #e74c3c;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    z-index: 2;
 }
 
 .route-type-badge {
@@ -3214,22 +3139,6 @@ button:focus {
     font-weight: 700 !important;
 }
 
-.route-card .old-price {
-    font-size: 0.82rem !important;
-    color: #aaa !important;
-    text-decoration: line-through !important;
-}
-
-.discount-badge {
-    display: inline-block !important;
-    background: #27ae60 !important;
-    color: #fff !important;
-    padding: 2px 8px !important;
-    border-radius: 10px !important;
-    font-size: 0.7rem !important;
-    font-weight: 600 !important;
-}
-
 .btn-view {
     display: inline-block !important;
     padding: 8px 18px !important;
@@ -3318,4 +3227,105 @@ button:focus {
     .tour-content { padding: 28px 24px 32px; }
     .tour-includes { grid-template-columns: 1fr; gap: 8px; }
     .expect-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* ============================================
+   LOADING SKELETON - Route cards placeholder
+   ============================================ */
+
+.loading-skeleton {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.skeleton-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-content {
+    padding: var(--spacing-md);
+}
+
+.skeleton-title {
+    width: 70%;
+    height: 20px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.skeleton-text {
+    width: 100%;
+    height: 14px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.skeleton-text.short {
+    width: 50%;
+}
+
+.skeleton-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid #eee;
+    margin-top: var(--spacing-sm);
+}
+
+.skeleton-price {
+    width: 60px;
+    height: 24px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: 4px;
+}
+
+.skeleton-btn {
+    width: 80px;
+    height: 32px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: 6px;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   ROUTES ERROR MESSAGE
+   ============================================ */
+
+.routes-error {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1em;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }

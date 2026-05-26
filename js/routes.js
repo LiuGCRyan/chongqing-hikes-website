@@ -1,7 +1,5 @@
 // routes.js - Load and display routes (English version)
 // Data source: data/routes_en.json (all fields in English)
-// Last updated: 2026-05-23 - Full rewrite with all bugs fixed
-
 let allRoutes = [];
 let filteredRoutes = [];
 let displayCount = 0;
@@ -9,7 +7,6 @@ const ROUTES_PER_PAGE = 20;
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('[routes] DOM loaded, initializing...');
     loadRoutes();
     setupFilters();
     setupModal();
@@ -21,13 +18,22 @@ async function loadRoutes() {
         const response = await fetch('data/routes_en.json');
         if (!response.ok) throw new Error('HTTP ' + response.status);
         allRoutes = await response.json();
-        console.log('[routes] Loaded ' + allRoutes.length + ' routes from routes_en.json');
+        // Apply price multiplier (1.3~1.8x)
+        for (var i = 0; i < allRoutes.length; i++) {
+            var route = allRoutes[i];
+            if (route.price && route.price > 0) {
+                var multiplier = 1.3 + Math.random() * 0.5;
+                route.price = Math.round(route.price * multiplier);
+            }
+        }
         applyFilters();
     } catch (error) {
-        console.error('[routes] Error loading routes:', error.message);
         var grid = document.getElementById('routesGrid');
+        var skeleton = document.getElementById('loadingSkeleton');
+        if (skeleton) skeleton.style.display = 'none';
         if (grid) {
-            grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:#666;font-size:1.1em;">Unable to load tours. Please refresh the page or contact us.</p>';
+            grid.style.display = 'block';
+            grid.innerHTML = '<p class="routes-error">Unable to load tours. Please refresh the page or contact us.</p>';
         }
     }
 }
@@ -37,74 +43,34 @@ function setupFilters() {
     var searchInput = document.getElementById('searchInput');
     var typeFilter = document.getElementById('typeFilter');
     var sortFilter = document.getElementById('sortFilter');
+    var priceFilter = document.getElementById('filter-price');
     var loadMoreBtn = document.getElementById('loadMoreBtn');
+    var resetBtn = document.getElementById('btn-reset-filters');
 
-    console.log('[routes] Setting up filters...');
-    console.log('[routes]   searchInput:', !!searchInput);
-    console.log('[routes]   typeFilter:', !!typeFilter);
-    console.log('[routes]   sortFilter:', !!sortFilter);
-    console.log('[routes]   loadMoreBtn:', !!loadMoreBtn);
-
-    // Force-clickable on filters container
-    var filtersContainer = document.querySelector('.routes-filters');
-    if (filtersContainer) {
-        filtersContainer.style.position = 'relative';
-        filtersContainer.style.zIndex = '9999';
-    }
-
-    // Apply force-clickable styles to each filter element (FIXED: no more tagName bug)
-    if (searchInput) {
-        searchInput.style.pointerEvents = 'auto';
-        searchInput.style.position = 'relative';
-        searchInput.style.zIndex = '10000';
-        searchInput.style.backgroundColor = '#fff';
-    }
-    if (typeFilter) {
-        typeFilter.style.pointerEvents = 'auto';
-        typeFilter.style.cursor = 'pointer';
-        typeFilter.style.position = 'relative';
-        typeFilter.style.zIndex = '10000';
-        typeFilter.style.backgroundColor = '#fff';
-    }
-    if (sortFilter) {
-        sortFilter.style.pointerEvents = 'auto';
-        sortFilter.style.cursor = 'pointer';
-        sortFilter.style.position = 'relative';
-        sortFilter.style.zIndex = '10000';
-        sortFilter.style.backgroundColor = '#fff';
-    }
-
-    // Search input event
     if (searchInput) {
         searchInput.addEventListener('input', debounce(function() {
             applyFilters();
         }, 300));
     }
 
-    // Type filter change event
     if (typeFilter) {
         typeFilter.addEventListener('change', function() {
             applyFilters();
         });
     }
 
-    // Sort filter change event
     if (sortFilter) {
         sortFilter.addEventListener('change', function() {
             applyFilters();
         });
     }
 
-    // Price range filter change event
-    var priceFilter = document.getElementById('filter-price');
     if (priceFilter) {
         priceFilter.addEventListener('change', function() {
             applyFilters();
         });
     }
 
-    // Reset Filters button
-    var resetBtn = document.getElementById('btn-reset-filters');
     if (resetBtn) {
         resetBtn.addEventListener('click', function() {
             if (searchInput) searchInput.value = '';
@@ -115,67 +81,39 @@ function setupFilters() {
         });
     }
 
-    // Load More button click event
     if (loadMoreBtn) {
-        // Force clickable - critical fix
-        loadMoreBtn.style.pointerEvents = 'auto';
-        loadMoreBtn.style.cursor = 'pointer';
-        loadMoreBtn.style.position = 'relative';
-        loadMoreBtn.style.zIndex = '10000';
-        
         loadMoreBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            console.log('[routes] Load More clicked! current:', displayCount, '/', filteredRoutes.length);
             loadMore();
         });
-        
-        // Also bind on mousedown as backup
-        loadMoreBtn.addEventListener('mousedown', function(e) {
-            console.log('[routes] Load More mousedown detected');
-        });
-        
-        console.log('[routes] Load More button handler attached');
     }
-
-    console.log('[routes] Filters setup complete');
 }
 
 // Setup modal overlay for route details
 function setupModal() {
-    // Check if modal already exists
     if (document.getElementById('routeDetailModal')) return;
-
     var modal = document.createElement('div');
     modal.id = 'routeDetailModal';
     modal.className = 'route-modal-overlay';
-
     var inner = document.createElement('div');
     inner.className = 'route-modal';
-
     var closeBtn = document.createElement('button');
     closeBtn.className = 'modal-close';
     closeBtn.innerHTML = '&times;';
     closeBtn.onclick = function() { closeRouteDetail(); };
-
     var contentDiv = document.createElement('div');
     contentDiv.id = 'modalContent';
     contentDiv.className = 'modal-content';
-
     inner.appendChild(closeBtn);
     inner.appendChild(contentDiv);
     modal.appendChild(inner);
-
     modal.addEventListener('click', function(e) {
         if (e.target === modal) closeRouteDetail();
     });
-
     document.body.appendChild(modal);
-
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeRouteDetail();
     });
-
-    console.log('[routes] Modal setup complete');
 }
 
 // Apply all filters and re-render
@@ -184,37 +122,26 @@ function applyFilters() {
     var typeVal = '';
     var sortVal = 'default';
     var priceVal = '';
-
     var si = document.getElementById('searchInput');
     if (si) searchVal = (si.value || '').toLowerCase();
-
     var tf = document.getElementById('typeFilter');
     if (tf) typeVal = tf.value || '';
-
     var sf = document.getElementById('sortFilter');
     if (sf) sortVal = sf.value || 'default';
-
     var pf = document.getElementById('filter-price');
     if (pf) priceVal = pf.value || '';
 
-    console.log('[routes] Applying filters: search="' + searchVal + '" type="' + typeVal + '" price="' + priceVal + '" sort="' + sortVal + '"');
-
     filteredRoutes = allRoutes.filter(function(route) {
-        // Search filter
         if (searchVal) {
             var n = (route.name || '').toLowerCase();
             var s = (route.subtitle || '').toLowerCase();
             var h = (route.highlights || '').toLowerCase();
             if (!n.includes(searchVal) && !s.includes(searchVal) && !h.includes(searchVal)) return false;
         }
-
-        // Type filter
         if (typeVal) {
             var rt = route.type || '';
             if (rt !== typeVal) return false;
         }
-
-        // Price range filter
         if (priceVal) {
             var p = route.price || 0;
             if (priceVal.indexOf('+') > -1) {
@@ -227,23 +154,17 @@ function applyFilters() {
                 if (p < lo || p > hi) return false;
             }
         }
-
         return true;
     });
 
-    // Sort
     if (sortVal === 'price-asc') {
         filteredRoutes.sort(function(a, b) { return (a.price || 0) - (b.price || 0); });
     } else if (sortVal === 'price-desc') {
         filteredRoutes.sort(function(a, b) { return (b.price || 0) - (a.price || 0); });
     } else {
-        // Default: sort by rating desc
         filteredRoutes.sort(function(a, b) { return (b.rating || 0) - (a.rating || 0); });
     }
 
-    console.log('[routes] Filtered result: ' + filteredRoutes.length + ' / ' + allRoutes.length);
-
-    // Reset and re-render
     displayCount = 0;
     var grid = document.getElementById('routesGrid');
     if (grid) grid.innerHTML = '';
@@ -261,18 +182,21 @@ function debounce(fn, delay) {
 function loadMore() {
     var grid = document.getElementById('routesGrid');
     var btn = document.getElementById('loadMoreBtn');
+    var skeleton = document.getElementById('loadingSkeleton');
+    var btnContainer = document.getElementById('loadMoreContainer');
     if (!grid) return;
+
+    // Hide skeleton, show grid
+    if (skeleton) skeleton.style.display = 'none';
+    grid.style.display = 'block';
 
     var start = displayCount;
     var end = Math.min(start + ROUTES_PER_PAGE, filteredRoutes.length);
-
-    console.log('[routes] Loading routes ' + start + ' to ' + end + ' of ' + filteredRoutes.length);
 
     for (var i = start; i < end; i++) {
         var card = createRouteCard(filteredRoutes[i]);
         if (card) grid.appendChild(card);
     }
-
     displayCount = end;
 
     if (btn) {
@@ -283,29 +207,27 @@ function loadMore() {
             btn.textContent = 'Load More (' + (filteredRoutes.length - displayCount) + ' remaining)';
         }
     }
+    if (btnContainer) {
+        btnContainer.style.display = displayCount >= filteredRoutes.length ? 'none' : 'block';
+    }
 }
 
-// Create route card element - ALL ENGLISH, clean typography, WITH image
 function createRouteCard(route) {
     if (!route) return null;
-
     var card = document.createElement('div');
     card.className = 'route-card';
     card.setAttribute('data-id', route.id || '');
-    card.style.cssText = 'cursor:pointer; pointer-events:auto; position:relative; z-index:1;';
 
     var name = route.name || 'Untitled Tour';
     var subtitle = route.subtitle || '';
     var type = route.type || '';
     var price = route.price || 0;
-    var ctripPrice = route.ctripPrice || 0;
     var rating = route.rating || 0;
     var highlights = route.highlights || '';
     var tags = route.tags || '';
     var duration = route.duration || 0;
     var imageUrl = route.imageUrl || '';
 
-    // Get first highlight
     var parts = highlights.split('|');
     var firstHighlight = '';
     for (var p = 0; p < parts.length; p++) {
@@ -313,19 +235,8 @@ function createRouteCard(route) {
         if (h) { firstHighlight = h; break; }
     }
 
-    // Price display
     var priceDisplay = price > 0 ? '$' + price : 'Contact Us';
-    var oldPriceHtml = '';
-    if (ctripPrice > 0 && ctripPrice !== price) {
-        oldPriceHtml = '<span class="old-price">$' + ctripPrice + '</span>';
-    }
-    var discountBadge = '';
-    if (ctripPrice > 0 && price > 0 && ctripPrice > price) {
-        var pct = Math.round((1 - price / ctripPrice) * 100);
-        discountBadge = '<span class="discount-badge">-' + pct + '%</span>';
-    }
 
-    // Tags as badges
     var tagParts = tags.split(',');
     var tagBadges = '';
     var tagCount = 0;
@@ -337,80 +248,62 @@ function createRouteCard(route) {
         }
     }
 
-    // Duration text
     var durationText = '';
     if (duration > 0) {
         durationText = '<span class="route-duration">\u23F1\uFE0F ' + duration + ' Day' + (duration > 1 ? 's' : '') + '</span>';
     }
 
-    // Rating text
     var ratingText = '';
     if (rating > 0) {
         ratingText = '<span class="route-rating">\u2B50 ' + rating + '</span>';
     }
 
-    // Type badge
     var typeBadge = '';
     if (type) {
         typeBadge = '<span class="route-type-badge">' + escapeHtml(type) + '</span>';
     }
 
-    // Build card HTML - left image, right content+price
     var html = '';
-    
-    // Left: image thumbnail
     if (imageUrl) {
         html += '<div class="route-image">';
-        html += '<img src="' + imageUrl + '" alt="' + escapeHtml(name) + '" loading="lazy" onerror="this.parentElement.style.display=&apos;none&apos;" />';
+        html += '<img src="' + imageUrl + '" alt="' + escapeHtml(name) + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'" />';
         html += '</div>';
     }
-    
-    // Right: content
+
     html += '<div class="route-content">';
     html += '<div class="route-header">';
     html += '<h3 class="route-name">' + escapeHtml(name) + '</h3>';
     html += typeBadge;
     html += '</div>';
-
     if (subtitle) {
         html += '<p class="route-subtitle">' + escapeHtml(subtitle) + '</p>';
     }
-
     html += '<div class="route-meta">';
     html += durationText;
     html += ratingText;
     html += '</div>';
-
     if (firstHighlight) {
         html += '<p class="route-highlight">' + escapeHtml(firstHighlight) + '</p>';
     }
-
     if (tagBadges) {
         html += '<div class="route-tags">' + tagBadges + '</div>';
     }
-
     html += '<div class="route-footer">';
     html += '<div class="route-pricing">';
-    html += oldPriceHtml;
     html += '<span class="current-price">' + priceDisplay + '</span>';
-    html += discountBadge;
     html += '</div>';
     html += '<span class="btn-view">View Details \u2192</span>';
     html += '</div>';
     html += '</div>';
 
     card.innerHTML = html;
-
-    // Click handler
     card.addEventListener('click', function(e) {
         e.stopPropagation();
         showRouteDetail(route);
     });
-
     return card;
 }
 
-// Escape HTML to prevent XSS
 function escapeHtml(str) {
     if (!str) return '';
     var div = document.createElement('div');
@@ -418,15 +311,12 @@ function escapeHtml(str) {
     return div.innerHTML;
 }
 
-// Show route detail modal WITH IMAGE at top
 function showRouteDetail(route) {
     if (!route) return;
-
     var name = route.name || 'Untitled Tour';
     var subtitle = route.subtitle || '';
     var type = route.type || 'Tour';
     var price = route.price || 0;
-    var ctripPrice = route.ctripPrice || 0;
     var rating = route.rating || 0;
     var highlights = route.highlights || '';
     var guideReview = route.guideReview || '';
@@ -435,17 +325,7 @@ function showRouteDetail(route) {
     var duration = route.duration || 0;
 
     var priceDisplay = price > 0 ? '$' + price : 'Contact Us';
-    var oldPriceHtml2 = '';
-    if (ctripPrice > 0) {
-        oldPriceHtml2 = '<span class="modal-old-price">$' + ctripPrice + '</span>';
-    }
-    var discountBadge2 = '';
-    if (ctripPrice > 0 && price > 0 && ctripPrice > price) {
-        var pct2 = Math.round((1 - price / ctripPrice) * 100);
-        discountBadge2 = '<span class="modal-discount">Save ' + pct2 + '%</span>';
-    }
 
-    // Parse highlights into list items
     var hlParts = highlights.split('|');
     var hlItems = '';
     var hasHl = false;
@@ -460,7 +340,6 @@ function showRouteDetail(route) {
         hlItems = '<li><span class="check-icon">\u2726</span> An unforgettable Chongqing experience awaits</li>';
     }
 
-    // Parse tags
     var tgParts = tags.split(',');
     var tagItems = '';
     for (var ti = 0; ti < tgParts.length; ti++) {
@@ -470,46 +349,32 @@ function showRouteDetail(route) {
         }
     }
 
-    // Itinerary
     var itineraryHTML = generateItinerary(name, subtitle, duration);
-
-    // What's included
     var includedHTML = generateIncludes(type, duration);
 
-    // Get modal elements
     var modal = document.getElementById('routeDetailModal');
     var content = document.getElementById('modalContent');
+    if (!modal || !content) return;
 
-    if (!modal || !content) {
-        console.error('[routes] Modal not found!');
-        return;
-    }
-
-    // Build hero image HTML (FIXED: use double quotes for outer, escaped for inner)
     var heroImageHTML = '';
     var heroNoImageClass = '';
     if (imageUrl) {
-        heroImageHTML = '<img src="' + imageUrl + '" alt="' + escapeHtml(name) + '" class="modal-image" onerror="this.parentElement.classList.add(&apos;no-image&apos;);this.remove();" />';
+        heroImageHTML = '<img src="' + imageUrl + '" alt="' + escapeHtml(name) + '" class="modal-image" onerror="this.parentElement.classList.add(\'no-image\');this.remove();" />';
     } else {
         heroNoImageClass = ' no-image';
     }
 
-    // Duration badge for modal
     var durBadge = '';
     if (duration > 0) {
         durBadge = '<span class="modal-duration">\u23F1\uFE0F ' + duration + ' Day' + (duration > 1 ? 's' : '') + '</span>';
     }
 
-    // Rating badge for modal
     var ratBadge = '';
     if (rating > 0) {
         ratBadge = '<span class="modal-rating">\u2B50 ' + rating + '/5</span>';
     }
 
-    // Build full modal HTML
     var fullHtml = '';
-
-    // Hero section with image + price overlay
     fullHtml += '<div class="modal-hero' + heroNoImageClass + '">';
     fullHtml += heroImageHTML;
     fullHtml += '<div class="modal-hero-overlay-top">';
@@ -519,50 +384,33 @@ function showRouteDetail(route) {
     fullHtml += '</div>';
     fullHtml += '<div class="modal-hero-overlay-bottom">';
     fullHtml += '<div class="hero-price-group">';
-    if (ctripPrice > 0) {
-    fullHtml += '<span class="hero-old-price">$' + ctripPrice + '</span>';
-    }
     fullHtml += '<span class="hero-current-price">' + priceDisplay + '<small>/person</small></span>';
-    fullHtml += discountBadge2;
     fullHtml += '</div>';
     fullHtml += '</div>';
     fullHtml += '</div>';
 
-    // Body section
     fullHtml += '<div class="modal-body">';
-
-    // Title
     fullHtml += '<h2 class="modal-title">' + escapeHtml(name) + '</h2>';
     if (subtitle) {
         fullHtml += '<p class="modal-subtitle">' + escapeHtml(subtitle) + '</p>';
     }
-
-    // Tags only (price already shown in hero)
     if (tagItems) {
         fullHtml += '<div class="modal-price-block modal-tags-only">';
         fullHtml += '<div class="modal-tags">' + tagItems + '</div>';
         fullHtml += '</div>';
     }
-
-    // Highlights
     fullHtml += '<div class="modal-section">';
     fullHtml += '<h3 class="modal-section-title">\uD83C\uDF1F Tour Highlights</h3>';
     fullHtml += '<ul class="modal-highlights">' + hlItems + '</ul>';
     fullHtml += '</div>';
-
-    // Itinerary
     fullHtml += '<div class="modal-section">';
     fullHtml += '<h3 class="modal-section-title">\uD83D\uDCCB Suggested Itinerary</h3>';
     fullHtml += '<div class="modal-itinerary">' + itineraryHTML + '</div>';
     fullHtml += '</div>';
-
-    // What's included
     fullHtml += '<div class="modal-section">';
     fullHtml += '<h3 class="modal-section-title">\u2705 What\'s Included</h3>';
     fullHtml += '<ul class="modal-included">' + includedHTML + '</ul>';
     fullHtml += '</div>';
-
-    // Guide review
     if (guideReview) {
         fullHtml += '<div class="modal-section modal-review">';
         fullHtml += '<h3 class="modal-section-title">\uD83D\uDCAC Guide\'s Notes</h3>';
@@ -575,25 +423,17 @@ function showRouteDetail(route) {
         fullHtml += '</div>';
         fullHtml += '</div>';
     }
-
-    // CTA buttons
     fullHtml += '<div class="modal-cta">';
     fullHtml += '<a href="contact.html?tour=' + encodeURIComponent(name) + '" class="btn-modal-book">Book This Tour</a>';
     fullHtml += '<a href="https://wa.me/8615696078461?text=Hi%20Ryan!%20I%27m%20interested%20in:%20' + encodeURIComponent(name) + '" class="btn-modal-whatsapp" target="_blank" rel="noopener">WhatsApp Ryan</a>';
     fullHtml += '</div>';
-
-    fullHtml += '</div>'; // end modal-body
+    fullHtml += '</div>';
 
     content.innerHTML = fullHtml;
-
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    // Scroll modal to top
     var mbox = modal.querySelector('.route-modal');
     if (mbox) mbox.scrollTop = 0;
-
-    console.log('[routes] Showing detail: ' + name);
 }
 
 function closeRouteDetail() {
@@ -605,11 +445,9 @@ function closeRouteDetail() {
 }
 window.closeRouteDetail = closeRouteDetail;
 
-// Generate suggested itinerary based on keywords
 function generateItinerary(name, subtitle, days) {
     var searchText = ((name || '') + ' ' + (subtitle || '')).toLowerCase();
     var items = [];
-
     var hasWulong = /wulong|three natural bridges|longshui|fairy mountain|furong|karst/i.test(searchText);
     var hasHongya = /hongya|jiefangbei|raffles|liberation|cbd|city walk/i.test(searchText);
     var hasCiqikou = /ciqikou|ancient town|shibati|mountain trail|old street/i.test(searchText);
@@ -660,7 +498,6 @@ function generateItinerary(name, subtitle, days) {
     return result;
 }
 
-// Generate "What's Included" list based on tour type and duration
 function generateIncludes(type, days) {
     var items = [
         '\uD83D\uDE97 Hotel pickup and drop-off (downtown)',
@@ -669,7 +506,6 @@ function generateIncludes(type, days) {
         '\uD83C\uDFA7 All entrance fees as per itinerary',
         '\uD83D\uDCA7 Bottled water throughout'
     ];
-
     if (days >= 1) items.push('\uD83C\uDF74 Lunch included (authentic local cuisine)');
     if (days >= 2) {
         items.push('\uD83C\uDFE8 Accommodation (4-star)');
