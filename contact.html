@@ -122,7 +122,14 @@
                     <h2>QUICK INQUIRY</h2>
                     <p>Fill this out and I'll get back to you via WhatsApp or email.</p>
                     
-                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xnqevwdr" method="POST">
+                    <!-- Formspree success/error messages -->
+                    <div id="form-success" data-fs-success style="display:none; margin-bottom:20px; padding:20px; background:#1a2e1a; border:1px solid #4caf50; border-radius:8px; color:#fff; text-align:center;">
+                        <h3 style="color:#c9a961; margin:0 0 8px;">✅ Inquiry Sent!</h3>
+                        <p style="margin:0;">Thank you! Ryan will respond within 2-4 hours. Check your email for confirmation.</p>
+                    </div>
+                    <div id="form-error" data-fs-error style="display:none; margin-bottom:20px; padding:20px; background:#2e1a1a; border:1px solid #f44336; border-radius:8px; color:#fff; text-align:center;"></div>
+
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzdwydgg" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required placeholder="John Smith">
@@ -130,7 +137,8 @@
                         
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required placeholder="john@example.com" data-fs-field>
+                            <span data-fs-error="email" style="color:#f44336; font-size:13px; display:none;"></span>
                         </div>
                         
                         <div class="form-group">
@@ -181,10 +189,18 @@
                             <textarea id="message" name="message" rows="4" placeholder="Dietary restrictions, fitness level, special interests, etc."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-primary btn-large btn-full">Send Inquiry</button>
-                        <p class="form-note">You'll receive a confirmation email. I typically reply within 2-4 hours.</p>
-                        <div id="form-status" style="margin-top: 15px; padding: 12px; border-radius: 4px; display: none;"></div>
+                        <!-- Honeypot anti-spam -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button type="submit" class="btn-primary btn-large btn-full" data-fs-submit-btn>Send Inquiry</button>
+                        <p class="form-note">You'll receive a confirmation email. Ryan typically replies within 2-4 hours.</p>
                     </form>
+
+                    <!-- Formspree Ajax SDK -->
+                    <script>
+                    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+                    formspree('initForm', { formElement: '#contact-form', formId: 'mzdwydgg' });
+                    </script>
+                    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
                 </div>
             </div>
         </div>
