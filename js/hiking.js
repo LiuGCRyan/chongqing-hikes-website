@@ -20,14 +20,15 @@
 
     // Difficulty config
     const DIFFICULTY_MAP = {
-        '⭐': { label: 'Easy', cls: 'easy', stars: '★☆☆☆☆', color: '#4CAF50' },
-        '⭐⭐': { label: 'Moderate', cls: 'moderate', stars: '★★☆☆☆', color: '#FF9800' },
-        '⭐⭐⭐': { label: 'Hard', cls: 'hard', stars: '★★★☆☆', color: '#f44336' },
-        '⭐⭐⭐⭐': { label: 'Expert', cls: 'expert', stars: '★★★★☆', color: '#9C27B0' }
+        '⭐': { label: 'Easy', cls: 'easy', level: 1, stars: '★☆☆☆☆', color: 'var(--difficulty-1)' },
+        '⭐⭐': { label: 'Moderate', cls: 'moderate', level: 2, stars: '★★☆☆☆', color: 'var(--difficulty-2)' },
+        '⭐⭐⭐': { label: 'Hard', cls: 'hard', level: 3, stars: '★★★☆☆', color: 'var(--difficulty-3)' },
+        '⭐⭐⭐⭐': { label: 'Expert', cls: 'expert', level: 4, stars: '★★★★☆', color: 'var(--difficulty-4)' },
+        '⭐⭐⭐⭐⭐': { label: 'Extreme', cls: 'extreme', level: 5, stars: '★★★★★', color: 'var(--difficulty-5)' }
     };
 
     function getDiffConfig(diff) {
-        return DIFFICULTY_MAP[diff] || { label: diff, cls: 'easy', stars: '★☆☆☆☆', color: '#4CAF50' };
+        return DIFFICULTY_MAP[diff] || { label: diff, cls: 'easy', level: 1, stars: '★☆☆☆☆', color: 'var(--difficulty-1)' };
     }
 
     function renderFilterBar() {
@@ -120,7 +121,7 @@
 
         card.innerHTML =
             '<div class="hiking-card-header">' +
-                '<span class="hiking-diff-badge ' + diff.cls + '" style="border-color:' + diff.color + ';color:' + diff.color + '">' +
+                '<span class="hiking-diff-badge difficulty-badge-' + diff.level + '">' +
                     diff.label +
                 '</span>' +
                 '<span class="hiking-card-district">' + route.district + '</span>' +

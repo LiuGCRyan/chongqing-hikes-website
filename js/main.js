@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check on load
+
+    // Scroll progress bar
+    const scrollProgress = document.querySelector('.scroll-progress');
+    if (scrollProgress) {
+        function updateScrollProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgress.style.width = scrollPercent + '%';
+        }
+        window.addEventListener('scroll', updateScrollProgress);
+        updateScrollProgress();
+    }
     
     // Mobile navigation toggle
     const navToggle = document.getElementById('navToggle');

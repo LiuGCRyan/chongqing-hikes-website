@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liugcryan.github.io/chongqing-hikes-website/sitemap.xml

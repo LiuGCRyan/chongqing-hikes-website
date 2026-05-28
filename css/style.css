@@ -51,6 +51,21 @@
     --radius-sm: 2px;
     --radius-md: 4px;
     --radius-lg: 8px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-gold: 0 8px 25px rgba(201, 169, 97, 0.25);
+
+    /* Difficulty Colors (5-level) */
+    --difficulty-1: #28A745;       /* Easy - Green */
+    --difficulty-2: #5CB85C;       /* Moderate - Light Green */
+    --difficulty-3: #FFC107;       /* Hard - Yellow */
+    --difficulty-4: #FD7E14;       /* Expert - Orange */
+    --difficulty-5: #DC3545;       /* Extreme - Red */
 }
 
 /* Reset & Base */
@@ -126,7 +141,9 @@ img {
 }
 
 .navbar.scrolled {
-    background: var(--bg-white);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
     padding: var(--spacing-sm) 0;
 }
@@ -193,16 +210,17 @@ img {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
     width: 0;
     height: 1px;
     background: var(--color-primary);
-    transition: var(--transition-fast);
+    transition: var(--transition-medium);
+    transform: translateX(-50%);
 }
 
 .nav-menu a:hover::after,
 .nav-menu a.active::after {
-    width: 100%;
+    width: 80%;
 }
 
 .nav-menu a:hover {
@@ -1697,8 +1715,8 @@ button:focus {
 }
 
 .route-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .route-card .route-image {
@@ -1875,8 +1893,8 @@ button:focus {
 }
 
 .route-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .route-card .route-image {
@@ -2847,7 +2865,7 @@ button:focus {
 
 .tour-card:hover {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
-    transform: translateY(-4px);
+    transform: translateY(-8px);
 }
 
 .tour-content {
@@ -3006,8 +3024,8 @@ button:focus {
 }
 
 .route-card:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.12) !important;
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
 }
 
 /* Left side: content (flexible) */
@@ -3328,4 +3346,126 @@ button:focus {
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* ============================================
+   PREMIUM UX ENHANCEMENTS
+   Inspired by modern interaction patterns
+   ============================================ */
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
+    z-index: 1001;
+    transition: width 0.1s linear;
+    pointer-events: none;
+}
+
+/* Custom Scrollbar - Gold Theme */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-light);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--bg-dark);
+}
+
+/* 5-Level Difficulty Badges */
+.difficulty-badge-1 {
+    background-color: var(--difficulty-1);
+    color: white;
+}
+
+.difficulty-badge-2 {
+    background-color: var(--difficulty-2);
+    color: white;
+}
+
+.difficulty-badge-3 {
+    background-color: var(--difficulty-3);
+    color: var(--text-dark);
+}
+
+.difficulty-badge-4 {
+    background-color: var(--difficulty-4);
+    color: white;
+}
+
+.difficulty-badge-5 {
+    background-color: var(--difficulty-5);
+    color: white;
+}
+
+/* Enhanced Button Press Feedback */
+.btn-primary:active,
+.btn-ghost:active,
+.btn-nav:active {
+    transform: translateY(0) scale(0.98) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* Link underline animation (body text) */
+p a {
+    position: relative;
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: var(--transition-medium);
+}
+
+p a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-primary);
+    transition: var(--transition-medium);
+    transform: translateX(-50%);
+}
+
+p a:hover::after {
+    width: 100%;
+}
+
+/* Smooth scroll for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Image lazy loading support */
+img[loading="lazy"] {
+    transition: opacity 0.3s ease;
+}
+
+/* Selection color - gold */
+::selection {
+    background-color: var(--color-primary);
+    color: var(--text-dark);
+}
+
+::-moz-selection {
+    background-color: var(--color-primary);
+    color: var(--text-dark);
 }
