@@ -21,6 +21,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hiking.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -85,243 +86,25 @@
     <section class="trails-section">
         <div class="container">
             <h2 class="section-title">CHOOSE YOUR TRAIL</h2>
-            <p class="section-subtitle">Each trail is rated by difficulty. Be honest about your fitness level — these are real hikes, not city walks.</p>
-            
-            <div class="trails-grid">
-                <!-- Trail 1 -->
-                <div class="trail-card">
-                    <div class="trail-header">
-                        <h3>Nanshan Forest Trail</h3>
-                        <div class="trail-difficulty easy">
-                            <span class="difficulty-label">Difficulty</span>
-                            <span class="difficulty-stars">★☆☆</span>
-                        </div>
-                    </div>
-                    <div class="trail-stats">
-                        <div class="stat">
-                            <span class="stat-value">3h</span>
-                            <span class="stat-label">Duration</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">8km</span>
-                            <span class="stat-label">Distance</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">+350m</span>
-                            <span class="stat-label">Elevation</span>
-                        </div>
-                    </div>
-                    <p class="trail-desc">Perfect intro to Chongqing's wild side. Lush forest, hidden temples, and panoramic city views at the summit. Ends at a local village restaurant for authentic farmhouse food.</p>
-                    <div class="trail-highlights">
-                        <span>🌲 Bamboo forests</span>
-                        <span>🏯 Hidden temple</span>
-                        <span>🌃 City viewpoint</span>
-                        <span>🍜 Village lunch</span>
-                    </div>
-                    <div class="trail-footer">
-                        <div class="trail-price">
-                            <span class="price">$59</span>
-                            <span class="per">per person</span>
-                        </div>
-                        <a href="contact.html" class="btn-primary">Book This Trail</a>
-                    </div>
-                </div>
+            <p class="section-subtitle">50 wild trails across Chongqing — filtered by difficulty. Be honest about your fitness level — these are real hikes, not city walks.</p>
 
-                <!-- Trail 2 -->
-                <div class="trail-card">
-                    <div class="trail-header">
-                        <h3>Gele Mountain Traverse</h3>
-                        <div class="trail-difficulty medium">
-                            <span class="difficulty-label">Difficulty</span>
-                            <span class="difficulty-stars">★★☆</span>
-                        </div>
-                    </div>
-                    <div class="trail-stats">
-                        <div class="stat">
-                            <span class="stat-value">5h</span>
-                            <span class="stat-label">Duration</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">12km</span>
-                            <span class="stat-label">Distance</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">+680m</span>
-                            <span class="stat-label">Elevation</span>
-                        </div>
-                    </div>
-                    <p class="trail-desc">A true mountain traverse with varying terrain. Pass through old villages, abandoned quarry caves, and ridgelines with 360° views. Moderate fitness required.</p>
-                    <div class="trail-highlights">
-                        <span>⛰️ Ridgeline hike</span>
-                        <span>🏘️ Old villages</span>
-                        <span>🦇 Abandoned caves</span>
-                        <span>🌅 Sunset option</span>
-                    </div>
-                    <div class="trail-footer">
-                        <div class="trail-price">
-                            <span class="price">$89</span>
-                            <span class="per">per person</span>
-                        </div>
-                        <a href="contact.html" class="btn-primary">Book This Trail</a>
-                    </div>
-                </div>
+            <!-- Filter Bar -->
+            <div class="hiking-filter-bar" id="hiking-filters"></div>
 
-                <!-- Trail 3 -->
-                <div class="trail-card">
-                    <div class="trail-header">
-                        <h3>Jinyun Mountain Summit</h3>
-                        <div class="trail-difficulty medium">
-                            <span class="difficulty-label">Difficulty</span>
-                            <span class="difficulty-stars">★★☆</span>
-                        </div>
-                    </div>
-                    <div class="trail-stats">
-                        <div class="stat">
-                            <span class="stat-value">4-5h</span>
-                            <span class="stat-label">Duration</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">10km</span>
-                            <span class="stat-label">Distance</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">+520m</span>
-                            <span class="stat-label">Elevation</span>
-                        </div>
-                    </div>
-                    <p class="trail-desc">Ancient Buddhist mountain with stone paths, monasteries, and thousand-year-old trees. Less technical but culturally rich. Great for photographers and history lovers.</p>
-                    <div class="trail-highlights">
-                        <span>🏛️ Ancient temples</span>
-                        <span>🌳 Old-growth forest</span>
-                        <span>📿 Buddhist culture</span>
-                        <span>📷 Photo friendly</span>
-                    </div>
-                    <div class="trail-footer">
-                        <div class="trail-price">
-                            <span class="price">$74</span>
-                            <span class="per">per person</span>
-                        </div>
-                        <a href="contact.html" class="btn-primary">Book This Trail</a>
-                    </div>
-                </div>
+            <!-- Count -->
+            <p class="hiking-count" id="hiking-count">50 trails</p>
 
-                <!-- Trail 4 -->
-                <div class="trail-card featured">
-                    <div class="trail-badge">Featured</div>
-                    <div class="trail-header">
-                        <h3>Wulong Karst Day Trip</h3>
-                        <div class="trail-difficulty hard">
-                            <span class="difficulty-label">Difficulty</span>
-                            <span class="difficulty-stars">★★★</span>
-                        </div>
-                    </div>
-                    <div class="trail-stats">
-                        <div class="stat">
-                            <span class="stat-value">Full day</span>
-                            <span class="stat-label">Duration</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">15km+</span>
-                            <span class="stat-label">Distance</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">varies</span>
-                            <span class="stat-label">Elevation</span>
-                        </div>
-                    </div>
-                    <p class="trail-desc">UNESCO World Heritage site with natural bridges, sinkholes, and karst formations. This is where they filmed Transformers: Age of Extinction. Full-day adventure from Chongqing.</p>
-                    <div class="trail-highlights">
-                        <span>🌉 Natural bridges</span>
-                        <span>🎬 Film location</span>
-                        <span>🦎 Unique geology</span>
-                        <span>🏞️ UNESCO site</span>
-                    </div>
-                    <div class="trail-footer">
-                        <div class="trail-price">
-                            <span class="price">$133</span>
-                            <span class="per">per person</span>
-                        </div>
-                        <a href="contact.html" class="btn-primary">Book This Trail</a>
-                    </div>
-                </div>
+            <!-- Dynamic Grid -->
+            <div class="hiking-trails-grid" id="hiking-trails-grid"></div>
 
-                <!-- Trail 5 -->
-                <div class="trail-card">
-                    <div class="trail-header">
-                        <h3>Iron Peak Ridge</h3>
-                        <div class="trail-difficulty hard">
-                            <span class="difficulty-label">Difficulty</span>
-                            <span class="difficulty-stars">★★★</span>
-                        </div>
-                    </div>
-                    <div class="trail-stats">
-                        <div class="stat">
-                            <span class="stat-value">6-7h</span>
-                            <span class="stat-label">Duration</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">14km</span>
-                            <span class="stat-label">Distance</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">+850m</span>
-                            <span class="stat-label">Elevation</span>
-                        </div>
-                    </div>
-                    <p class="trail-desc">Challenging ridgeline hike with steep sections and exposed trails. For experienced hikers only. Rewards with some of the best views in the region. Not for beginners.</p>
-                    <div class="trail-highlights">
-                        <span>⛰️ Challenging</span>
-                        <span>🌄 Epic views</span>
-                        <span>🧭 Remote</span>
-                        <span>💪 Fit hikers</span>
-                    </div>
-                    <div class="trail-footer">
-                        <div class="trail-price">
-                            <span class="price">$103</span>
-                            <span class="per">per person</span>
-                        </div>
-                        <a href="contact.html" class="btn-primary">Book This Trail</a>
-                    </div>
-                </div>
+            <!-- Load More -->
+            <button class="hiking-load-more" id="hiking-load-more">Load More</button>
 
-                <!-- Custom Trail -->
-                <div class="trail-card custom">
-                    <div class="trail-header">
-                        <h3>Custom Adventure</h3>
-                        <div class="trail-difficulty custom-diff">
-                            <span class="difficulty-label">Your Choice</span>
-                            <span class="difficulty-stars">❓</span>
-                        </div>
-                    </div>
-                    <div class="trail-stats">
-                        <div class="stat">
-                            <span class="stat-value">Flexible</span>
-                            <span class="stat-label">Duration</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">Custom</span>
-                            <span class="stat-label">Distance</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">Varies</span>
-                            <span class="stat-label">Elevation</span>
-                        </div>
-                    </div>
-                    <p class="trail-desc">Want a specific type of trail? Multi-day trek? Photography-focused hike? Sunrise/sunset mission? I know trails that aren't on any app. Tell me what you want.</p>
-                    <div class="trail-highlights">
-                        <span>🎯 Your goals</span>
-                        <span>🗺️ Secret spots</span>
-                        <span>📸 Photo focus</span>
-                        <span>⏰ Flexible time</span>
-                    </div>
-                    <div class="trail-footer">
-                        <div class="trail-price">
-                            <span class="price">Contact</span>
-                            <span class="per">for quote</span>
-                        </div>
-                        <a href="contact.html" class="btn-primary">Inquire</a>
-                    </div>
-                </div>
+            <!-- Custom Adventure -->
+            <div class="custom-adventure-box" style="margin-top: 2rem; background: #1e1e1e; border: 1.5px solid var(--color-primary); border-radius: 12px; padding: 2rem; text-align: center;">
+                <h3 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 1.5rem; margin: 0 0 0.5rem;">CUSTOM ADVENTURE</h3>
+                <p style="color: #aaa; margin: 0 0 1rem; font-size: 0.9rem;">Want a specific type of trail? Multi-day trek? Photography-focused hike? Sunrise/sunset mission? I know trails that aren't on any app. Tell me what you want.</p>
+                <a href="contact.html" class="hiking-book-btn" style="display: inline-block;">Inquire About Custom Trail</a>
             </div>
         </div>
     </section>
@@ -420,6 +203,7 @@
         </div>
     </footer>
 
+    <script src="js/hiking.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
