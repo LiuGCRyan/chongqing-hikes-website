@@ -5116,14 +5116,40 @@ a.contact-method:hover,
     margin: 0;
 }
 
-#form-success,
-#form-error {
+#form-success {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #1a2e1a;
+    border: 1px solid #4caf50;
     border-radius: 10px;
+    color: #fff;
+    text-align: center;
 }
 
 #form-success h3 {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
+    color: #c9a961;
+    margin: 0 0 8px;
+}
+
+#form-success p {
+    margin: 0;
+}
+
+#form-error {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #2e1a1a;
+    border: 1px solid #f44336;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+[data-fs-error="email"] {
+    color: #f44336;
+    font-size: 13px;
 }
 
 /* FAQ Section - Dark Theme */
