@@ -4196,3 +4196,85 @@ img[loading="lazy"] {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   SPOT CARDS - Modal Scenic Spots Breakdown
+   ============================================ */
+
+.modal-spots {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.spot-card {
+    display: flex;
+    gap: 16px;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.spot-card:hover {
+    border-color: #555;
+}
+
+.spot-image-slot {
+    flex-shrink: 0;
+    width: 120px;
+    min-height: 100px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spot-image-slot .media-slot-placeholder {
+    height: 100%;
+}
+
+.spot-image-slot img {
+    width: 120px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spot-info {
+    padding: 14px 16px 14px 0;
+    flex: 1;
+    min-width: 0;
+}
+
+.spot-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.05rem;
+    color: var(--color-primary);
+    margin: 0 0 6px;
+    letter-spacing: 0.5px;
+}
+
+.spot-desc {
+    color: #aaa;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .spot-card {
+        flex-direction: column;
+    }
+    .spot-image-slot {
+        width: 100%;
+        min-height: 80px;
+        height: 80px;
+    }
+    .spot-image-slot img {
+        width: 100%;
+    }
+    .spot-info {
+        padding: 12px 16px;
+    }
+}

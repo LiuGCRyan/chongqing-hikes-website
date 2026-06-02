@@ -399,6 +399,13 @@ function showRouteDetail(route) {
     fullHtml += '<h3 class="modal-section-title">\uD83C\uDF1F Tour Highlights</h3>';
     fullHtml += '<ul class="modal-highlights">' + hlItems + '</ul>';
     fullHtml += '</div>';
+    // Scenic Spots Breakdown
+    var spotsHTML = generateScenicSpots(name, subtitle, highlights);
+    fullHtml += '<div class="modal-section">';
+    fullHtml += '<h3 class="modal-section-title">\uD83D\uDDFA\uFE0F Scenic Spots Breakdown</h3>';
+    fullHtml += '<div class="modal-spots">' + spotsHTML + '</div>';
+    fullHtml += '</div>';
+
     fullHtml += '<div class="modal-section">';
     fullHtml += '<h3 class="modal-section-title">\uD83D\uDCCB Suggested Itinerary</h3>';
     fullHtml += '<div class="modal-itinerary">' + itineraryHTML + '</div>';
@@ -440,6 +447,105 @@ function closeRouteDetail() {
     }
 }
 window.closeRouteDetail = closeRouteDetail;
+
+function generateScenicSpots(name, subtitle, highlights) {
+    // Parse spots from subtitle (separated by \u00b7)
+    var spotNames = [];
+    if (subtitle) {
+        var parts = subtitle.split('\u00b7');
+        for (var i = 0; i < parts.length; i++) {
+            var s = parts[i].trim();
+            if (s) spotNames.push(s);
+        }
+    }
+    // If no spots from subtitle, try highlights
+    if (spotNames.length === 0 && highlights) {
+        var hlParts = highlights.split('|');
+        for (var j = 0; j < hlParts.length && j < 5; j++) {
+            var h = hlParts[j].trim();
+            if (h) spotNames.push(h);
+        }
+    }
+    // If still no spots, use name
+    if (spotNames.length === 0) {
+        spotNames.push(name || 'Tour Destination');
+    }
+
+    // Spot descriptions database
+    var spotDB = {
+        'Hongya Cave': 'A 75-meter-high stilt-house complex built into the cliff face overlooking the Jialing River. At night, its layered wooden balconies glow with warm light \u2014 said to have inspired Miyazaki\'s Spirited Away bathhouse scene. Free to enter, magical after dark.',
+        'Ciqikou Ancient Town': 'A 1,700-year-old preserved town with cobblestone alleys, traditional teahouses, and artisan workshops. Once a vital port on the Jialing River, now a living museum of old Chongqing life. Try the famous Chen Mahua twisted dough and watch craftsmen at work.',
+        'Liziba Station': 'The world-famous light rail station where Line 2 passes directly through a residential building on the 6th-8th floors. An engineering marvel that embodies Chongqing\'s 8D cityscape. Trains glide silently through \u2014 residents barely notice.',
+        'Jiefangbei': 'Chongqing\'s Times Square \u2014 a towering 27.5m monument surrounded by gleaming malls and neon lights. The spiritual and commercial heart of the city since 1947. Perfect for people-watching and feeling the city\'s pulse.',
+        'Three Natural Bridges': 'Three colossal limestone arches \u2014 Tianlong, Qinglong, and Heilong \u2014 rising up to 281m, forming Asia\'s largest natural bridge cluster. A UNESCO World Heritage site and filming location for Transformers 4 and Curse of the Golden Flower. Walk through the mist-filled valley beneath these ancient giants.',
+        'Wulong Karst': 'A UNESCO World Heritage landscape of dramatic gorges, natural bridges, and caves carved over millions of years. The Three Natural Bridges, Longshui Gorge, and Fairy Mountain together create one of China\'s most spectacular geological wonders.',
+        'Longshui Gorge': 'A dramatic 5km narrow gorge with walls reaching 200m high, carved by millennia of water erosion. Walk the suspended walkway past thundering waterfalls and emerald pools. Cool mist rises constantly \u2014 bring a rain jacket even in summer.',
+        'Fairy Mountain': 'A 1,991m alpine meadow often called \'Oriental Switzerland\' for its rolling grasslands and cool summer climate. In winter, it transforms into a ski resort. Year-round, the panoramic views of the Wulong karst landscape are breathtaking.',
+        'Dazu Rock Carvings': 'A UNESCO World Heritage site featuring over 50,000 Buddhist, Confucian, and Taoist stone carvings created from the 7th to 13th century. The Baodingshan section is the crown jewel \u2014 an entire mountainside carved with intricate reliefs telling stories of enlightenment and daily life.',
+        'Fengdu Ghost City': 'A 2,000-year-old complex of temples and shrines dedicated to the afterlife, built on Ming Mountain. Walk through the \'Courts of Hell\' with their vivid depictions of judgment and punishment. Part cultural museum, part spiritual journey \u2014 unlike anything you\'ve seen.',
+        'Baidicheng': 'The \'White Emperor City\' perched atop a cliff at the entrance to Qutang Gorge. Where Liu Bei entrusted his son to Zhuge Liang in Three Kingdoms legend. Poet Li Bai\'s famous verse \'Departing from Baidi amid colored clouds\' was written here. Stunning Yangtze views.',
+        'Qutang Gorge': 'The shortest (8km) but most dramatic of the Three Gorges \u2014 sheer cliffs tower 1,200m above the Yangtze like giant gates. Called \'the most magnificent gorge under heaven\'. The Kuimen Gate at its entrance is featured on China\'s 10-yuan note.',
+        'Wu Gorge': 'The middle and most poetic of the Three Gorges, stretching 45km with mist-shrouded peaks said to resemble twelve elegant goddesses. The deep, winding valley changes mood with the weather \u2014 ethereal in fog, dramatic in sunlight.',
+        'Xiling Gorge': 'The longest of the Three Gorges at 76km, known for its turbulent rapids (now calmed by the dam) and hidden caves. The scenery is more varied \u2014 alternating between narrow chasms and open river valleys dotted with orange groves.',
+        'Three Gorges Dam': 'The world\'s largest hydroelectric dam \u2014 2,335m long and 185m high. An engineering marvel visible from space. The ship lift and five-stage lock system are jaw-dropping. Love it or hate it, you can\'t ignore it.',
+        'Project 816': 'A top-secret underground nuclear facility carved into a mountain by 60,000 soldiers over 18 years, never completed. Now open to the public \u2014 explore 20km of tunnels, the massive reactor hall, and eerie Cold War remnants. China\'s most surreal historical site.',
+        'Youyang Peach Blossom Spring': 'A valley straight from Tao Yuanming\'s 4th-century fable of a hidden utopia. Walk through a narrow cave to emerge into a sunlit valley of peach trees, rice paddies, and traditional Tujia villages. Time seems to stop here.',
+        'Gongtan Ancient Town': 'A 1,700-year-old riverside town of stilt houses perched over the Wu River, once a vital salt trading port. Its wooden architecture cascades down the cliff in layers \u2014 less commercialized than Ciqikou, more authentically atmospheric.',
+        'Jinfo Mountain': 'A UNESCO Biosphere Reserve and World Heritage site rising 2,251m, home to 6,000+ plant species and ancient rhododendron forests. The glass walkway along the cliff edge offers views that make your heart race.',
+        'Wuling Rift Valley': 'Called \'China\'s Most Dynamic Gorge\' \u2014 a 10km canyon slicing through the Wuling Mountains with 1,400m walls. The underground river, natural bridges, and primeval forest make this a geologist\'s dream and a photographer\'s paradise.',
+        'Wujiang Gallery': 'A 60km stretch of the Wu River where emerald water winds between towering karst cliffs, earning the name \'Hundred-Mile Gallery\'. The ever-changing rock formations and reflections create a living Chinese landscape painting.',
+        'Hechuan Fishing City': 'A 13th-century fortress that withstood the Mongol army for 36 years \u2014 where M\u00f6ngke Khan died, changing world history. Walk the ancient walls above the Jialing River and see why this small mountain changed the fate of empires.',
+        'Shibati Traditional Style Street': 'A beautifully restored stretch of old Chongqing with steep stone staircases, traditional courtyard homes, and authentic teahouses. Climb the \'18 Stairs\' that gave the street its name and discover a slower, older Chongqing.',
+        'Yangtze River Cableway': 'The \'First Air Corridor over the Yangtze\' \u2014 a 1,166m cable car ride offering breathtaking aerial views of Chongqing\'s skyline. Once a commuter crossing, now a must-do experience. Best at sunset when the city lights up.',
+        'Eling Park': 'The highest point on Chongqing\'s Yuzhong Peninsula offering 360-degree panoramic views of the city, two rivers, and surrounding mountains. The former British consulate grounds now host beautiful gardens and the iconic Liangjiang Pavilion.',
+        'Huangguan Escalator': 'Asia\'s longest outdoor escalator at 112m \u2014 a 2.5-minute ride that perfectly illustrates Chongqing\'s verticality. What other city needs an escalator as public transit? Free entertainment watching tourists\' reactions.',
+        'Chaotianmen': 'Where the Yangtze and Jialing rivers merge in a dramatic confluence \u2014 muddy yellow meets emerald green. The Raffles City complex towers above like a gateway to the sky. Historically the starting point of the Three Gorges journey.',
+        'Chongqing Zoo': 'Home to the world\'s most successful giant panda breeding program outside Sichuan. See red pandas, golden snub-nosed monkeys, and South China tigers. Best visited in the morning when the pandas are most active.',
+        'White House Hall': 'Also known as Baigongguan \u2014 a villa that became a notorious Nationalist prison during the Chinese Civil War. Along with Zhazidong, it forms the \'Two Prisons\' memorial site. A sobering look at revolutionary history.',
+        'Zhazidong Prison': 'A former coal mine turned secret prison where over 300 political prisoners were held in horrific conditions. Now a memorial and museum \u2014 the escape tunnel and torture chambers remain preserved. Powerful and haunting.',
+        'Great Hall of the People': 'Chongqing\'s most iconic building \u2014 a massive traditional Chinese structure resembling the Temple of Heaven in Beijing, completed in 1954. The surrounding People\'s Square is a gathering place for morning tai chi and evening dances.',
+        'Nanshan Mountain': 'The green lung south of the Yangtze offering hiking trails, botanical gardens, and the best sunset views of Chongqing\'s skyline. The One Tree Viewing Platform is THE photo spot for the famous night panorama.',
+        'Hotpot Experience': 'Chongqing is the birthplace of hotpot \u2014 a communal dining experience where you cook fresh ingredients in a bubbling cauldron of numbing-spicy Sichuan pepper broth. It\'s not just a meal, it\'s a social ritual. Not for the faint-hearted!',
+        'Night Cruise': 'See Chongqing\'s cyberpunk skyline from the water \u2014 glittering towers, illuminated bridges, and Hongya Cave glowing like a golden pagoda. The Two Rivers Night Cruise covers both the Yangtze and Jialing. Pure magic.',
+        'Ciyun Temple': 'An ancient Buddhist temple complex hidden in the Nanshan hills, dating back to the Tang Dynasty. Less touristy than city-center temples, with beautiful moss-covered stone paths and resident monks who might invite you for tea.'
+    };
+
+    var result = '';
+    for (var k = 0; k < spotNames.length; k++) {
+        var spotName = spotNames[k];
+        var desc = '';
+        // Try exact match first
+        if (spotDB[spotName]) {
+            desc = spotDB[spotName];
+        } else {
+            // Try partial match
+            var searchName = spotName.toLowerCase();
+            var found = false;
+            var keys = Object.keys(spotDB);
+            for (var m = 0; m < keys.length; m++) {
+                if (searchName.indexOf(keys[m].toLowerCase()) > -1 || keys[m].toLowerCase().indexOf(searchName) > -1) {
+                    desc = spotDB[keys[m]];
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                desc = 'A highlight of this tour. [Ryan to add detailed description and personal tips]';
+            }
+        }
+
+        result += '<div class="spot-card">';
+        result += '<div class="spot-image-slot">';
+        result += '<div class="media-slot-placeholder"><span class="placeholder-icon">\uD83D\uDCF7</span><span class="placeholder-text">' + escapeHtml(spotName) + '</span></div>';
+        result += '</div>';
+        result += '<div class="spot-info">';
+        result += '<h4 class="spot-name">' + escapeHtml(spotName) + '</h4>';
+        result += '<p class="spot-desc">' + escapeHtml(desc) + '</p>';
+        result += '</div>';
+        result += '</div>';
+    }
+    return result;
+}
 
 function generateItinerary(name, subtitle, days) {
     var searchText = ((name || '') + ' ' + (subtitle || '')).toLowerCase();
