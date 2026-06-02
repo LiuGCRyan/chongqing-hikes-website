@@ -226,9 +226,16 @@ function createRouteCard(route) {
 
     var parts = highlights.split('|');
     var firstHighlight = '';
+    var additionalHighlights = [];
     for (var p = 0; p < parts.length; p++) {
         var h = parts[p].trim();
-        if (h) { firstHighlight = h; break; }
+        if (h) {
+            if (!firstHighlight) {
+                firstHighlight = h;
+            } else if (additionalHighlights.length < 3) {
+                additionalHighlights.push(h);
+            }
+        }
     }
 
     var priceDisplay = price > 0 ? '$' + price : 'Contact Us';
@@ -280,6 +287,13 @@ function createRouteCard(route) {
     html += '</div>';
     if (firstHighlight) {
         html += '<p class="route-highlight">' + escapeHtml(firstHighlight) + '</p>';
+    }
+    if (additionalHighlights.length > 0) {
+        html += '<div class="route-features">';
+        for (var f = 0; f < additionalHighlights.length; f++) {
+            html += '<span class="route-feature">\u2713 ' + escapeHtml(additionalHighlights[f]) + '</span>';
+        }
+        html += '</div>';
     }
     if (tagBadges) {
         html += '<div class="route-tags">' + tagBadges + '</div>';
