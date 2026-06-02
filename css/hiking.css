@@ -79,10 +79,7 @@
 
 /* Card Header */
 .hiking-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 20px 8px;
+    display: none; /* Replaced by overlay badges on image */
 }
 
 .hiking-diff-badge {
