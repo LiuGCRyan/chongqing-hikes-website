@@ -359,7 +359,7 @@ function showRouteDetail(route) {
         }
     }
 
-    var itineraryHTML = generateItinerary(name, subtitle, duration);
+    var itineraryHTML = generateRealItinerary(route);
     var includedHTML = generateIncludes(type, duration);
 
     var modal = document.getElementById('routeDetailModal');
@@ -421,7 +421,7 @@ function showRouteDetail(route) {
     fullHtml += '</div>';
 
     fullHtml += '<div class="modal-section">';
-    fullHtml += '<h3 class="modal-section-title">\uD83D\uDCCB Suggested Itinerary</h3>';
+    fullHtml += '<h3 class="modal-section-title">\uD83D\uDCCB Day-by-Day Itinerary</h3>';
     fullHtml += '<div class="modal-itinerary">' + itineraryHTML + '</div>';
     fullHtml += '</div>';
     fullHtml += '<div class="modal-section">';
@@ -556,6 +556,37 @@ function generateScenicSpots(name, subtitle, highlights) {
         result += '<h4 class="spot-name">' + escapeHtml(spotName) + '</h4>';
         result += '<p class="spot-desc">' + escapeHtml(desc) + '</p>';
         result += '</div>';
+        result += '</div>';
+    }
+    return result;
+}
+
+// Generate itinerary from real route data (day-by-day)
+function generateRealItinerary(route) {
+    var itinerary = route.itinerary;
+    if (!itinerary || !itinerary.length) {
+        // Fallback to generated itinerary
+        return generateItinerary(route.name || '', route.subtitle || '', route.duration || 0);
+    }
+    var result = '';
+    for (var i = 0; i < itinerary.length; i++) {
+        var day = itinerary[i];
+        var dayLabel = 'Day ' + (day.day || (i + 1));
+        var dayTitle = day.title || '';
+        var dayAccom = day.accommodation || '';
+        var dayDetails = day.details || '';
+
+        result += '<div class="itinerary-day-block">';
+        result += '<div class="itinerary-day-header">';
+        result += '<span class="itinerary-day-num">' + dayLabel + '</span>';
+        result += '<span class="itinerary-day-title">' + escapeHtml(dayTitle) + '</span>';
+        result += '</div>';
+        if (dayDetails) {
+            result += '<div class="itinerary-day-details">' + escapeHtml(dayDetails) + '</div>';
+        }
+        if (dayAccom) {
+            result += '<div class="itinerary-day-accom">\uD83C\uDFE8 ' + escapeHtml(dayAccom) + '</div>';
+        }
         result += '</div>';
     }
     return result;
