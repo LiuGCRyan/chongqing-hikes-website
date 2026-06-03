@@ -3,7 +3,7 @@
     "id": "132",
     "productId": "101981472",
     "type": "Day Tour",
-    "name": "Full Day Tour",
+    "name": "Ciqikou & Zhazidong | Full Day Tour",
     "subtitle": "Ciqikou Ancient Town · Zhazidong Prison",
     "originName": "【亲子游】动物园+科技馆+渣滓洞+磁器口+嘉陵江轮渡一日游",
     "price": 59,
@@ -12,13 +12,21 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "Ancient town with 1700+ years history | Try local snacks: Chen Mahua (twisted dough), | Traditional crafts and tea houses",
     "guideReview": "Ciqikou is packed on weekends — go on a weekday or arrive before 9 AM. The authentic shops are off the main street — I'll take you to the real hidden gems.",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Ciqikou Ancient Town + Zhazidong Prison Full Day Tour",
+        "accommodation": "",
+        "details": "09:00 Hotel pickup by private transfer. 09:30-12:00 Visit Ciqikou Ancient Town (1,700+ years old, cobblestone streets, Chen Mahua snacks, traditional teahouses, local crafts). 12:00-13:00 Lunch at Ciqikou — try spicy hotpot noodles, Maoxuewang, and street snacks. 13:30-16:00 Visit Zhazidong Prison (former revolutionary prison museum, restored cells, Kuomintang history exhibits). 16:30 Return to hotel or continue exploring Chongqing city."
+      }
+    ]
   },
   {
     "id": "150",
     "productId": "50857227",
     "type": "Day Tour",
-    "name": "Wulong Karst | Full Day Tour",
+    "name": "Wulong Karst Highlights | Full Day Tour",
     "subtitle": "Longshui Gorge · Three Natural Bridges · Earth Crack (Difeng)",
     "originName": "武隆天生三桥+龙水峡地缝+乌江画廊一日游【vip包车含门票】",
     "price": 147,
@@ -27,13 +35,21 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. Longshui Gorge is narrow and cool in summer — nature's own AC.",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Wulong Karst UNESCO World Heritage Full Day Tour",
+        "accommodation": "",
+        "details": "07:30 Hotel pickup, drive ~2.5 hours to Wulong. 10:00-12:00 Visit Three Natural Bridges (UNESCO World Heritage, massive stone arches, Transformers 4 filming location, Tianfu Official Post). 12:00-13:00 Lunch at Wulong local restaurant. 13:30-15:00 Visit Longshui Gorge (narrow rift canyon, waterfalls, nature's air conditioning). 15:30-17:00 Visit Earth Crack/Difeng (dramatic karst fissure). 17:30 Drive back to Chongqing (~2.5 hours)."
+      }
+    ]
   },
   {
     "id": "202",
     "productId": "61386063",
     "type": "Small Group",
-    "name": "Wulong Karst | 2 Days 1 Nights - Small Group",
+    "name": "Wulong Karst Explorer | 2 Days 1 Night - Small Group",
     "subtitle": "Fairy Mountain (Xiannvshan) · Furong Cave · Furong River · Natural Sinkhole (Tiankeng) | Max 8 Guests | Hotel Pickup/Drop-off",
     "originName": "武隆区2日1晚拼小团",
     "price": 354,
@@ -42,7 +58,21 @@
     "tags": "No Shopping Stops, Guaranteed Departure, Hotel Pickup",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. Small groups are flexible — I can adjust the itinerary to your interests.",
-    "duration": 2
+    "duration": 2,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Chongqing → Wulong Three Natural Bridges + Longshui Gorge",
+        "accommodation": "4-star hotel in Wulong Xiannü Town",
+        "details": "08:00 Hotel pickup, drive ~2.5h to Wulong. 10:30-13:00 Visit Three Natural Bridges (UNESCO World Heritage). 14:00-16:00 Visit Longshui Gorge (rift canyon). Evening: check into Xiannü Town hotel."
+      },
+      {
+        "day": 2,
+        "title": "Fairy Mountain + Furong Cave → Return to Chongqing",
+        "accommodation": "",
+        "details": "08:30-11:30 Fairy Mountain Grassland (alpine meadow, horse riding, forest train). 12:00-13:00 Lunch. 13:30-15:30 Furong Cave (3,000m karst cave with spectacular formations) + Furong River cruise. 16:00 Drive back to Chongqing (~2.5h)."
+      }
+    ]
   },
   {
     "id": "64",
@@ -57,7 +87,15 @@
     "tags": "Instant Confirmation, No Shopping Stops, Conditional Refund",
     "highlights": "UNESCO World Heritage - 5,000+ Buddhist carvings | 1,000+ years of history - Tang & Song dynasties | World-class stone art mastery",
     "guideReview": "For the Dazu Rock Carvings, a guide is a must — otherwise it's just rocks. I can arrange a specialist guide. Baoding Mountain takes ~3 hours; wear comfy shoes for some uphill walking.",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Dazu Rock Carvings UNESCO World Heritage Full Day Tour",
+        "accommodation": "",
+        "details": "08:00 Hotel pickup, drive ~2 hours to Dazu. 10:00-13:00 Visit Baodingshan Rock Carvings (UNESCO World Heritage, 5,000+ Buddhist carvings, Rolling Sea Buddha, 1,000+ years of history). Specialist guide recommended. 13:00-14:00 Lunch at Dazu local restaurant. 14:30-16:00 Visit Beishan Rock Carvings (finer detail, fewer crowds). 16:30 Drive back to Chongqing (~2 hours)."
+      }
+    ]
   },
   {
     "id": "14",
@@ -72,14 +110,46 @@
     "tags": "Guaranteed Departure",
     "highlights": "World-famous Three Gorges - once-in-a-lifetime cruise | Ancient Ba culture and cliff coffins | Luxury 5-star cruise ship with balcony rooms",
     "guideReview": "Private tours go at your pace — no rushing, great for families. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 5
+    "duration": 5,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → 8D Magic City Experience",
+        "accommodation": "5-star river-view hotel in Chongqing",
+        "details": "Private airport/train station pickup. Visit Jiefangbei, Hongya Cave, Yangtze River Cableway. Evening: authentic Chongqing hotpot experience at local favorite restaurant. Mountain city night views."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Fengdu Ghost City → Board Cruise",
+        "accommodation": "5-star cruise ship (balcony room)",
+        "details": "Morning: drive to Fengdu Ghost City. Afternoon: board cruise ship at Chaotianmen Pier. Captain's welcome reception and buffet dinner."
+      },
+      {
+        "day": 3,
+        "title": "Baidicheng → Qutang Gorge → Wu Gorge → Shennü Creek",
+        "accommodation": "5-star cruise ship",
+        "details": "Shore excursion: Baidicheng, ship passes Qutang and Wu Gorges. Afternoon: boat tour of Shennü Creek."
+      },
+      {
+        "day": 4,
+        "title": "Lesser Three Gorges → Xiling Gorge → Three Gorges Dam",
+        "accommodation": "5-star cruise ship",
+        "details": "Shore excursion: Lesser Three Gorges. Ship passes Xiling Gorge. Visit Three Gorges Dam."
+      },
+      {
+        "day": 5,
+        "title": "Yichang → Departure",
+        "accommodation": "",
+        "details": "Disembark at Yichang. Private transfer to airport/railway station. Trip concludes."
+      }
+    ]
   },
   {
     "id": "161",
     "productId": "24528624",
     "type": "Small Group",
     "name": "Three Gorges | 6 Days 5 Nights - Small Group",
-    "subtitle": "Max 8 Guests",
+    "subtitle": "Qutang Gorge · Wu Gorge · Yangtze Three Gorges Cruise",
     "originName": "长江三峡+重庆6日5晚拼小团",
     "price": 1608,
     "rating": 5,
@@ -87,13 +157,51 @@
     "tags": "No Shopping Stops, Guaranteed Departure",
     "highlights": "World-famous Three Gorges - once-in-a-lifetime cruise | Ancient Ba culture and cliff coffins | Luxury 5-star cruise ship with balcony rooms",
     "guideReview": "Small groups are flexible — I can fine-tune the itinerary. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 6
+    "duration": 6,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → Board Cruise Ship",
+        "accommodation": "5-star river-view hotel in Chongqing",
+        "details": "Airport/train station pickup by private transfer. Check into 5-diamond river-view hotel. Free time: visit Jiefangbei (Liberation Monument), Hongya Cave (Hongyadong), and Qiansimen Bridge for stunning mountain city night views. Taste authentic Chongqing hotpot and Xiaomian noodles. Before 20:00, proceed to designated pier to complete boarding procedures. Check into balcony room on 5-star cruise ship."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Fengdu Ghost City → Zhongxian",
+        "accommodation": "5-star cruise ship (balcony room)",
+        "details": "08:00 Cruise departs, sailing downstream along Yangtze River. 10:00-13:00 Shore excursion: Fengdu Ghost City ('China's hometown of divine comedy') — experience the culture of the underworld, visit Naihe Bridge and Tiandi Palace. 14:00-16:00 Optional: Fengyan Three Kingdoms live show OR Shibaozhai (Yangtze's little Penglai, a 12-story wooden tower built into cliffside). Evening: buffet dinner on board, captain's welcome reception, enjoy river night scenery."
+      },
+      {
+        "day": 3,
+        "title": "Fengjie → Baidicheng → Qutang Gorge → Wu Gorge → Shennü Creek",
+        "accommodation": "5-star cruise ship (balcony room)",
+        "details": "08:30-11:30 Shore excursion: Baidicheng (White Emperor City) — the poetic place of 'departing from Baidicheng in the morning amid colorful clouds', sacred Three Kingdoms heritage site, overlook panoramic view of Qutang Gorge. 11:30-12:00 Ship passes through Qutang Gorge (shortest and most dramatic of Three Gorges, 'Qutang most magnificent under heaven'). 14:00-17:00 Transfer to small boat for Shennü Creek (most beautiful tributary of Wu Gorge) — ride wooden boat through emerald valley, light hike to explore Tujia village ruins. 17:00-19:00 Ship passes through Wu Gorge, view Shennü Peak and Twelve Peaks of Wu Mountain."
+      },
+      {
+        "day": 4,
+        "title": "Wushan → Lesser Three Gorges → Three Gorges Dam → Xiling Gorge",
+        "accommodation": "5-star cruise ship (balcony room)",
+        "details": "08:00-11:00 Optional: Lesser Three Gorges + Mini Three Gorges — transfer to willow-leaf boat, enjoy canyon scenery, possible wild macaque sightings. 12:00-15:00 Ship passes through Xiling Gorge (longest of Three Gorges), view Military Book and Sword Gorge, Ox Liver and Horse Lung Gorge. 15:30-18:00 Shore excursion: Three Gorges Dam (century engineering marvel) — visit Tanziling Viewing Platform, 185 Platform, and Cutoff Memorial Park for panoramic dam views. Evening: ship passes through Gezhouba Ship Lock — experience the unique 'water rising, ship lifting' sensation."
+      },
+      {
+        "day": 5,
+        "title": "Yichang → Three Gorges Tribe Scenic Area → Yichang City",
+        "accommodation": "5-star hotel in Yichang downtown",
+        "details": "08:00-12:00 Shore excursion: Three Gorges Tribe Scenic Area — rich Tujia ethnic culture, visit Mountain Family, Tujia Village, Longjin Stream, Creekside Family, watch Tujia 'crying marriage' performance. 14:00-16:00 Optional: Qu Yuan Temple (memorial to great patriotic poet Qu Yuan). 17:00 Arrive at Yichang Maoping Port, disembark and transfer to downtown Yichang hotel. Evening: free time to taste Yichang specialties such as fat fish hotpot."
+      },
+      {
+        "day": 6,
+        "title": "Yichang → Departure",
+        "accommodation": "",
+        "details": "After breakfast, private transfer to Yichang East Railway Station or Sanxia Airport according to flight/train schedule. Trip concludes."
+      }
+    ]
   },
   {
     "id": "120",
     "productId": "88755220",
     "type": "Day Tour",
-    "name": "Wulong Karst | Full Day Tour",
+    "name": "Wulong Three Bridges & Fairy Mountain | Full Day Tour",
     "subtitle": "Three Natural Bridges · Fairy Mountain (Xiannvshan) | Pure Play - No Shopping",
     "originName": "【纯玩2-8团】仙女山森林公园+武隆天生三桥+乌江画廊一日游",
     "price": 59,
@@ -102,14 +210,22 @@
     "tags": "No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers — lots of trails. Day tours are brisk — bring a power bank for all the photos.",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Wulong Three Natural Bridges + Fairy Mountain Full Day Tour",
+        "accommodation": "",
+        "details": "07:30 Hotel pickup, drive ~2.5h to Wulong. 10:00-12:30 Visit Three Natural Bridges (UNESCO World Heritage, massive stone arches, Transformers 4 filming location). 13:00-14:00 Lunch. 14:30-17:00 Fairy Mountain Grassland (alpine meadow at 2,000m altitude, horse riding, forest train). 17:30 Drive back to Chongqing (~2.5h)."
+      }
+    ]
   },
   {
     "id": "115",
     "productId": "105062088",
     "type": "Day Tour",
     "name": "Three Gorges | Full Day Tour",
-    "subtitle": "Pure Play - No Shopping",
+    "subtitle": "Summit of Three Gorges · Baidicheng (White Emperor City) · Qutang Gorge",
     "originName": "奉节三峡之巅+白帝城+瞿塘峡一日游【一价全含无自费+纯玩】",
     "price": 88,
     "rating": 5,
@@ -117,13 +233,21 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "World-famous Three Gorges - once-in-a-lifetime cruise | Ancient Ba culture and cliff coffins | Luxury 5-star cruise ship with balcony rooms",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Fengjie → Baidicheng → Qutang Gorge → Wushan (Full Day)",
+        "accommodation": "",
+        "details": "08:30 Fengjie Station → Baidicheng Scenic Area. Transport: direct shuttle 15 RMB/person (30 min) or taxi ~50 RMB. Park opens at 8:30 — early arrival avoids tour groups. 09:00-11:00 Visit Baidicheng: Bai Emperor Temple, Mingliang Palace, Wuhou Shrine, overlook panoramic Qutang Gorge (scenery featured on back of 10 RMB banknote). Swipe ID card for entry. 11:00-12:00 Zhongyi Pier → Qutang Gorge cruise boat. Boat ticket ~50 RMB/person, departs at 11:00. Close-up view of 'Qutang most magnificent under heaven', cliff walls mere 100+ meters apart at narrowest point. 12:00-13:00 Lunch at nearby restaurant — recommended Fengjie navel orange and griddle chicken, ~50 RMB/person. 13:00-15:00 Optional: Qutang Viewing Platform / Chijia Mountain — 360° unobstructed photography of Qutang Gorge, even more spectacular than from the boat. Drive or charter car, road condition good. 15:30 Return trip. Fengjie → Chongqing main city by high-speed rail ~2 hours."
+      }
+    ]
   },
   {
     "id": "195",
     "productId": "98443072",
     "type": "Day Tour",
-    "name": "Full Day Tour",
+    "name": "Project 816 Nuclear Plant | Full Day Tour",
     "subtitle": "Project 816 Underground Nuclear Plant | Max 8 Guests",
     "originName": "【大团小团直发】白鹤梁+816工程+武陵山一日游",
     "price": 29,
@@ -132,13 +256,21 @@
     "tags": "Instant Confirmation, No Shopping Stops",
     "highlights": "Perfect for short stay - hit all highlights in one day",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Project 816 Nuclear Plant + Wulong Highlights Full Day Tour",
+        "accommodation": "",
+        "details": "07:30 Hotel pickup, drive ~2.5h to Fuling. 10:00-12:00 Visit Project 816 Underground Nuclear Plant (Cold War era underground facility, 42,000 sq meters, 6 stories deep, now museum). 12:30-13:30 Lunch at local restaurant. 14:00-17:00 Visit Wulong Three Natural Bridges (UNESCO World Heritage). 17:30 Drive back to Chongqing (~2.5h)."
+      }
+    ]
   },
   {
     "id": "497",
     "productId": "36484449",
     "type": "Small Group",
-    "name": "Wulong Karst | 5 Days 4 Nights - Small Group",
+    "name": "Wulong + Dazu Heritage | 5 Days 4 Nights - Small Group",
     "subtitle": "Three Natural Bridges · Dazu Rock Carvings · Baodingshan · Earth Crack (Difeng) | Max 8 Guests",
     "originName": "重庆+武隆区+大足石刻5日4晚拼小团",
     "price": 870,
@@ -147,14 +279,46 @@
     "tags": "No Shopping Stops, Guaranteed Departure, No Hidden Fees",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. For Dazu Rock Carvings, a guide is essential — I can arrange a specialist for you.",
-    "duration": 5
+    "duration": 5,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → City Highlights",
+        "accommodation": "5-star hotel in Chongqing",
+        "details": "Private airport/train pickup. Visit Jiefangbei, Hongya Cave, mountain city night views."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Dazu Rock Carvings → Baodingshan",
+        "accommodation": "5-star hotel in Chongqing",
+        "details": "Full day at Dazu Rock Carvings (UNESCO World Heritage, 5,000+ Buddhist carvings, Baodingshan highlights). Specialist guide arranged."
+      },
+      {
+        "day": 3,
+        "title": "Chongqing → Wulong Three Natural Bridges + Longshui Gorge",
+        "accommodation": "4-star hotel in Wulong",
+        "details": "Drive to Wulong. Visit Three Natural Bridges (UNESCO Heritage). Visit Longshui Gorge (rift canyon)."
+      },
+      {
+        "day": 4,
+        "title": "Wulong Fairy Mountain + Earth Crack → Return to Chongqing",
+        "accommodation": "5-star hotel in Chongqing",
+        "details": "Morning: Fairy Mountain Grassland. Afternoon: Earth Crack (Difeng). Return to Chongqing."
+      },
+      {
+        "day": 5,
+        "title": "Chongqing → Departure",
+        "accommodation": "",
+        "details": "Free morning in Chongqing (optional: Ciqikou, Liziba). Private transfer to airport/railway station."
+      }
+    ]
   },
   {
     "id": "133",
     "productId": "31849538",
     "type": "Private Tour",
-    "name": "Three Gorges | 7 Days 6 Nights - Private",
-    "subtitle": "Fully Private",
+    "name": "Three Gorges | 7 Days 6 Nights - Private Tour",
+    "subtitle": "Yangtze Three Gorges Cruise · Enshi Canyon · Qutang Gorge",
     "originName": "长江三峡+恩施市7日6晚私家团",
     "price": 3643,
     "rating": 5,
@@ -162,14 +326,58 @@
     "tags": "Guaranteed Departure",
     "highlights": "World-famous Three Gorges - once-in-a-lifetime cruise | Ancient Ba culture and cliff coffins | Luxury 5-star cruise ship with balcony rooms",
     "guideReview": "Private tours go at your pace — no rushing, great for families. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 7
+    "duration": 7,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → Jiefangbei & Hongya Cave",
+        "accommodation": "5-star river-view hotel in Chongqing (Westin / Niccolo)",
+        "details": "Exclusive airport/train station pickup by private transfer according to flight/train time, direct to hotel, no waiting. Free time: visit Jiefangbei, Hongya Cave, Qiansimen Bridge, enjoy mountain city night views. Dinner: private customized Chongqing hotpot (avoiding internet-famous shops, selected old-established local favorites). Accommodation: Westin or Niccolo 5-diamond river-view hotel, overlooking twin-river confluence."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Fengdu Ghost City → Zhongxian → Board Cruise",
+        "accommodation": "5-star luxury cruise ship (180° river-view balcony room)",
+        "details": "08:30 Private exclusive transfer to Fengdu (~2 hours), exclusive guide explains Chongqing history and culture en route. 10:30-13:00 Visit Fengdu Ghost City (VIP channel, skip queues), experience 'underworld' culture, visit Naihe Bridge and Tiandi Palace. 13:30-14:30 Zhongxian specialty lunch (recommended Shibaozhai tofu fish). 15:00-17:00 Optional: Shibaozhai (Yangtze's little Penglai, tower built into mountain, spectacular and unique). 18:00 Arrive at Chongqing Chaotianmen Pier, exclusive boarding channel, check into 180° river-view balcony room. 19:00 Captain's welcome reception (exclusive seating for private tour) + Chinese-Western buffet dinner. 20:00 Cruise departs, sailing downstream along Yangtze River."
+      },
+      {
+        "day": 3,
+        "title": "Fengjie → Baidicheng → Qutang Gorge → Wu Gorge → Shennü Creek",
+        "accommodation": "5-star luxury cruise ship (balcony room)",
+        "details": "08:30-11:30 Shore excursion: Baidicheng (exclusive private tour guide, avoid large groups), overlook panoramic Qutang Gorge (10 RMB banknote backdrop), feel the poetry of 'departing from Baidicheng in the morning amid colorful clouds'. 11:30-12:00 Ship passes Qutang Gorge (shortest and most dramatic of Three Gorges), exclusive deck viewing position, unobstructed photography. 14:00-17:00 Transfer to private small boat for Shennü Creek (deep into most beautiful Wu Gorge tributary), light hike to explore Tujia village, optional Tujia intangible cultural heritage experience. 17:00-19:00 Ship passes Wu Gorge, view Shennü Peak and Twelve Peaks, exclusive guide explains mythology legends. Evening: cruise ship stargazing cinema / private KTV (exclusive time slot for private tour)."
+      },
+      {
+        "day": 4,
+        "title": "Wushan → Lesser Three Gorges + Mini Three Gorges → Xiling Gorge",
+        "accommodation": "5-star luxury cruise ship (balcony room)",
+        "details": "08:00-12:00 Transfer to private boat for Lesser Three Gorges + Mini Three Gorges (exclusive boat for private tour, can stop anytime for photos), enjoy Longmen Gorge, Bawu Gorge, Dicui Gorge, possible wild macaque and hanging coffin sightings. 12:00-13:30 Wushan specialty lunch (recommended Wushan grilled fish). 14:00-18:00 Ship passes Xiling Gorge (longest of Three Gorges), view Military Book and Sword Gorge, Ox Liver and Horse Lung Gorge, Lamp Shadow Gorge. Evening: cruise ship SPA / fitness center (priority reservation for private tour) + buffet dinner."
+      },
+      {
+        "day": 5,
+        "title": "Three Gorges Dam → Tanziling → 185 Platform → Cutoff Memorial → Three Gorges Tribe",
+        "accommodation": "5-star luxury cruise ship (balcony room)",
+        "details": "08:30-12:00 Shore excursion: Three Gorges Dam (exclusive VIP channel, no queuing), three must-visit spots: Tanziling (highest point, panoramic dam + five-level ship lock), 185 Platform (same height as dam top, eye-level view of dam discharge), Cutoff Memorial Park (downstream view of dam, see dam construction relics). 12:00-13:30 Sandouping specialty lunch (recommended Yichang fat fish hotpot). 14:00-17:30 Shore excursion: Three Gorges Tribe Scenic Area (exclusive route for private tour, avoid crowds), visit Mountain Family, Creekside Family, watch Tujia 'crying marriage' performance, experience Tujia waving dance. 18:00 Ship passes Gezhouba Ship Lock (exclusive viewing platform for private tour), experience 'water rising, ship lifting'. Evening: cruise ship farewell banquet (customized menu, complimentary red wine)."
+      },
+      {
+        "day": 6,
+        "title": "Yichang → Qu Yuan Temple → Yichang City",
+        "accommodation": "5-star hotel in Yichang (Crowne Plaza / Wanda Vista)",
+        "details": "08:00-10:00 Shore excursion: Qu Yuan Temple (memorial to great patriotic poet Qu Yuan, exclusive guide explanation). 10:30-12:00 Yichang specialty lunch (recommended Tujia 'lifting grid'). 13:00-16:00 Free time in Yichang city (optional: Three Gorges Waterfall / Qingjiang Gallery, private exclusive transfer anytime). 17:00 Check into Yichang downtown 5-diamond hotel (Crowne Plaza / Wanda Vista). Evening: stroll along Yichang riverside park, enjoy Yangtze River night views."
+      },
+      {
+        "day": 7,
+        "title": "Yichang → Departure",
+        "accommodation": "",
+        "details": "After breakfast, exclusive transfer to Yichang East Railway Station or Sanxia Airport according to flight/train schedule. Trip concludes."
+      }
+    ]
   },
   {
     "id": "35",
     "productId": "40885119",
     "type": "Free and Easy",
     "name": "Three Gorges | 6 Days 5 Nights - Free and Easy",
-    "subtitle": "Quality Hotel Included",
+    "subtitle": "Chongqing 8D City · Yangtze Three Gorges Cruise · Wuhan",
     "originName": "重庆+长江三峡+武汉6日5晚自由行",
     "price": 2271,
     "rating": 5,
@@ -177,14 +385,52 @@
     "tags": "Free Cancellation",
     "highlights": "World-famous Three Gorges - once-in-a-lifetime cruise | Ancient Ba culture and cliff coffins | Luxury 5-star cruise ship with balcony rooms",
     "guideReview": "This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 6
+    "duration": 6,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → Jiefangbei & Hongya Cave",
+        "accommodation": "Hotel near Jiefangbei / Hongya Cave, Chongqing",
+        "details": "Arrive in Chongqing, check into hotel near Jiefangbei. Visit Hongya Cave (stilt-house complex glowing at night), Jiefangbei (city center), Yangtze River Cableway ( aerial view of mountain city). Evening: enjoy mountain city night views, taste Chongqing hotpot."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Fengdu Ghost City → Board Cruise → Zhongxian",
+        "accommodation": "5-star luxury cruise ship (180° river-view balcony room)",
+        "details": "Morning: private transfer to Fengdu Ghost City, experience 'underworld' culture. Afternoon: board cruise ship at Chongqing Chaotianmen Pier, 5-star luxury cruise ship departs. Evening: enjoy buffet dinner on board, captain's welcome reception."
+      },
+      {
+        "day": 3,
+        "title": "Fengjie → Baidicheng → Qutang Gorge → Wu Gorge → Shennü Creek",
+        "accommodation": "5-star luxury cruise ship",
+        "details": "Shore excursion: Baidicheng (overlook Qutang Gorge panoramic view, 10 RMB banknote backdrop). Ship passes Qutang Gorge and Wu Gorge. afternoon: boat tour of Shennü Creek, light hike to explore Tujia village. Evening: enjoy cruise ship entertainment."
+      },
+      {
+        "day": 4,
+        "title": "Wushan → Lesser Three Gorges → Xiling Gorge → Three Gorges Dam",
+        "accommodation": "5-star luxury cruise ship",
+        "details": "Shore excursion: Lesser Three Gorges + Mini Three Gorges (boat tour through canyon). Ship passes Xiling Gorge. afternoon: visit Three Gorges Dam (Tanziling, 185 Platform, Cutoff Memorial Park). Evening: ship passes Gezhouba Ship Lock, experience 'water rising, ship lifting'."
+      },
+      {
+        "day": 5,
+        "title": "Yichang → Three Gorges Dam → Yichang East Station → Wuhan",
+        "accommodation": "Hotel near Jianghan Road / Yellow Crane Tower, Wuhan",
+        "details": "Disembark at Yichang. High-speed rail to Wuhan (~2 hours). Visit Yellow Crane Tower (iconic tower overlooking Yangtze River), Hubei Provincial Museum (d famous Bronze Chime Bells), East Lake (largest urban lake in Wuhan). Evening: taste Wuhan specialties such as Hot Dry Noodles (Re Gan Mian), Duck Neck."
+      },
+      {
+        "day": 6,
+        "title": "Wuhan City Tour → Departure",
+        "accommodation": "",
+        "details": "Visit Wuhan University (cherry blossom avenue), Jianghan Road Pedestrian Street (colonial architecture), Wuhan Yangtze River Bridge. Taste local snacks at Hubu Alley. According to flight/train schedule, transfer to Wuhan Station or Tianhe Airport. Trip concludes."
+      }
+    ]
   },
   {
     "id": "48",
     "productId": "34105488",
     "type": "Group Tour",
     "name": "Wulong Karst | 8 Days 7 Nights - Group Tour",
-    "subtitle": "Discover the best of Chongqing with a local expert guide",
+    "subtitle": "Yangtze Three Gorges · Wulong Karst · Three Natural Bridges · Fairy Mountain",
     "originName": "宜昌+长江三峡+重庆+武隆区8日7晚跟团游",
     "price": 2522,
     "rating": 5,
@@ -192,14 +438,64 @@
     "tags": "No Shopping Stops, Guaranteed Departure",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 8
+    "duration": 8,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → Jiefangbei & Hongya Cave",
+        "accommodation": "5-star hotel in Chongqing (Jiefangbei area)",
+        "details": "Arrive in Chongqing, check into 5-diamond hotel near Jiefangbei. Visit Hongya Cave, Jiefangbei, Yangtze River Cableway. Evening: enjoy mountain city night views."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Wulong Three Natural Bridges → Longshui Gorge → Fairy Mountain",
+        "accommodation": "4-star hotel in Wulong Xiannü Town",
+        "details": "08:30 Depart Chongqing, drive ~2.5 hours to Wulong. 10:30-13:00 Visit Three Natural Bridges (UNESCO World Heritage, giant natural stone arches, Transformers 4 filming location). 14:00-16:00 Visit Longshui Gorge (dramatic narrow rift canyon, nature's air conditioning). 16:30-18:00 Fairy Mountain Grassland (Eastern Switzerland, alpine meadow, horse riding). Overnight: 4-star hotel in Xiannü Town."
+      },
+      {
+        "day": 3,
+        "title": "Wulong → Chongqing → Fengdu Ghost City → Board Cruise",
+        "accommodation": "5-star luxury cruise ship (180° river-view balcony room)",
+        "details": "Morning: return to Chongqing from Wulong. Afternoon: visit Fengdu Ghost City (experience 'underworld' culture). Evening: board cruise ship at Chaotianmen Pier, check into balcony room. Cruise departs downstream."
+      },
+      {
+        "day": 4,
+        "title": "Fengjie → Baidicheng → Qutang Gorge → Wu Gorge → Shennü Creek",
+        "accommodation": "5-star cruise ship",
+        "details": "Shore excursion: Baidicheng (White Emperor City, overlook Qutang Gorge). Ship passes Qutang Gorge and Wu Gorge. afternoon: boat tour of Shennü Creek. Evening: enjoy cruise ship activities."
+      },
+      {
+        "day": 5,
+        "title": "Wushan → Lesser Three Gorges → Xiling Gorge → Three Gorges Dam",
+        "accommodation": "5-star cruise ship",
+        "details": "Shore excursion: Lesser Three Gorges boat tour. Ship passes Xiling Gorge. Visit Three Gorges Dam (Tanziling Viewing Platform, 185 Platform). Evening: ship passes Gezhouba Ship Lock."
+      },
+      {
+        "day": 6,
+        "title": "Yichang → Three Gorges Tribe → Yichang City",
+        "accommodation": "5-star hotel in Yichang downtown",
+        "details": "Shore excursion: Three Gorges Tribe Scenic Area (Tujia ethnic culture). Disembark at Yichang Maoping Port. Transfer to Yichang downtown hotel. Evening: free time in Yichang."
+      },
+      {
+        "day": 7,
+        "title": "Yichang City Tour → Gezhouba → Three Tour Cave",
+        "accommodation": "5-star hotel in Yichang",
+        "details": "Visit Gezhouba Dam, Three Tour Cave (historical site where Su Dongpo inscribed poetry). Visit Yichang Museum. Evening: farewell dinner in Yichang, taste fat fish hotpot."
+      },
+      {
+        "day": 8,
+        "title": "Yichang → Departure",
+        "accommodation": "",
+        "details": "According to flight/train schedule, private transfer to Yichang East Railway Station or Sanxia Airport. Trip concludes."
+      }
+    ]
   },
   {
     "id": "7",
     "productId": "61748785",
     "type": "Small Group",
     "name": "Chongqing | 6 Days 5 Nights - Small Group",
-    "subtitle": "Max 8 Guests | Hotel Pickup/Drop-off",
+    "subtitle": "Chongqing 8D City · Chengdu Panda Base · Jiuzhaigou Valley",
     "originName": "重庆+成都+九寨沟6日5晚拼小团",
     "price": 1563,
     "rating": 5,
@@ -207,14 +503,52 @@
     "tags": "No Shopping Stops, Guaranteed Departure, No Hidden Fees",
     "highlights": "Small group (max 8 pax) - more personal experience | Make friends with fellow travelers",
     "guideReview": "Small groups are flexible — I can fine-tune the itinerary. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 6
+    "duration": 6,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → Jiefangbei & Hongya Cave & Yangtze Cableway",
+        "accommodation": "5-star river-view hotel in Chongqing (Jiefangbei area)",
+        "details": "Arrive in Chongqing, exclusive private transfer to 5-diamond river-view hotel. Free time: visit Jiefangbei, Hongya Cave, Yangtze River Cableway, enjoy mountain city night views. Dinner: recommended old-established Chongqing hotpot (avoiding internet-famous shops)."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Chengdu → Chengdu Panda Base → Kuanzhai Alley → Jinli",
+        "accommodation": "5-star hotel in Chengdu (Chunxi Road area)",
+        "details": "08:30 High-speed rail Chongqing → Chengdu (~1.5 hours). 10:30-13:00 Visit Chengdu Panda Base (world's premier panda conservation facility, observe giant pandas and red pandas in naturalistic enclosures). 14:00-16:00 Kuanzhai Alley (authentic Chengdu slow life, traditional courtyard alleys). 16:30-19:00 Jinli Ancient Street (Three Kingdoms culture, local snacks, glowing lanterns at night). Overnight: 5-diamond hotel near Chunxi Road."
+      },
+      {
+        "day": 3,
+        "title": "Chengdu → Dujiangyan Irrigation System → Songpan Ancient Town → Jiuzhaigou",
+        "accommodation": "4-star Tibetan-style hotel at Jiuzhaigou entrance",
+        "details": "08:00 Depart Chengdu, drive ~2 hours to Dujiangyan. 10:00-12:00 Visit Dujiangyan Irrigation System (UNESCO World Heritage, 2,000+ years old, world's only remaining non-dam irrigation system). 13:00-17:00 Drive to Songpan Ancient Town (~4 hours), visit this Tibetan-Qiang ancient town along the way. Evening: arrive at Jiuzhaigou entrance, check into 4-star Tibetan-style hotel."
+      },
+      {
+        "day": 4,
+        "title": "Jiuzhaigou Full Day Deep Tour",
+        "accommodation": "4-star Tibetan-style hotel at Jiuzhaigou entrance",
+        "details": "Full day deep tour of Jiuzhaigou Valley (UNESCO World Heritage): Five-Flower Lake (most beautiful lake, turquoise multi-color water), Five-Color Pool (highest altitude lake, sapphire blue), Nuorilang Waterfall (Tibet Plateau's widest waterfall). 'After visiting Jiuzhaigou, no need to view water elsewhere.' Overnight: same Tibetan-style hotel."
+      },
+      {
+        "day": 5,
+        "title": "Jiuzhaigou → Huanglong → Chengdu",
+        "accommodation": "5-star hotel in Chengdu (Chunxi Road area)",
+        "details": "08:00 Depart Jiuzhaigou, drive ~2 hours to Huanglong. 10:00-14:00 Visit Huanglong Scenic Area (UNESCO World Heritage, 'fairyland on earth', travertine colorful pools, golden autumn scenery). 15:00 Drive back to Chengdu (~6 hours). Evening: arrive in Chengdu, check into 5-diamond hotel near Chunxi Road. Free time: Taikoo Li (upscale shopping district)."
+      },
+      {
+        "day": 6,
+        "title": "Chengdu City Tour → Du Fu Thatched Cottage → Wuhou Shrine → Departure",
+        "accommodation": "",
+        "details": "Morning: visit Du Fu Thatched Cottage (memorial to Tang Dynasty poet Du Fu). 11:00-13:00 Visit Wuhou Shrine (Three Kingdoms culture, memorial to Liu Bei and Zhuge Liang). 14:00 According to flight/train schedule, private transfer to Chengdu Shuangliu Airport or East Railway Station. Trip concludes."
+      }
+    ]
   },
   {
     "id": "29",
     "productId": "40601987",
     "type": "Private Tour",
-    "name": "Three Gorges | 6 Days 5 Nights - Private",
-    "subtitle": "Fully Private | Quality Hotel Included",
+    "name": "Three Gorges | 6 Days 5 Nights - Private Tour",
+    "subtitle": "Yangtze Three Gorges · Qutang Gorge · Chongqing 8D City",
     "originName": "宜昌+长江三峡+重庆6日5晚私家团",
     "price": 2979,
     "rating": 5,
@@ -222,13 +556,51 @@
     "tags": "Free Cancellation, Guaranteed Departure",
     "highlights": "World-famous Three Gorges - once-in-a-lifetime cruise | Ancient Ba culture and cliff coffins | Luxury 5-star cruise ship with balcony rooms",
     "guideReview": "Private tours go at your pace — no rushing, great for families. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 6
+    "duration": 6,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Yichang → Three Gorges Tribe Scenic Area",
+        "accommodation": "5-star hotel in Yichang downtown",
+        "details": "Arrive in Yichang, private transfer to downtown hotel. Visit Three Gorges Tribe Scenic Area (Tujia ethnic culture, Creekid Family, Mountain Family, 'crying marriage' performance). Evening: free time in Yichang, taste local specialties."
+      },
+      {
+        "day": 2,
+        "title": "Yichang → Three Gorges Dam → Gezhouba → Board Cruise",
+        "accommodation": "5-star luxury cruise ship (180° river-view balcony room)",
+        "details": "08:30-12:00 Visit Three Gorges Dam (world's largest hydroelectric project): Tanziling Viewing Platform (panoramic dam + five-level ship lock), 185 Platform (eye-level with dam top), Cutoff Memorial Park (downstream view of dam). 14:00-15:30 Visit Gezhouba Dam (first large-scale water conservancy project on Yangtze River). 18:00 Board cruise ship at Yichang Maoping Port, check into balcony room. Evening: buffet dinner, captain's welcome reception."
+      },
+      {
+        "day": 3,
+        "title": "Xiling Gorge → Wu Gorge → Lesser Three Gorges + Mini Three Gorges",
+        "accommodation": "5-star cruise ship",
+        "details": "Ship passes Xiling Gorge (longest of Three Gorges). Afternoon: ship passes Wu Gorge, view Shennü Peak and Twelve Peaks. Shore excursion: Lesser Three Gorges + Mini Three Gorges (transfer to small boat, enjoy canyon scenery, possible wild macaque sightings). Evening: enjoy cruise ship entertainment."
+      },
+      {
+        "day": 4,
+        "title": "Qutang Gorge → Baidicheng → Fengdu Ghost City",
+        "accommodation": "5-star cruise ship",
+        "details": "Ship passes Qutang Gorge (shortest and most dramatic of Three Gorges, 'Qutang most magnificent under heaven'). Shore excursion: Baidicheng (White Emperor City, overlook Qutang Gorge panoramic view, 10 RMB banknote backdrop). Afternoon: visit Fengdu Ghost City (experience 'underworld' culture). Evening: enjoy cruise ship activities."
+      },
+      {
+        "day": 5,
+        "title": "Fengdu → Chongqing → Hongya Cave → Jiefangbei",
+        "accommodation": "5-star river-view hotel in Chongqing (Jiefangbei area)",
+        "details": "Disembark at Chongqing Chaotianmen Pier. Private transfer to downtown Chongqing hotel. Visit Hongya Cave (stilt-house complex glowing at night), Jiefangbei, Yangtze River Cableway. Evening: enjoy Chongqing 8D magic city night views, taste authentic hotpot."
+      },
+      {
+        "day": 6,
+        "title": "Chongqing City Tour → Liziba → Ciqikou → Departure",
+        "accommodation": "",
+        "details": "Morning: visit Liziba Station (Light Rail Line 2 passing through building, iconic Chongqing scene). 11:00-14:00 Visit Ciqikou Ancient Town (1,700+ years old, traditional shops, Chen mahua snacks, old teahouses). 15:00 According to flight/train schedule, private transfer to Chongqing Jiangbei Airport or North Railway Station. Trip concludes."
+      }
+    ]
   },
   {
     "id": "82",
     "productId": "30413260",
     "type": "Small Group",
-    "name": "Wulong Karst | 5 Days 4 Nights - Small Group",
+    "name": "Wulong Karst Deep Dive | 5 Days 4 Nights - Small Group",
     "subtitle": "Fairy Mountain (Xiannvshan) · Furong Cave · Furong River · Natural Sinkhole (Tiankeng) | Max 8 Guests | Hotel Pickup/Drop-off",
     "originName": "重庆+武隆区5日4晚拼小团",
     "price": 796,
@@ -237,14 +609,46 @@
     "tags": "Free Cancellation, No Shopping Stops, Guaranteed Departure",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. Small groups are flexible — I can adjust the itinerary to your interests.",
-    "duration": 5
+    "duration": 5,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → City Highlights",
+        "accommodation": "5-star hotel in Chongqing",
+        "details": "Private transfer to hotel. Visit Jiefangbei, Hongya Cave, Yangtze River Cableway. Mountain city night views."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Wulong Three Natural Bridges + Longshui Gorge",
+        "accommodation": "4-star hotel in Wulong",
+        "details": "Drive to Wulong. Visit Three Natural Bridges (UNESCO Heritage) and Longshui Gorge."
+      },
+      {
+        "day": 3,
+        "title": "Fairy Mountain + Furong Cave + Furong River",
+        "accommodation": "4-star hotel in Wulong",
+        "details": "Morning: Fairy Mountain Grassland. Afternoon: Furong Cave + Furong River cruise."
+      },
+      {
+        "day": 4,
+        "title": "Earth Crack + Natural Sinkhole (Tiankeng)",
+        "accommodation": "4-star hotel in Wulong",
+        "details": "Morning: Earth Crack (Difeng). Afternoon: Natural Sinkhole (massive karst hole). Optional: 'Impression Wulong' evening show."
+      },
+      {
+        "day": 5,
+        "title": "Wulong → Chongqing → Departure",
+        "accommodation": "",
+        "details": "Drive back to Chongqing. Visit Ciqikou Ancient Town or Liziba. Private transfer to airport/railway station."
+      }
+    ]
   },
   {
     "id": "149",
     "productId": "61293059",
     "type": "Private Tour",
-    "name": "Wulong Karst | 7 Days 6 Nights - Private",
-    "subtitle": "Fairy Mountain (Xiannvshan) · Hongya Cave · Natural Sinkhole (Tiankeng) · City of Fog | Fully Private",
+    "name": "Wulong Karst | 7 Days 6 Nights - Private Tour",
+    "subtitle": "Fairy Mountain · Hongya Cave · Natural Sinkhole · City of Fog",
     "originName": "重庆+武隆区+成都7日6晚私家团",
     "price": 1932,
     "rating": 5,
@@ -252,14 +656,58 @@
     "tags": "Guaranteed Departure",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. Private tours go at your pace — no rushing, great for families with kids or seniors.",
-    "duration": 7
+    "duration": 7,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Pickup → Wulong → Fairy Mountain Resort",
+        "accommodation": "5-star resort hotel in Fairy Mountain (forest-view room)",
+        "details": "Chongqing pickup by exclusive first-class chartered car (~2.5 hours), drive to Wulong Fairy Mountain area, begin karst journey. Check into 5-star resort hotel in Fairy Mountain. Evening: enjoy mountain breeze, starry sky, forest bird sounds."
+      },
+      {
+        "day": 2,
+        "title": "Three Natural Bridges + Tianfu Official Post + 'Impression Wulong' Show",
+        "accommodation": "5-star resort hotel in Fairy Mountain",
+        "details": "09:00-12:00 Visit Three Natural Bridges (world's largest natural bridge group, UNESCO World Heritage, Transformers 4 and 'Curse of the Golden Flower' filming location). 13:00-15:00 Visit Tianfu Official Post (ancient post station on Tea-Horse Road, well-preserved Ming-Qing architecture). 19:00-21:00 Watch 'Impression Wulong' (large-scale real-scene live performance directed by Zhang Yimou, showcasing Bayu culture and Tujia customs)."
+      },
+      {
+        "day": 3,
+        "title": "Longshui Gorge + Fairy Mountain Grassland",
+        "accommodation": "5-star resort hotel in Fairy Mountain",
+        "details": "09:00-12:00 Visit Longshui Gorge (dramatic narrow rift canyon, waterfalls cascading down mossy cliffs, 'nature's air conditioning'). 13:00-17:00 Fairy Mountain Grassland (Eastern Switzerland, 2,000m altitude alpine meadow, horse riding, forest train, vast pasture with cattle and sheep). Evening: return to resort hotel."
+      },
+      {
+        "day": 4,
+        "title": "Furong Cave + Furong River Cruise",
+        "accommodation": "Boutique hotel in Wulong downtown",
+        "details": "09:00-12:00 Visit Furong Cave (one of China's largest karst caves, 3,000-meter passages, brilliant illuminated stalactites and stalagmites). 13:00-16:00 Furong River cruise (crystal-clear water reflecting karst peaks, peaceful and picturesque). Evening: check into Wulong downtown boutique hotel."
+      },
+      {
+        "day": 5,
+        "title": "Wulong → Baima Mountain → Pengshui",
+        "accommodation": "Miao ethnic style hotel at Chi You Nine Li City, Pengshui",
+        "details": "09:00-12:00 Drive to Baima Mountain (~1.5 hours), visit tea plantation terraces, enjoy panoramic view of Wu River first bay. 14:00-17:00 Drive to Pengshui (~2 hours), visit Chi You Nine Li City (world's largest Miao architecture complex, Nine Li tribe cultural heritage). Evening: check into Miao style hotel, enjoy Miao welcoming ritual with rice wine."
+      },
+      {
+        "day": 6,
+        "title": "Chi You Nine Li City + Wujiang Gallery Cruise + Gongtan Ancient Town",
+        "accommodation": "River-view stilt-house B&B in Gongtan Ancient Town",
+        "details": "09:00-12:00 Deep tour of Chi You Nine Li City (Miao culture, bronze drum performance, Miao costume experience). 13:00-16:00 Wujiang Gallery cruise (hundred-mile gallery, emerald water reflecting karst peaks, ancient Tujia villages along banks). 17:00 Arrive at Gongtan Ancient Town (1,700-year-old riverside town, stone streets, stilt houses). Evening: check into river-view stilt-house B&B, enjoy ancient town night views."
+      },
+      {
+        "day": 7,
+        "title": "Gongtan Ancient Town → Chongqing → Departure",
+        "accommodation": "",
+        "details": "Morning: enjoy Gongtan Ancient Town morning scenery (misty river, ancient stone streets, peaceful atmosphere). 11:00 Drive back to Chongqing (~3 hours). 15:00 According to flight/train schedule, transfer to Chongqing Jiangbei Airport or North Railway Station. Trip concludes."
+      }
+    ]
   },
   {
     "id": "783",
     "productId": "31774591",
     "type": "Private Tour",
-    "name": "Three Gorges | 8 Days 7 Nights - Private",
-    "subtitle": "Fully Private",
+    "name": "Three Gorges | 8 Days 7 Nights - Private Tour",
+    "subtitle": "Yangtze Three Gorges · Shennongjia Primeval Forest · Qutang Gorge",
     "originName": "重庆+长江三峡+神农架8日7晚私家团",
     "price": 2655,
     "rating": 4.7,
@@ -267,14 +715,64 @@
     "tags": "Guaranteed Departure",
     "highlights": "World-famous Three Gorges - once-in-a-lifetime cruise | Ancient Ba culture and cliff coffins | Luxury 5-star cruise ship with balcony rooms",
     "guideReview": "Private tours go entirely at your pace — no rushing, perfect for families with seniors or kids.",
-    "duration": 8
+    "duration": 8,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → Jiefangbei & Hongya Cave & Yangtze Cableway",
+        "accommodation": "5-star river-view hotel in Chongqing (Jiefangbei area)",
+        "details": "Arrive in Chongqing, exclusive private transfer to 5-diamond river-view hotel. Free time: visit Jiefangbei, Hongya Cave, Yangtze River Cableway. Evening: enjoy mountain city night views, private customized hotpot dinner."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Fengdu Ghost City → Board Cruise → Night Cruise on Three Gorges",
+        "accommodation": "5-star luxury cruise ship (180° river-view balcony room)",
+        "details": "08:30 Private transfer to Fengdu (~2 hours), visit Fengdu Ghost City (VIP channel, skip queues). 18:00 Board cruise at Chongqing Chaotianmen Pier, exclusive boarding channel. 20:00 Cruise departs, enjoy night cruise on Yangtze River, dazzling lights of mountain city reflecting off water."
+      },
+      {
+        "day": 3,
+        "title": "Qutang Gorge → Baidicheng → Wu Gorge → Shennü Creek",
+        "accommodation": "5-star luxury cruise ship",
+        "details": "Shore excursion: Baidicheng (exclusive private guide, overlook Qutang Gorge panoramic view). Ship passes Qutang Gorge and Wu Gorge. afternoon: boat tour of Shennü Creek (private small boat, light hike to Tujia village). Evening: cruise ship stargazing cinema / private KTV."
+      },
+      {
+        "day": 4,
+        "title": "Xiling Gorge → Three Gorges Dam → Yichang → Shennongjia Muyu Town",
+        "accommodation": "4-star forest hotel in Shennongjia Muyu Town",
+        "details": "Ship passes Xiling Gorge. Shore excursion: Three Gorges Dam (exclusive VIP channel). Disembark at Yichang. Private transfer to Shennongjia Muyu Town (~4 hours). Evening: check into 4-star forest hotel in Muyu Town, enjoy primeval forest mountain air."
+      },
+      {
+        "day": 5,
+        "title": "Shennongjia Deep Tour (Shennong Peak + Banbiyan + Shennong Valley)",
+        "accommodation": "4-star forest hotel in Shennongjia Muyu Town",
+        "details": "08:00-17:00 Shennongjia Deep Tour: Shennong Peak (3,105m altitude, 'Central China's Roof', panoramic view of primeval forest), Banbiyan (cliff-edge plank road, sea of clouds observation point), Shennong Valley (primeval forest traverse, mysterious 'wild man' legend). Evening: return to Muyu Town."
+      },
+      {
+        "day": 6,
+        "title": "Shennongjia (Dajiuhu + Natural Bridge + Shennong Altar)",
+        "accommodation": "4-star forest hotel in Shennongjia Muyu Town",
+        "details": "08:00-12:00 Dajiuhu National Wetland Park (alpine wetland, meandering waterways, herds of cattle and sheep, 'Hubei's Tibet'). 13:00-17:00 Visit Natural Bridge (karst natural stone bridge, waterfall flowing through bridge), Shennong Altar (memorial to Yan Emperor Shennong, ancient fir tree forest). Evening: return to Muyu Town."
+      },
+      {
+        "day": 7,
+        "title": "Shennongjia → Yichang → Three Gorges Tribe Scenic Area",
+        "accommodation": "5-star hotel in Yichang downtown",
+        "details": "08:00 Drive from Shennongjia to Yichang (~4 hours). 13:00-17:00 Visit Three Gorges Tribe Scenic Area (exclusive route for private tour, avoid crowds). Evening: check into Yichang downtown 5-diamond hotel. Free time: Yichang riverside park."
+      },
+      {
+        "day": 8,
+        "title": "Yichang City Tour → Departure",
+        "accommodation": "",
+        "details": "Morning: visit Gezhouba Dam, Three Tour Cave (historical site where Su Dongpo inscribed poetry). 12:00 According to flight/train schedule, exclusive private transfer to Yichang East Railway Station or Sanxia Airport. Trip concludes."
+      }
+    ]
   },
   {
     "id": "107",
     "productId": "67172269",
     "type": "Small Group",
     "name": "Wulong Karst | 5 Days 4 Nights - Small Group",
-    "subtitle": "Max 8 Guests",
+    "subtitle": "Three Natural Bridges · Fairy Mountain · Chiyou Jiulicheng",
     "originName": "重庆+武隆区+彭水5日4晚拼小团",
     "price": 870,
     "rating": 5,
@@ -282,13 +780,45 @@
     "tags": "No Shopping Stops, Guaranteed Departure, No Hidden Fees",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. Small groups are flexible — I can adjust the itinerary to your interests.",
-    "duration": 5
+    "duration": 5,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → Hotel Check-in → Private Photo Shoot at Hongya Cave",
+        "accommodation": "5-star river-view hotel in Chongqing (Jiefangbei area)",
+        "details": "Arrive in Chongqing, exclusive private transfer to 5-diamond river-view hotel. Free time: visit Jiefangbei, Hongya Cave, Yangtze River Cableway. Evening: exclusive private photo shoot session at Hongya Cave (professional photographer, iconic mountain city night views as backdrop)."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Wulong Three Natural Bridges → Longshui Gorge",
+        "accommodation": "4-star resort hotel in Wulong Xiannü Town",
+        "details": "08:30 Depart Chongqing, drive ~2.5 hours to Wulong. 10:30-13:00 Visit Three Natural Bridges (UNESCO World Heritage, world's largest natural bridge group, Transformers 4 filming location). 14:00-16:00 Visit Longshui Gorge (narrow rift canyon, waterfalls, nature's air conditioning). Evening: check into 4-star resort hotel in Xiannü Town."
+      },
+      {
+        "day": 3,
+        "title": "Fairy Mountain → Wujiang Gallery → Pengshui Chi You Nine Li City",
+        "accommodation": "Miao ethnic style hotel at Chi You Nine Li City, Pengshui",
+        "details": "09:00-12:00 Fairy Mountain Grassland (Eastern Switzerland, alpine meadow, horse riding, forest train). 13:00-16:00 Drive to Pengshui via Wujiang Gallery route (scenic drive along Wu River, emerald water, karst peaks). 17:00 Arrive at Chi You Nine Li City (world's largest Miao architecture complex). Evening: check into Miao style hotel, enjoy Miao welcoming ritual with rice wine."
+      },
+      {
+        "day": 4,
+        "title": "Chi You Nine Li City Deep Tour + Ay River Drifting",
+        "accommodation": "Miao ethnic style hotel at Chi You Nine Li City, Pengshui",
+        "details": "09:00-12:00 Deep tour of Chi You Nine Li City (Miao culture, bronze drum performance, Miao costume experience, Nine Li tribe heritage). 13:00-17:00 Ay River drifting (canyon drifting, emerald water, thrilling rapids, Qinglong Sky Ladder). Evening: Miao family reunion dinner, experience Miao 'crying marriage' and waving dance."
+      },
+      {
+        "day": 5,
+        "title": "Pengshui → Chongqing → Liziba → Ciqikou → Departure",
+        "accommodation": "",
+        "details": "08:00 Drive from Pengshui to Chongqing (~3 hours). 11:00-12:00 Visit Liziba Station (Light Rail Line 2 passing through building). 12:00-14:00 Visit Ciqikou Ancient Town (1,700+ years old, traditional shops, Chen mahua snacks). 15:00 According to flight/train schedule, private transfer to Chongqing Jiangbei Airport or North Railway Station. Trip concludes."
+      }
+    ]
   },
   {
     "id": "284",
     "productId": "69973975",
     "type": "Private Tour",
-    "name": "Wulong Karst | 6 Days 5 Nights - Private",
+    "name": "Wulong + Dazu Ultimate | 6 Days 5 Nights - Private Tour",
     "subtitle": "Longshui Gorge · Three Natural Bridges · Yangtze River Cableway · Dazu Rock Carvings | Max 8 Guests | Fully Private | Quality Hotel Included",
     "originName": "重庆+大足石刻+武隆天生三桥+龙水峡地缝+仙女山国家森林公园6日5晚私家团",
     "price": 2109,
@@ -297,14 +827,52 @@
     "tags": "Guaranteed Departure",
     "highlights": "UNESCO World Heritage Site - stunning natural karst landscape | Featured in Transformers 4 movie location | Easy hiking with breathtaking views",
     "guideReview": "Wulong is a must-see! Wear comfortable sneakers. Longshui Gorge is narrow and cool in summer — nature's own AC.",
-    "duration": 6
+    "duration": 6,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chongqing → 8D City Experience",
+        "accommodation": "5-star river-view hotel in Chongqing",
+        "details": "Private pickup. Visit Jiefangbei, Hongya Cave, Yangtze River Cableway. Authentic hotpot dinner."
+      },
+      {
+        "day": 2,
+        "title": "Chongqing → Dazu Rock Carvings → Baodingshan",
+        "accommodation": "5-star hotel in Chongqing",
+        "details": "Full day at Dazu Rock Carvings (UNESCO Heritage, Baodingshan, specialist guide)."
+      },
+      {
+        "day": 3,
+        "title": "Chongqing → Wulong Three Natural Bridges + Longshui Gorge",
+        "accommodation": "5-star resort in Wulong",
+        "details": "Drive to Wulong. Visit Three Natural Bridges and Longshui Gorge. Evening: optional 'Impression Wulong' show."
+      },
+      {
+        "day": 4,
+        "title": "Fairy Mountain + Furong Cave",
+        "accommodation": "5-star resort in Wulong",
+        "details": "Morning: Fairy Mountain Grassland. Afternoon: Furong Cave + Furong River."
+      },
+      {
+        "day": 5,
+        "title": "Wulong → Yangtze River Cableway → Chongqing",
+        "accommodation": "5-star hotel in Chongqing",
+        "details": "Drive back to Chongqing. Visit Yangtze River Cableway, free time in city."
+      },
+      {
+        "day": 6,
+        "title": "Chongqing → Departure",
+        "accommodation": "",
+        "details": "Free morning. Private transfer to airport/railway station."
+      }
+    ]
   },
   {
     "id": "274",
     "productId": "85611323",
     "type": "Day Tour",
-    "name": "Full Day Tour",
-    "subtitle": "Discover the best of Chongqing with a local expert guide",
+    "name": "Chiyou Jiulicheng & Wujiang Gallery | Full Day Tour",
+    "subtitle": "Chiyou Jiulicheng · Wujiang Gallery Cruise · Yangtze Night Cruise",
     "originName": "彭水蚩尤九黎城+万足码头（乌江精华段）游船 一日游",
     "price": 133,
     "rating": 5,
@@ -312,14 +880,22 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "Night cruise on Yangtze & Jialing Rivers | Stunning skyline view with colorful lights | See Hongyaodong from the water",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Chiyou Jiulicheng + Wujiang Gallery + Yangtze Night Cruise",
+        "accommodation": "",
+        "details": "07:30 Hotel pickup, drive ~2.5h to Pengshui. 10:00-12:00 Visit Chiyou Jiulicheng (world's largest Miao architecture complex, cultural performances). 12:30-13:30 Lunch — Miao specialty dishes. 14:00-16:30 Wujiang Gallery cruise (emerald water, karst peaks, ancient Tujia villages). 17:00 Drive back to Chongqing. 19:30-21:00 Yangtze & Jialing Rivers night cruise (illuminated skyline, Hongya Cave from water)."
+      }
+    ]
   },
   {
     "id": "506",
     "productId": "54257084",
     "type": "Day Tour",
-    "name": "Chongqing | Full Day Tour",
-    "subtitle": "Max 8 Guests",
+    "name": "Fengdu Ghost City | Full Day Tour",
+    "subtitle": "Fengdu Ghost City · Fengdu Mingshan Scenic Area",
     "originName": "重庆丰都鬼城名山景区一日游【2-8人小团无购物+亲子游】",
     "price": 133,
     "rating": 5,
@@ -327,14 +903,22 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "Perfect for short stay - hit all highlights in one day",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Fengdu Ghost City Full Day Tour",
+        "accommodation": "",
+        "details": "08:00 Hotel pickup, drive ~2h to Fengdu. 10:00-13:00 Visit Fengdu Ghost City (1,800+ years of afterlife culture, Naihe Bridge, Tiandi Palace, judgment halls). 13:00-14:00 Lunch. 14:30-16:30 Visit Fengdu Mingshan (mountain temples, panoramic Yangtze views from summit). 17:00 Drive back to Chongqing (~2h)."
+      }
+    ]
   },
   {
     "id": "627",
     "productId": "52292992",
     "type": "Day Tour",
-    "name": "Full Day Tour",
-    "subtitle": "Discover the best of Chongqing with a local expert guide",
+    "name": "Jinfo Mountain & Wujiang Cruise | Full Day Tour",
+    "subtitle": "Jinfo Mountain · Wujiang Gallery Cruise",
     "originName": "南川金佛山+乌江游船一日游含门票",
     "price": 162,
     "rating": 5,
@@ -342,13 +926,21 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "Night cruise on Yangtze & Jialing Rivers | Stunning skyline view with colorful lights | See Hongyaodong from the water",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Jinfo Mountain + Wujiang Gallery Full Day Tour",
+        "accommodation": "",
+        "details": "07:30 Hotel pickup, drive ~1.5h to Nanchuan. 09:00-12:30 Visit Jinfo Mountain (UNESCO World Heritage, Buddhist sacred mountain, ancient rhododendrons, Southern Sky temple complex, cable car to summit). 13:00-14:00 Lunch. 14:30-17:00 Wujiang Gallery cruise (emerald water, karst peaks, ancient villages). 17:30 Drive back to Chongqing (~2h)."
+      }
+    ]
   },
   {
     "id": "75",
     "productId": "70427879",
     "type": "Day Tour",
-    "name": "Full Day Tour",
+    "name": "Wuling Rift Valley & Project 816 | Full Day Tour",
     "subtitle": "Wuling Mountain Rift Valley | Pure Play - No Shopping",
     "originName": "武陵山大裂谷+816一日游【纯玩丨含门票+部分小交通+导游】",
     "price": 44,
@@ -357,14 +949,22 @@
     "tags": "Instant Confirmation, No Shopping Stops, Conditional Refund",
     "highlights": "Perfect for short stay - hit all highlights in one day",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Wuling Mountain Rift Valley + Project 816 Full Day Tour",
+        "accommodation": "",
+        "details": "07:30 Hotel pickup, drive ~2h to Wuling. 09:30-12:00 Visit Wuling Mountain Rift Valley (spectacular chasm, glass walkway, waterfalls, verdant forests). 12:30-13:30 Lunch. 14:00-16:00 Visit Project 816 Underground Nuclear Plant (Cold War era, 42,000 sq meters, now museum). 16:30 Drive back to Chongqing (~2h)."
+      }
+    ]
   },
   {
     "id": "30",
     "productId": "107356918",
     "type": "Day Tour",
-    "name": "Full Day Tour",
-    "subtitle": "Pure Play - No Shopping",
+    "name": "Chiyou Jiulicheng & Gongtan Town | Full Day Tour",
+    "subtitle": "Chiyou Jiulicheng · Gongtan Ancient Town · Wujiang Gallery",
     "originName": "【含游船】九黎城+龚滩古镇+乌江画廊一日游『纯玩+苗宴』",
     "price": 59,
     "rating": 5,
@@ -372,14 +972,22 @@
     "tags": "Instant Confirmation, No Shopping Stops, Conditional Refund",
     "highlights": "Ancient town with 1700+ years history | Try local snacks: Chen Mahua (twisted dough), | Traditional crafts and tea houses",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Chiyou Jiulicheng + Gongtan + Wujiang Gallery Full Day Tour",
+        "accommodation": "",
+        "details": "07:00 Hotel pickup (early start for full day), drive ~2.5h to Pengshui. 09:30-11:30 Visit Chiyou Jiulicheng (Miao architecture, cultural show). 12:00-14:00 Wujiang Gallery cruise (emerald water, karst peaks) to Gongtan. 14:00-16:00 Explore Gongtan Ancient Town (1,700-year-old riverside town, stilt houses, stone streets, Miao snack lunch). 16:30 Drive back to Chongqing (~3h)."
+      }
+    ]
   },
   {
     "id": "178",
     "productId": "91462647",
     "type": "Day Tour",
-    "name": "Full Day Tour",
-    "subtitle": "Discover the best of Chongqing with a local expert guide",
+    "name": "Two Gorges One Peak Cruise | Full Day Tour",
+    "subtitle": "Wu Gorge · Qutang Gorge · Goddess Peak",
     "originName": "船游【两峡一峰 奉节-巫山】巫峡·瞿塘峡·神女峰半日游",
     "price": 88,
     "rating": 5,
@@ -387,14 +995,22 @@
     "tags": "Instant Confirmation, No Shopping Stops, Conditional Refund",
     "highlights": "Perfect for short stay - hit all highlights in one day",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 0
+    "duration": 0,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Two Gorges One Peak (Wu Gorge + Qutang Gorge + Goddess Peak) Half-Day Cruise",
+        "accommodation": "",
+        "details": "07:00 Hotel pickup, drive ~4.5h or high-speed rail to Fengjie (~2h). 10:00-10:30 Board cruise at Fengjie. 10:30-12:00 Ship passes Qutang Gorge (shortest and most dramatic, 'Qutang most magnificent under heaven', 10 RMB banknote scenery). 12:00-14:00 Ship passes Wu Gorge (most scenic, Twelve Peaks, Goddess Peak watching over river). 14:30 Return to Fengjie. High-speed rail back to Chongqing (~2h)."
+      }
+    ]
   },
   {
     "id": "610",
     "productId": "71220149",
     "type": "Free and Easy",
-    "name": "3 Days 2 Nights - Free and Easy",
-    "subtitle": "Pure Play - No Shopping | Quality Hotel Included | Local Cuisine Included",
+    "name": "Miao Culture & Wujiang Gallery | 3 Days 2 Nights",
+    "subtitle": "Chiyou Jiulicheng · Gongtan Ancient Town · Wujiang Gallery · Youyang Peach Blossom Spring",
     "originName": "彭水+蚩尤九黎城+龚滩古镇乌江画廊+酉阳桃花源景区3日2晚自由行",
     "price": 1549,
     "rating": 5,
@@ -402,14 +1018,34 @@
     "tags": "No Shopping Stops",
     "highlights": "Ancient town with 1700+ years history | Try local snacks: Chen Mahua (twisted dough), | Traditional crafts and tea houses",
     "guideReview": "This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 3
+    "duration": 3,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Chongqing → Pengshui → Chi You Nine Li City → Night Tour of Nine Li City",
+        "accommodation": "Miao ethnic style hotel at Chi You Nine Li City, Pengshui",
+        "details": "Morning: high-speed rail Chongqing North → Pengshui (~1.5 hours), then taxi to Chi You Nine Li City. 14:00-18:00 Visit Chi You Nine Li City (world's largest Miao architecture complex, Nine Li Palace light show, Miao cuisine). Evening: night tour of Nine Li City (colorful lights, Miao song and dance performance). Check into Miao style hotel."
+      },
+      {
+        "day": 2,
+        "title": "Pengshui Wanzu Pier → Wujiang Gallery Cruise → Gongtan Ancient Town → Night Tour of Ancient Town",
+        "accommodation": "River-view stilt-house B&B in Gongtan Ancient Town",
+        "details": "09:00-12:00 Wanzu Pier → Wujiang Gallery cruise boat (~2.5 hours), enjoy hundred-mile Wujiang Gallery, emerald water reflecting karst peaks, ancient Tujia villages along banks. 13:00-17:00 Arrive at Gongtan Ancient Town (1,700-year-old riverside town, 'most beautiful town along Wu River', stone streets, stilt houses). Evening: night tour of Gongtan Ancient Town (lantern-lit streets, peaceful river breeze). Check into river-view stilt-house B&B."
+      },
+      {
+        "day": 3,
+        "title": "Gongtan Ancient Town → Youyang Peach Blossom Spring → Chongqing",
+        "accommodation": "",
+        "details": "Morning: enjoy Gongtan Ancient Town morning scenery. 10:00 Drive to Youyang Peach Blossom Spring (~2 hours). 12:00-16:00 Visit Youyang Peach Blossom Spring (inspiration for Tao Yuanming's 'Peach Blossom Spring', Taoist utopia, lush gardens, caves, streams). 17:00 Drive back to Chongqing (~3 hours). Arrive in Chongqing, trip concludes."
+      }
+    ]
   },
   {
     "id": "486",
     "productId": "79767633",
     "type": "Day Tour",
-    "name": "Chongqing | Full Day Tour",
-    "subtitle": "Discover the best of Chongqing with a local expert guide",
+    "name": "Diaoyu Fortress & Laitan Town | Full Day Tour",
+    "subtitle": "Diaoyu Fortress · Laitan Ancient Town · Garden Expo Park",
     "originName": "重庆合川钓鱼城+涞滩古镇+园博园一日游",
     "price": 88,
     "rating": 5,
@@ -417,14 +1053,22 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "Ancient town with 1700+ years history | Try local snacks: Chen Mahua (twisted dough), | Traditional crafts and tea houses",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Diaoyu Fortress + Laitan Ancient Town + Garden Expo Full Day Tour",
+        "accommodation": "",
+        "details": "08:00 Hotel pickup, drive ~1.5h to Hechuan. 09:30-12:00 Visit Diaoyu Fortress (900-year-old mountain fortress, Song dynasty garrison held off Mongol invasions for 36 years, dramatic cliffs). 12:30-13:30 Lunch at Laitan Ancient Town. 13:30-15:30 Explore Laitan Ancient Town (Ming Dynasty defensive town, moat, ancient streets, annual lantern festival). 16:00-17:30 Visit Chongqing Garden Expo Park (landscaped gardens, lakes, pavilions). 18:00 Return to hotel."
+      }
+    ]
   },
   {
     "id": "582",
     "productId": "45769611",
     "type": "Day Tour",
-    "name": "Chongqing | Full Day Tour",
-    "subtitle": "Pure Play - No Shopping | Max 8 Guests",
+    "name": "Sibian Mountain Waterfalls | Full Day Tour",
+    "subtitle": "Sibian Mountain · Wangxiang Waterfall",
     "originName": "重庆四面山一日游【2-8人小团·无需中转车·江津区·纯玩】",
     "price": 133,
     "rating": 5,
@@ -432,14 +1076,22 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "Perfect for short stay - hit all highlights in one day",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Sibian Mountain + Wangxiang Waterfall Full Day Tour",
+        "accommodation": "",
+        "details": "07:30 Hotel pickup, drive ~2h to Jiangjin. 09:30-12:30 Visit Sibian Mountain (National 5A scenic area, waterfall cascades, red sandstone cliffs, primeval forest). 12:30-13:30 Lunch at mountain restaurant. 14:00-16:00 Visit Wangxiang Waterfall (signature waterfall of Sibian Mountain, giant horsetail cascade down red cliffs, most photographed natural wonder). 16:30 Drive back to Chongqing (~2h)."
+      }
+    ]
   },
   {
     "id": "566",
     "productId": "47552453",
     "type": "Day Tour",
-    "name": "Full Day Tour",
-    "subtitle": "Discover the best of Chongqing with a local expert guide",
+    "name": "Yunyang Dragon Barrel | Full Day Tour",
+    "subtitle": "Yunyang Dragon Barrel · Longgang Glass Skywalk",
     "originName": "云阳龙缸国家地质公园一日游【自由随心·亲子·家庭1V1客服】",
     "price": 133,
     "rating": 5,
@@ -447,6 +1099,14 @@
     "tags": "Instant Confirmation, No Shopping Stops, Hotel Pickup, Conditional Refund",
     "highlights": "Perfect for short stay - hit all highlights in one day",
     "guideReview": "Day tours move at a brisk pace — wear comfy shoes and bring a power bank. This route rates 5.0/5 — excellent reputation, book with confidence!",
-    "duration": 1
+    "duration": 1,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Yunyang Dragon Barrel + Longgang Glass Skywalk Full Day Tour",
+        "accommodation": "",
+        "details": "07:00 Hotel pickup, drive ~3.5h to Yunyang. 10:30-12:30 Visit Yunyang Dragon Barrel (Longgang) — massive karst sinkhole with nearly vertical walls over 500m deep. 12:30-13:30 Lunch at Longgang scenic area. 14:00-16:00 Experience Longgang Glass Skywalk (glass-bottomed walkway clinging to cliffs, 700m above ground, panoramic karst views). 16:30 Drive back to Chongqing (~3.5h)."
+      }
+    ]
   }
 ]
