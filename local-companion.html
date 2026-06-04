@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Companion in Chongqing — Your English-Speaking Local Fixer</title>
+    <meta name="description" content="Don't struggle alone in Chongqing. A local English-speaking companion handles language, payments, transport, food, and more. Full-day private service for foreigners.">
+    <meta property="og:title" content="Local Companion in Chongqing — Your English-Speaking Local Fixer">
+    <meta property="og:description" content="Don't struggle alone in Chongqing. A local English-speaking companion handles language, payments, transport, food, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://liugcryan.github.io/chongqing-hikes-website/local-companion.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Local Companion in Chongqing — Your English-Speaking Local Fixer">
+    <meta name="twitter:description" content="Don't struggle alone in Chongqing. Full-day private companion service for foreigners.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Local Companion page-specific styles */
+        .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+        .pain-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 28px 24px; transition: all 0.3s ease; }
+        .pain-card:hover { border-color: #c9a961; transform: translateY(-4px); box-shadow: 0 8px 32px rgba(201,169,97,0.1); }
+        .pain-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+        .pain-card h3 { color: #c9a961; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 1px; margin: 0 0 8px; }
+        .pain-card .pain-problem { color: #e74c3c; font-size: 0.85rem; margin-bottom: 8px; font-style: italic; }
+        .pain-card .pain-solution { color: #aaa; font-size: 0.9rem; line-height: 1.6; }
+
+        .horror-stories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+        .horror-card { background: linear-gradient(135deg, #1a0a0a, #1a1a1a); border: 1px solid #2a1a1a; border-radius: 12px; padding: 32px 28px; position: relative; overflow: hidden; }
+        .horror-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #e74c3c; }
+        .horror-card h3 { color: #e74c3c; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 1px; margin: 0 0 12px; }
+        .horror-card p { color: #999; font-size: 0.92rem; line-height: 1.7; margin: 0; }
+
+        .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+        .solution-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 32px 28px; text-align: center; transition: all 0.3s ease; }
+        .solution-card:hover { border-color: #c9a961; transform: translateY(-4px); }
+        .solution-card .sol-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+        .solution-card h3 { color: #c9a961; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 1px; margin: 0 0 10px; }
+        .solution-card p { color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0; }
+
+        .creator-quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+        .creator-quote { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 28px 24px; }
+        .creator-quote .quote-text { color: #ccc; font-size: 1rem; line-height: 1.7; font-style: italic; margin-bottom: 12px; }
+        .creator-quote .quote-text::before { content: '\201C'; color: #c9a961; font-size: 2rem; }
+        .creator-quote .quote-source { color: #c9a961; font-size: 0.85rem; }
+
+        .day-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+        .day-step { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px 20px; text-align: center; position: relative; }
+        .day-step .step-num { background: #c9a961; color: #1a1a1a; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin: 0 auto 12px; }
+        .day-step h4 { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 1px; margin: 0 0 8px; }
+        .day-step p { color: #888; font-size: 0.85rem; line-height: 1.5; margin: 0; }
+
+        .ref-route-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 48px; }
+        .ref-route-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; overflow: hidden; transition: all 0.3s ease; display: flex; }
+        .ref-route-card:hover { border-color: #c9a961; }
+        .ref-route-img { width: 140px; min-height: 120px; background-size: cover; background-position: center; flex-shrink: 0; }
+        .ref-route-info { padding: 16px 20px; flex: 1; }
+        .ref-route-info h4 { color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 1px; margin: 0 0 6px; }
+        .ref-route-info .ref-meta { color: #888; font-size: 0.8rem; margin-bottom: 4px; }
+        .ref-route-info .ref-price { color: #c9a961; font-weight: 600; font-size: 1rem; }
+
+        .disclaimer-banner { background: #1a1a0a; border: 1px solid #c9a96133; border-radius: 8px; padding: 16px 24px; margin-bottom: 48px; text-align: center; }
+        .disclaimer-banner p { color: #c9a961; font-size: 0.9rem; margin: 0; }
+
+        @media (max-width: 768px) {
+            .pain-grid { grid-template-columns: 1fr; }
+            .horror-stories, .creator-quotes, .ref-route-grid { grid-template-columns: 1fr; }
+            .solution-grid { grid-template-columns: 1fr; }
+            .day-flow { grid-template-columns: repeat(2, 1fr); }
+            .ref-route-card { flex-direction: column; }
+            .ref-route-img { width: 100%; height: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <div id="google_translate_element"></div>
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,fr,es,ru,de,ko',
+            layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">CHONGQING</span>
+                <span class="logo-accent">HIKES</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="local-companion.html" class="active">Local Companion</a></li>
+                <li><a href="hiking.html">Wild Hiking</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn-nav">Inquire</a></li>
+                <li id="language-switcher" class="nav-lang"></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="js/language-switcher.js"></script>
+
+    <!-- Hero -->
+    <header class="hero" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 70%, #0a0a0a 100%);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-label">Your Local Fixer in Chongqing, China</p>
+            <h1 class="hero-title">
+                Don't Just Visit.<br>
+                <span class="highlight">Actually Experience It.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Language barriers, confusing payments, tourist traps&mdash;traveling in China is hard alone.<br>
+                I'm your English-speaking local companion. Not a tour guide. A friend who has your back.
+            </p>
+            <div class="hero-cta">
+                <a href="#how-i-help" class="btn-primary">See How I Help</a>
+                <a href="contact.html" class="btn-ghost">Get in Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to discover</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Section 1: The China Challenge -->
+    <section class="tours-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Reality</p>
+                <h2 class="section-title">CHINA IS NOT BUILT FOR FOREIGN VISITORS</h2>
+                <p class="section-subtitle" style="max-width: 700px;">
+                    You've seen the TikTok videos. Chongqing looks incredible. But here's what those videos don't show you&mdash;the everyday struggles that turn a dream trip into a headache.
+                </p>
+            </div>
+
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <span class="pain-icon">🗣️</span>
+                    <h3>Language Barrier</h3>
+                    <p class="pain-problem">Nobody speaks English. Not the taxi drivers. Not the waiters. Not even at the hotel front desk.</p>
+                    <p class="pain-solution">I translate everything&mdash;menus, signs, conversations. You'll actually understand what you're eating and where you're going.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">💳</span>
+                    <h3>Payment Nightmare</h3>
+                    <p class="pain-problem">Cash? Almost useless. Credit cards? Rarely accepted. Your Visa from home? Forget it.</p>
+                    <p class="pain-solution">China runs on WeChat Pay and Alipay. I handle all payments and you just pay me one flat fee at the end.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">🚕</span>
+                    <h3>Transportation Chaos</h3>
+                    <p class="pain-problem">Didi (China's Uber) requires a Chinese phone number. Metro signs? All in Chinese. Taxi drivers don't use meters for foreigners.</p>
+                    <p class="pain-solution">I handle all transport. Didi, metro, or my private car. You focus on the experience, not the logistics.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">🌶️</span>
+                    <h3>Food Roulette</h3>
+                    <p class="pain-problem">Menus without pictures. No English. "Chicken" could mean anything. Spice levels that melt faces.</p>
+                    <p class="pain-solution">I order what you'll actually enjoy. Mild, medium, or face-melting&mdash;your call. And I know the clean, safe spots.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">🏨</span>
+                    <h3>Accommodation Confusion</h3>
+                    <p class="pain-problem">Not all hotels accept foreigners. Booking.com shows rooms that don't exist. Best location? Good luck figuring that out.</p>
+                    <p class="pain-solution">I recommend foreigner-friendly hotels in the right neighborhoods. Pre-check locations so you don't end up in an industrial zone.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">📱</span>
+                    <h3>Internet Blackout</h3>
+                    <p class="pain-problem">Google? Blocked. Instagram? Blocked. WhatsApp? Blocked. Your entire digital life disappears at the airport.</p>
+                    <p class="pain-solution">I set you up before you even land. VPN recommendations, eSIM options, and offline maps so you're never stranded.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">🎭</span>
+                    <h3>Cultural Landmines</h3>
+                    <p class="pain-problem">Is it rude to finish your food? Should you haggle? Why is everyone staring? Are you offending someone?</p>
+                    <p class="pain-solution">I explain cultural context in real time. No awkward moments, no accidental insults, just smooth interactions.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">🛂</span>
+                    <h3>Visa &amp; Entry Stress</h3>
+                    <p class="pain-problem">144-hour transit? Tourist visa? What documents? What if immigration asks questions you can't answer?</p>
+                    <p class="pain-solution">Pre-arrival guidance on visa options, required documents, and what to expect at the border. Peace of mind before you fly.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">🗺️</span>
+                    <h3>Tourist Traps Everywhere</h3>
+                    <p class="pain-problem">Google "best Chongqing restaurants" and you'll find overpriced tourist spots. Real local gems? Impossible to find alone.</p>
+                    <p class="pain-solution">I take you where locals actually eat and hang out. The hotpot place with zero English reviews. The viewpoint with no selfie sticks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Without a Local Fixer -->
+    <section class="tours-section" style="padding: 80px 0; background: #0d0d0d;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">True Stories</p>
+                <h2 class="section-title">WHAT HAPPENS WITHOUT A LOCAL FIXER</h2>
+                <p class="section-subtitle" style="max-width: 700px;">
+                    These aren't hypotheticals. They happen to foreigners in Chongqing every single day.
+                </p>
+            </div>
+
+            <div class="horror-stories">
+                <div class="horror-card">
+                    <h3>&#x26A0;&#xFE0F; The Taxi That Cost $80 for a $5 Ride</h3>
+                    <p>A solo traveler landed at Chongqing Jiangbei Airport. No Chinese, no WeChat. Taxi driver saw a foreigner, turned off the meter, and demanded 500 RMB for a 15-minute ride that should cost 35 RMB. The traveler paid&mdash;he had no way to argue and no alternative.</p>
+                </div>
+                <div class="horror-card">
+                    <h3>&#x26A0;&#xFE0F; The Hotpot That Sent Someone to the Hospital</h3>
+                    <p>Two backpackers walked into a random hotpot restaurant. The menu was Chinese-only. They pointed at pictures and got served the spiciest broth in Chongqing. One ended up with severe stomach issues, cutting their trip short by 3 days.</p>
+                </div>
+                <div class="horror-card">
+                    <h3>&#x26A0;&#xFE0F; Stranded at Midnight with No Signal</h3>
+                    <p>A content creator explored the city alone. Her VPN stopped working. Google Maps went blank. She couldn't call a Didi without a Chinese number. Wandering for 2 hours in an unfamiliar district at midnight was not the content she planned to create.</p>
+                </div>
+                <div class="horror-card">
+                    <h3>&#x26A0;&#xFE0F; The Hotel That Didn't Accept Foreigners</h3>
+                    <p>Booked on Booking.com. Confirmation in hand. Arrived at 10 PM to hear &quot;We don't accept foreigners.&quot; Why? The hotel wasn't licensed for international guests. Four hotels later, he finally found a room at double the price and half the quality.</p>
+                </div>
+                <div class="horror-card">
+                    <h3>&#x26A0;&#xFE0F; The &quot;Attraction&quot; That Was Actually a Shopping Trap</h3>
+                    <p>A family followed a &quot;free tour&quot; recommendation from their hotel. The &quot;tea ceremony&quot; turned into a high-pressure sales pitch. They spent $200 on tea they didn't want, because they didn't know how to say no in Chinese.</p>
+                </div>
+                <div class="horror-card">
+                    <h3>&#x26A0;&#xFE0F; The Metro Meltdown</h3>
+                    <p>A solo traveler tried taking Chongqing's metro. All signs in Chinese. Transferred to the wrong line three times. What should have been a 20-minute trip took 2 hours. She missed her entire morning itinerary and was too exhausted to enjoy the afternoon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: What Overseas Creators Say -->
+    <section class="tours-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">They&apos;ve Been There</p>
+                <h2 class="section-title">WHAT OVERSEAS TRAVELERS SAY ABOUT CHINA</h2>
+                <p class="section-subtitle" style="max-width: 700px;">
+                    Even experienced travelers struggle. Here's what popular travel creators have shared about visiting China without local help.
+                </p>
+            </div>
+
+            <div class="creator-quotes">
+                <div class="creator-quote">
+                    <p class="quote-text">I've been to 80 countries and China was the hardest. Not because it's dangerous&mdash;because nothing works like you expect. The apps, the payments, the maps. Everything is different.</p>
+                    <p class="quote-source">&mdash; Travel vlogger (1M+ subscribers), after a 2-week solo trip</p>
+                </div>
+                <div class="creator-quote">
+                    <p class="quote-text">The biggest mistake I made was assuming Google Translate would be enough. It's not. You need a human who understands context, tone, and culture. Without that, you're just guessing.</p>
+                    <p class="quote-source">&mdash; Food &amp; travel creator, after their first China food tour</p>
+                </div>
+                <div class="creator-quote">
+                    <p class="quote-text">I spent more time figuring out how to pay for things than actually enjoying the city. Alipay rejected my foreign card 6 times. I almost cried in a convenience store.</p>
+                    <p class="quote-source">&mdash; Solo female traveler, Chongqing vlog series</p>
+                </div>
+                <div class="creator-quote">
+                    <p class="quote-text">Chongqing is the most photogenic city I've ever seen. But finding the good spots without a local? Impossible. I wasted 3 days at tourist viewpoints when the real magic was hidden in back alleys.</p>
+                    <p class="quote-source">&mdash; Photography YouTuber, China travel documentary</p>
+                </div>
+                <div class="creator-quote">
+                    <p class="quote-text">The China I experienced on my first trip was completely different from my second trip&mdash;because the second time I had a local friend. Night and day difference. I actually felt like I visited the real country.</p>
+                    <p class="quote-source">&mdash; Adventure travel blogger, comparing solo vs. local-guided trips</p>
+                </div>
+                <div class="creator-quote">
+                    <p class="quote-text">My advice to anyone visiting China for the first time: budget for a local fixer. Not a tour guide&mdash;a fixer. Someone who solves problems before they become problems. It's the best money you'll spend.</p>
+                    <p class="quote-source">&mdash; Digital nomad YouTuber, China survival guide video</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: How I Help -->
+    <section id="how-i-help" class="tours-section" style="padding: 80px 0; background: #0d0d0d;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Solution</p>
+                <h2 class="section-title">YOUR LOCAL COMPANION FOR THE DAY</h2>
+                <p class="section-subtitle" style="max-width: 700px;">
+                    One flat rate. One day. All your problems handled. Here's what a typical day with me looks like.
+                </p>
+            </div>
+
+            <div class="day-flow">
+                <div class="day-step">
+                    <div class="step-num">1</div>
+                    <h4>Before You Arrive</h4>
+                    <p>We chat on WhatsApp. I learn your interests, dietary needs, budget. I send you VPN setup, eSIM options, and airport pickup details.</p>
+                </div>
+                <div class="day-step">
+                    <div class="step-num">2</div>
+                    <h4>Morning Meet-Up</h4>
+                    <p>I pick you up at your hotel. We grab a real local breakfast. You tell me your vibe for the day. Flexible, no rigid itinerary.</p>
+                </div>
+                <div class="day-step">
+                    <div class="step-num">3</div>
+                    <h4>Explore Like a Local</h4>
+                    <p>We hit the spots you care about. Photography? Food? History? Markets? I adapt in real time. No script, no rush, no tourist traps.</p>
+                </div>
+                <div class="day-step">
+                    <div class="step-num">4</div>
+                    <h4>Evening Wind-Down</h4>
+                    <p>Authentic dinner at a spot I'd bring my own friends to. Night views, drinks, or drop you back. Your day, your pace, your adventure.</p>
+                </div>
+            </div>
+
+            <div class="solution-grid" style="margin-top: 64px;">
+                <div class="solution-card">
+                    <span class="sol-icon">&#x1F464;</span>
+                    <h3>Private Only</h3>
+                    <p>You + me (or your small group). No strangers. No crowded buses. A completely personalized day designed around your interests.</p>
+                </div>
+                <div class="solution-card">
+                    <span class="sol-icon">&#x1F4B0;</span>
+                    <h3>Simple Pricing</h3>
+                    <p>One flat full-day rate. No hidden fees. No &quot;optional&quot; shopping stops. I handle payments during the day&mdash;you just pay me once.</p>
+                </div>
+                <div class="solution-card">
+                    <span class="sol-icon">&#x1F4F1;</span>
+                    <h3>Content Creator Friendly</h3>
+                    <p>I know the angles. I'll help you find perfect shots for TikTok, Instagram, and YouTube. I can even film for you.</p>
+                </div>
+                <div class="solution-card">
+                    <span class="sol-icon">&#x1F3A4;</span>
+                    <h3>Real English</h3>
+                    <p>Fluent, natural English. No awkward translations. I explain culture, history, and context in a way that actually makes sense.</p>
+                </div>
+                <div class="solution-card">
+                    <span class="sol-icon">&#x1F37D;&#xFE0F;</span>
+                    <h3>Food Without Fear</h3>
+                    <p>From street stalls to hidden hotpot dens. I handle ordering, spice levels, and dietary restrictions. You just enjoy.</p>
+                </div>
+                <div class="solution-card">
+                    <span class="sol-icon">&#x1F698;</span>
+                    <h3>Transport Sorted</h3>
+                    <p>Didi, metro, or private car&mdash;I know the fastest, cheapest, most comfortable way to get anywhere in Chongqing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Trust Builders -->
+    <section class="why-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Why Me</p>
+                <h2 class="section-title">BORN HERE. SPEAK YOUR LANGUAGE.</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h4>Born &amp; Raised in Chongqing</h4>
+                    <p>Every alley, every shortcut, every hidden gem&mdash;I grew up here. I don't just know Chongqing. I am Chongqing.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Fluent English, Zero Awkwardness</h4>
+                    <p>I speak English like we're having a conversation, not reading a textbook. Cultural nuance translated naturally.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v4l3 3"/>
+                        </svg>
+                    </div>
+                    <h4>Problem Solver, Not a Script Reader</h4>
+                    <p>Tour guides follow scripts. I solve real problems. Payment not working? Restaurant closed? Sudden rain? I adapt instantly.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                    </div>
+                    <h4>Instagram-Ready Adventures</h4>
+                    <p>I know what makes great content. Let me help you capture Chongqing in a way your followers have never seen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Most Popular Routes Reference -->
+    <section class="tours-section" style="padding: 80px 0; background: #0d0d0d;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Route Inspiration</p>
+                <h2 class="section-title">MOST POPULAR ROUTES</h2>
+                <p class="section-subtitle" style="max-width: 700px;">
+                    These are the 10 most-booked routes by travelers in Chongqing. Use them as inspiration for your custom day. Every route adapts to your pace and preferences.
+                </p>
+            </div>
+
+            <div class="disclaimer-banner">
+                <p>&#x1F4CC; These are reference routes only. All companion services are fully customized to you. No fixed itineraries, no rush, no tour groups.</p>
+            </div>
+
+            <div class="ref-route-grid">
+                <!-- Route 1: Ciqikou & Zhazidong -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_132')"></div>
+                    <div class="ref-route-info">
+                        <h4>Ciqikou &amp; Zhazidong</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; Full Day &middot; &#x2B50; 5.0 &middot; Day Tour</p>
+                        <p class="ref-meta">Ancient porcelain town + revolutionary history site + authentic riverside lunch</p>
+                        <span class="ref-price">From $59</span>
+                    </div>
+                </div>
+
+                <!-- Route 2: Wulong Karst -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_150')"></div>
+                    <div class="ref-route-info">
+                        <h4>Wulong Karst Highlights</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; Full Day &middot; &#x2B50; 5.0 &middot; Day Tour</p>
+                        <p class="ref-meta">UNESCO karst bridges, Transformers filming location, mountain scenery</p>
+                        <span class="ref-price">From $147</span>
+                    </div>
+                </div>
+
+                <!-- Route 3: Dazu Rock Carvings -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_64')"></div>
+                    <div class="ref-route-info">
+                        <h4>Dazu Rock Carvings</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; Full Day &middot; &#x2B50; 5.0 &middot; Day Tour</p>
+                        <p class="ref-meta">UNESCO World Heritage, 800-year-old Buddhist cliff carvings</p>
+                        <span class="ref-price">From $44</span>
+                    </div>
+                </div>
+
+                <!-- Route 4: Three Bridges & Fairy Mountain -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_120')"></div>
+                    <div class="ref-route-info">
+                        <h4>Wulong Three Bridges &amp; Fairy Mountain</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; Full Day &middot; &#x2B50; 5.0 &middot; Day Tour</p>
+                        <p class="ref-meta">Natural limestone bridges + alpine meadow at Fairy Mountain</p>
+                        <span class="ref-price">From $59</span>
+                    </div>
+                </div>
+
+                <!-- Route 5: Three Gorges Day Trip -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_115')"></div>
+                    <div class="ref-route-info">
+                        <h4>Three Gorges Day Trip</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; Full Day &middot; &#x2B50; 5.0 &middot; Day Tour</p>
+                        <p class="ref-meta">Yangtze River cruise, dramatic gorge scenery, Qutang Gorge views</p>
+                        <span class="ref-price">From $88</span>
+                    </div>
+                </div>
+
+                <!-- Route 6: Project 816 Nuclear Plant -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_195')"></div>
+                    <div class="ref-route-info">
+                        <h4>Project 816 Nuclear Plant</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; Full Day &middot; &#x2B50; 5.0 &middot; Day Tour</p>
+                        <p class="ref-meta">World's largest man-made cave, Cold War nuclear bunker tour</p>
+                        <span class="ref-price">From $29</span>
+                    </div>
+                </div>
+
+                <!-- Route 7: Wulong Explorer 2-Day -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_202')"></div>
+                    <div class="ref-route-info">
+                        <h4>Wulong Karst Explorer</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; 2 Days &middot; &#x2B50; 5.0 &middot; Small Group</p>
+                        <p class="ref-meta">Overnight karst adventure, Three Bridges + Furong Cave + canyon hike</p>
+                        <span class="ref-price">From $354</span>
+                    </div>
+                </div>
+
+                <!-- Route 8: Three Gorges 6-Day -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_161')"></div>
+                    <div class="ref-route-info">
+                        <h4>Three Gorges Deep Explorer</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; 6 Days &middot; &#x2B50; 5.0 &middot; Small Group</p>
+                        <p class="ref-meta">Extended Yangtze cruise, Shennong Stream, White Emperor City, Fengdu</p>
+                        <span class="ref-price">From $1,608</span>
+                    </div>
+                </div>
+
+                <!-- Route 9: Wulong + Dazu 5-Day -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_497')"></div>
+                    <div class="ref-route-info">
+                        <h4>Wulong + Dazu Heritage</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; 5 Days &middot; &#x2B50; 5.0 &middot; Small Group</p>
+                        <p class="ref-meta">UNESCO double feature: karst landscapes + ancient Buddhist carvings</p>
+                        <span class="ref-price">From $870</span>
+                    </div>
+                </div>
+
+                <!-- Route 10: Three Gorges Premium -->
+                <div class="ref-route-card">
+                    <div class="ref-route-img" style="background-image: url('https://res.cloudinary.com/dnbzfboyc/image/upload/w_400,q_auto,f_auto/chongqing-hikes/routes/route_14')"></div>
+                    <div class="ref-route-info">
+                        <h4>Three Gorges Premium</h4>
+                        <p class="ref-meta">&#x23F1;&#xFE0F; 5 Days &middot; &#x2B50; 5.0 &middot; Private Tour</p>
+                        <p class="ref-meta">Luxury Yangtze cruise, private guide, exclusive shore excursions</p>
+                        <span class="ref-price">From $2,168</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Pricing & CTA -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Actually Experience Chongqing?</h2>
+                <p class="cta-subtitle">
+                    Full-day private companion service. All logistics handled. Just show up and enjoy.<br>
+                    Limited availability each week&mdash;let's plan your perfect day.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary btn-large">
+                        Book Your Day
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/8615696078461" class="btn-ghost" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">CHONGQING HIKES</h3>
+                    <p class="footer-tagline">
+                        Your local English-speaking companion for the 8D city and wild mountains of Chongqing, China.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.tiktok.com/@chongqinghikes" target="_blank" aria-label="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/chongqinghikes" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="17.5" cy="6.5" r="1.5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="local-companion.html">Local Companion</a></li>
+                        <li><a href="hiking.html">Wild Hiking</a></li>
+                        <li><a href="contact.html">Custom Inquiries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Ryan</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p>
+                        <a href="https://wa.me/8615696078461">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            WhatsApp: +86 156 9607 8461
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:chongqinghikes@qq.com">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            chongqinghikes@qq.com
+                        </a>
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Chongqing, China
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chongqing Hikes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
