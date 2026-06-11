@@ -283,7 +283,7 @@ img {
     justify-content: center;
     background: 
         linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(139, 154, 109, 0.4) 100%),
-        url('https://images.unsplash.com/photo-1537531383496-f4749b8032cf?w=1920&q=80') center/cover no-repeat;
+        url('images/backgrounds/hero-cq-night.webp') center/cover no-repeat;
     color: var(--text-white);
 }
 
@@ -3602,14 +3602,35 @@ img[loading="lazy"] {
 .city-hero {
     background:
         linear-gradient(135deg, rgba(26,26,26,0.7) 0%, rgba(26,26,26,0.5) 50%, rgba(201,169,97,0.3) 100%),
-        url('images/tours/hongya_cave.webp') center/cover no-repeat;
+        url('images/backgrounds/hero-zhangjiajie.webp') center/cover no-repeat;
 }
 
 /* Wild Hiking Hero Background */
 .hiking-hero {
     background:
         linear-gradient(135deg, rgba(26,26,26,0.7) 0%, rgba(26,26,26,0.5) 50%, rgba(201,169,97,0.3) 100%),
-        url('images/tours/chongqing_scenic.webp') center/cover no-repeat;
+        url('images/backgrounds/hero-mountain-trail.webp') center/cover no-repeat;
+}
+
+/* About Page Hero */
+.about-hero {
+    background:
+        linear-gradient(135deg, rgba(26,26,26,0.75) 0%, rgba(26,26,26,0.5) 50%, rgba(201,169,97,0.3) 100%),
+        url('images/backgrounds/hero-cq-street.webp') center/cover no-repeat;
+}
+
+/* Contact Page Hero */
+.contact-hero {
+    background:
+        linear-gradient(135deg, rgba(26,26,26,0.75) 0%, rgba(26,26,26,0.5) 50%, rgba(201,169,97,0.3) 100%),
+        url('images/backgrounds/hero-hotpot.webp') center/cover no-repeat;
+}
+
+/* Local Companion Page Hero */
+.local-hero {
+    background:
+        linear-gradient(135deg, rgba(26,26,26,0.7) 0%, rgba(26,26,26,0.5) 50%, rgba(201,169,97,0.3) 100%),
+        url('images/backgrounds/hero-cliff-hiking.webp') center/cover no-repeat;
 }
 
 /* Decorative accent line under hero title */
