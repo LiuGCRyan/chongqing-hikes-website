@@ -1,0 +1,62 @@
+{
+  "hero/hero-cq-night": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162780/chongqing-hikes/hero/hero-cq-night.webp",
+    "bytes": 179498
+  },
+  "hero/hero-mountain-trail": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162847/chongqing-hikes/hero/hero-mountain-trail.webp",
+    "bytes": 354708
+  },
+  "hero/hero-cliff-hiking": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162849/chongqing-hikes/hero/hero-cliff-hiking.webp",
+    "bytes": 108616
+  },
+  "hero/hero-zhangjiajie": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162852/chongqing-hikes/hero/hero-zhangjiajie.webp",
+    "bytes": 447470
+  },
+  "hero/hero-cq-street": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162854/chongqing-hikes/hero/hero-cq-street.webp",
+    "bytes": 145762
+  },
+  "hero/hero-hotpot": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162856/chongqing-hikes/hero/hero-hotpot.webp",
+    "bytes": 214952
+  },
+  "hero/hero-karst-mountain": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162860/chongqing-hikes/hero/hero-karst-mountain.webp",
+    "bytes": 941800
+  },
+  "hero/hero-foggy-mountain": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162863/chongqing-hikes/hero/hero-foggy-mountain.webp",
+    "bytes": 476408
+  },
+  "hero/hero-chinese-food": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162865/chongqing-hikes/hero/hero-chinese-food.webp",
+    "bytes": 155636
+  },
+  "hiking/zhangfei-trail-1": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162867/chongqing-hikes/hiking/zhangfei-trail-1.webp",
+    "bytes": 109480
+  },
+  "hiking/zhangfei-trail-3": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162869/chongqing-hikes/hiking/zhangfei-trail-3.webp",
+    "bytes": 120674
+  },
+  "hiking/zhangfei-trail-5": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162872/chongqing-hikes/hiking/zhangfei-trail-5.webp",
+    "bytes": 119668
+  },
+  "hiking/luzuofu-memorial": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162874/chongqing-hikes/hiking/luzuofu-memorial.jpg",
+    "bytes": 188386
+  },
+  "hiking/hot-spring-temple": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162876/chongqing-hikes/hiking/hot-spring-temple.jpg",
+    "bytes": 203920
+  },
+  "hiking/fudan-old-site": {
+    "url": "https://res.cloudinary.com/dnbzfboyc/image/upload/v1781162879/chongqing-hikes/hiking/fudan-old-site.jpg",
+    "bytes": 110389
+  }
+}
